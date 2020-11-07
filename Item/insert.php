@@ -7,8 +7,8 @@ if(isset($_POST['submit']))
 	 $category = $_POST['category'];
 	 $manufacturer = $_POST['manufacturer'];
 	 $ides = $_POST['ides'];
-	 $unit = $_POST['unit']
-	 $price = $_POST['price']
+	 $unit = $_POST['unit'];
+	 $price = $_POST['price'];
      $iquantity = $_POST['iquantity'];
 	 $total = $_POST['total'];
 	 $invoice = $_POST['invoice'];
