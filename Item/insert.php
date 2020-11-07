@@ -7,9 +7,16 @@ if(isset($_POST['submit']))
 	 $category = $_POST['category'];
 	 $manufacturer = $_POST['manufacturer'];
 	 $ides = $_POST['ides'];
-	 $iquantity = $_POST['iquantity'];
-	 $sql = "INSERT INTO details (itemid,itemname,category,manufacturer,ides,iquantity)
-	 VALUES ('$itemid','$itemname','$category','$manufacturer','$ides','$iquantity')";
+	 $unit = $_POST['unit']
+	 $price = $_POST['price']
+     $iquantity = $_POST['iquantity'];
+	 $total = $_POST['total'];
+	 $invoice = $_POST['invoice'];
+	 $adminid = $_POST['adminid'];
+
+	 
+	 $sql = "INSERT INTO details (itemid,itemname,category,manufacturer,ides,unit,price,iquantity,total,invoice,adminid)
+	 VALUES ('$itemid','$itemname','$category','$manufacturer','$ides','unit','price','$iquantity','total','invoice','adminid')";
 	 if (mysqli_query($conn, $sql)) {
 		echo "New record created successfully !";
 	 } else {

@@ -20,9 +20,9 @@
 		<hr></center>
   	</div>
 	<div class="row">
-  		<center><a href="#">Item</a><hr>
+  		<center><a href="#">Customer</a><hr>
 		<a href="#">Stock</a><hr>
-		<a href="#">Customer</a><hr>
+		<a href="#">Item</a><hr>
 		<a href="#">Supplier</a><hr>
 		<a href="#">Supplier Order</a><hr>
 		<a href="#">Customer Order</a><hr>

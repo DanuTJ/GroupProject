@@ -20,9 +20,9 @@
 		<hr></center>
   	</div>
 	<div class="row">
-  		<center><a href="#">Item</a><hr>
+  		<center><a href="#">Customer</a><hr>
 		<a href="#">Stock</a><hr>
-		<a href="#">Customer</a><hr>
+		<a href="#">Item</a><hr>
 		<a href="#">Supplier</a><hr>
 		<a href="#">Supplier Order</a><hr>
 		<a href="#">Customer Order</a><hr>
@@ -65,7 +65,7 @@
 
 		    <label for="Icategory">Item Category:</label>
 		    <select id="category" name="category">
-		      <option value="Drugs">Drugs</option>
+		      <option value="Medicine">Medicine</option>
 		      <option value="Personal hygiene">Personal hygiene</option>
 		      <option value="Skincare">Skincare</option>
 			  <option value="Diet and Nutrition">Diet and Nutrition</option>
@@ -77,9 +77,24 @@
 			
 			<label for="Description">Item description:</label>
 		    <input type="text" id="Ides" name="ides" placeholder="Item description.." required>
+			
+			<label for="Unit">Unit:</label>
+		    <input type="text" id="Unit" name="unit" placeholder="Unit.." required>
+			
+			<label for="Price">Price:</label>
+		    <input type="text" id="Price" name="price" placeholder="Price.." required>
 
 		    <label for="Iquantity">Item quantity:</label>
 		    <input type="text" id="Iquantity" name="iquantity" placeholder="Item quantity.." required>
+			
+			<label for="Total">Total:</label>
+		    <input type="text" id="Total" name="total" placeholder="Total.." required>
+			
+			<label for="Invoiceno">Order invoice no:</label>
+		    <input type="text" id="Invoiceno" name="invoice" placeholder="Invoice no.." required>
+			
+			<label for="AdminId">Admin ID</label>
+		    <input type="text" id="AdminId" name="adminid" placeholder="Admin ID.." required>
 			
 		  	
 		  	<input type="submit" name="submit" value="Submit">

@@ -29,9 +29,9 @@ if (mysqli_num_rows($result) > 0) {
 		<hr></center>
   	</div>
 	<div class="row">
-  		<center><a href="#">Item</a><hr>
+  		<center><a href="#">Customer</a><hr>
 		<a href="#">Stock</a><hr>
-		<a href="#">Customer</a><hr>
+		<a href="#">Item</a><hr>
 		<a href="#">Supplier</a><hr>
 		<a href="#">Supplier Order</a><hr>
 		<a href="#">Customer Order</a><hr>
@@ -75,7 +75,12 @@ if (mysqli_num_rows($result) > 0) {
 			    <th>Item Category</th>
 			    <th>Manufacturer</th>
 			    <th>Item description</th>
+		        <th>Unit</th>
+                <th>Price</th>
 			    <th>Item quantity</th>
+				<th>Total</th>
+				<th>Order Invoice no</th>
+				<th>Admin ID</th>
 			    <th>Edit</th>
 			    <th>Delete</th>
 			  </tr>
@@ -89,7 +94,12 @@ if (mysqli_num_rows($result) > 0) {
 			    <td><?php echo $row["category"]; ?></td>
 			    <td><?php echo $row["manufacturer"]; ?></td>
 			    <td><?php echo $row["ides"]; ?></td>
-			    <td><?php echo $row["iquantity"]; ?></td>
+				<td><?php echo $row["unit"]; ?></td>
+				<td><?php echo $row["price"]; ?></td>
+                <td><?php echo $row["iquantity"]; ?></td>
+				<td><?php echo $row["total"]; ?></td>
+				<td><?php echo $row["invoice"]; ?></td>
+				<td><?php echo $row["adminid"]; ?></td>
 				<td><a href="updated.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
 				<td><a href="deleted.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red"></i></a></td>
 
