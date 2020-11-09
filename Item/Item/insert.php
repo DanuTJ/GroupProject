@@ -2,7 +2,7 @@
 include_once 'connection.php';
 if(isset($_POST['submit']))
 {	 
-	 $itemid = $_POST['itemid'];
+     $id = $_POST['id'];
 	 $itemname = $_POST['itemname'];
 	 $category = $_POST['category'];
 	 $manufacturer = $_POST['manufacturer'];
@@ -15,8 +15,8 @@ if(isset($_POST['submit']))
 	 $adminid = $_POST['adminid'];
 
 	 
-	 $sql = "INSERT INTO details (itemid,itemname,category,manufacturer,ides,unit,price,iquantity,total,invoice,adminid)
-	 VALUES ('$itemid','$itemname','$category','$manufacturer','$ides','$unit','$price','$iquantity','$total','$invoice','$adminid')";
+	 $sql = "INSERT INTO details (id,itemname,category,manufacturer,ides,unit,price,iquantity,total,invoice,adminid)
+	 VALUES ('$id','$itemname','$category','$manufacturer','$ides','$unit','$price','$iquantity','$total','$invoice','$adminid')";
 	 if (mysqli_query($conn, $sql)) {
 		echo "New record created successfully !";
 	 } else {
