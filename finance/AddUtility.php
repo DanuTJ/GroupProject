@@ -47,9 +47,8 @@
   	<div class="row" style="margin-top: -18px;">
   		<ul>
 		  <li><a class="active" href="AddUtility.php">Add Utility</a></li>
+		  <li><a href="ViewUtility.php">View Utility</a></li>
 		  <li><a href="ManageUtility.php">Manage Utility</a></li>
-		  <li><a href="Income.php">Income</a></li>
-		  <li><a href="Expense.php">Expenses</a></li>
 		  <li><a href="PrintDetails.php">Print Details</a></li>
 		</ul>
   	</div>
