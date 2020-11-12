@@ -58,7 +58,7 @@
   		<form action="insert.php" method="POST">
 		
 		    <label for="Iid">Item ID:</label>
-		    <input type="text" id="Iid" name="itemid" placeholder="Item ID.." required>
+		    <input type="text" id="Iid" name="id" placeholder="Item ID.." required>
 			
 		    <label for="Iname">Item Name:</label>
 		    <input type="text" id="Iname" name="itemname" placeholder="Item name.." required>

@@ -1,17 +1,17 @@
 <?php
 include_once 'connection.php';
-$result = mysqli_query($conn,"SELECT * FROM details");
+$result = mysqli_query($conn,"SELECT * FROM finance");
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Item Details</title>
+<title>Finance Details</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="Css/ViewItemCSS.css">
+<link rel="stylesheet" href="Css/ViewUtilityCSS.css">
 
 </head>
 <body>
@@ -56,9 +56,9 @@ if (mysqli_num_rows($result) > 0) {
   	<br>
   	<div class="row" style="margin-top: -18px;">
   		<ul>
-		  <li><a href="AddItemDetails.php">Add Item</a></li>
-		  <li><a class="active" href="ViewItem.php">View Item</a></li>
-		  <li><a href="ManageItem.php">Manage Item</a></li>
+		  <li><a href="AddUtility.php">Add Utility</a></li>
+		  <li><a class="active" href="ViewUtility.php">View Utility</a></li>
+		  <li><a href="ManageUtility.php">Manage Utility</a></li>
 		  <li><a href="PrintDetails.php">Print Details</a></li>
 		</ul>
   	</div>
@@ -71,16 +71,11 @@ if (mysqli_num_rows($result) > 0) {
 		  	<br>
 		  	<table>
 			  <tr>
-			    <th>Item ID</th>
-			    <th>Item Name</th>
-			    <th>Item Category</th>
-			    <th>Manufacturer</th>
-			    <th>Item description</th>
-				<th>Unit</th>
-                <th>Price</th>
-			    <th>Item quantity</th>
-				<th>Total</th>
-				<th>Order Invoice no</th>
+			    <th>Utility no</th>
+			    <th>Utility type</th>
+			    <th>Description</th>
+			    <th>Date</th>
+			    <th>Amount</th>
 				<th>Admin ID</th>
 			  </tr>
 			  	<?php
@@ -88,17 +83,13 @@ if (mysqli_num_rows($result) > 0) {
 					while($row = mysqli_fetch_array($result)) {
 				?>
 			  <tr>
-			    <td><?php echo $row["itemid"]; ?></td>
-			    <td><?php echo $row["itemname"]; ?></td>
-			    <td><?php echo $row["category"]; ?></td>
-			    <td><?php echo $row["manufacturer"]; ?></td>
-			    <td><?php echo $row["ides"]; ?></td>
-				<td><?php echo $row["unit"]; ?></td>
-				<td><?php echo $row["price"]; ?></td>
-			    <td><?php echo $row["iquantity"]; ?></td>
-				<td><?php echo $row["total"]; ?></td>
-				<td><?php echo $row["invoice"]; ?></td>
+			    <td><?php echo $row["id"]; ?></td>
+			    <td><?php echo $row["type"]; ?></td>
+			    <td><?php echo $row["utilitydes"]; ?></td>
+			    <td><?php echo $row["date"]; ?></td>
+			    <td><?php echo $row["amount"]; ?></td>
 				<td><?php echo $row["adminid"]; ?></td>
+				
 				
 			  </tr>
 			  	<?php

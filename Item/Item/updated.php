@@ -1,15 +1,17 @@
 <?php
 include_once 'connection.php';
 if(count($_POST)>0) {
-mysqli_query($conn,"UPDATE details set itemid='" . $_POST['itemid'] . "', itemname='" . $_POST['itemname'] . "', category='" . $_POST['category'] . "', manufacturer='" . $_POST['manufacturer'] . "', ides='" . $_POST['ides'] . "', unit='" .$_POST['unit'] ."', price='" . $_POST[price] ."' ,iquantity='" . $_POST['iquantity'] . "', total='" .$_POST[total] ."' ,invoice='" . $_POST['invoice'] . "' ,adminid='" . $_POST['adminid'] . "' WHERE itemid='" . $_POST['itemid'] . "'");
+mysqli_query($conn,"UPDATE details set id='" . $_POST['id'] . "', itemname='" . $_POST['itemname'] . "', category='" . $_POST['category'] . "', manufacturer='" . $_POST['manufacturer'] . "', ides='" . $_POST['ides'] . "', unit='" .$_POST['unit'] ."', price='" . $_POST[price] ."' ,iquantity='" . $_POST['iquantity'] . "', total='" .$_POST[total] ."' ,invoice='" . $_POST['invoice'] . "' ,adminid='" . $_POST['adminid'] . "' WHERE id='" . $_POST['id'] . "'");
 $message = "Record Modified Successfully";
 }
-$result = mysqli_query($conn,"SELECT * FROM details WHERE itemid='" . $_GET['itemid'] . "'");
+
+$result = mysqli_query($conn,"SELECT * FROM details WHERE id='" . $_GET['id'] . "'");
 $row= mysqli_fetch_array($result);
+
 ?>
 <html>
 <head>
-<title>Update Customer Details</title>
+<title>Update Item Details</title>
 <link rel="stylesheet" href="Css/ViewItemCSS.css">
 </head>
 <body>
@@ -64,8 +66,8 @@ $row= mysqli_fetch_array($result);
 		<div style="padding-bottom:5px;">
 		</div>
 		Item ID: <br>
-		<input type="hidden" name="Iid" class="txtField" value="<?php echo $row['itemid']; ?>">
-		<input type="text" name="Iid"  value="<?php echo $row['itemid']; ?>">
+		<input type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>">
+		<input type="text" name="id"  value="<?php echo $row['id']; ?>"> 
 		<br>
 		Item Name: <br>
 		<input type="text" name="itemname" class="txtField" value="<?php echo $row['itemname']; ?>">
