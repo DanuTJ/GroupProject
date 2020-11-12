@@ -1,7 +1,7 @@
 <?php
 include_once 'connection.php';
 if(count($_POST)>0) {
-mysqli_query($conn,"UPDATE sorders set orderid='" . $_POST['orderid'] . "', orderdate='" . $_POST['orderdate'] . "',supplierid='" . $_POST['supplierid'] . "',suppliername='" . $_POST['suppliername'] . "', utilitynumber='" . $_POST['utilitynumber'] . "',numofunits='" . $_POST['numofunits'] . "', arrivingdate='" . $_POST['arrivingdate'] . "', totalprice='" . $_POST['totalprice'] . "', adminid='" . $_POST['adminid'] . "' WHERE orderid='" . $_POST['orderid'] . "'");
+mysqli_query($conn,"UPDATE sorders set orderid='" . $_POST['orderid'] . "', orderdate='" . $_POST['orderdate'] . "',supplierid='" . $_POST['supplierid'] . "',suppliername='" . $_POST['suppliername'] . "',numofunits='" . $_POST['numofunits'] . "', arrivingdate='" . $_POST['arrivingdate'] . "', totalprice='" . $_POST['totalprice'] . "', adminid='" . $_POST['adminid'] . "' WHERE orderid='" . $_POST['orderid'] . "'");
 $message = "Record Modified Successfully";
 }
 $result = mysqli_query($conn,"SELECT * FROM sorders WHERE orderid='" . $_GET['id'] . "'");
@@ -69,22 +69,21 @@ $row= mysqli_fetch_array($result);
 		<input type="text" name="orderid"  value="<?php echo $row['orderid']; ?>">
 		<br>
 		Order Date: <br>
-		<input type="text" name="orderdate" class="txtField" value="<?php echo $row['orderdate']; ?>">
+		<input type="date" name="orderdate" class="txtField" value="<?php echo $row['orderdate']; ?>">
+
 		<br>
+
 		Supplier ID:<br>
 		<input type="text" name="supplierid" class="txtField" value="<?php echo $row['supplierid']; ?>">
 		<br>
 		Supplier Name: <br>
 		<input type="text" name="suppliername" class="txtField" value="<?php echo $row['suppliername']; ?>">
 		<br>
-		Utility No: <br>
-		<input type="text" name="utilitynumber" class="txtField" value="<?php echo $row['utilitynumber']; ?>">
-		<br>
 		No. of Units: <br>
 		<input type="text" name="numofunits" class="txtField" value="<?php echo $row['numofunits']; ?>">
 		<br>
 		Arriving Date:<br>
-		<input type="text" name="arrivingdate" class="txtField" value="<?php echo $row['arrivingdate']; ?>">
+		<input type="date" name="arrivingdate" class="txtField" value="<?php echo $row['arrivingdate']; ?>">
 		<br>
 		Total Price:<br>
 		<input type="text" name="totalprice" class="txtField" value="<?php echo $row['totalprice']; ?>">

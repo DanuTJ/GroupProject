@@ -46,9 +46,9 @@
   	<br>
   	<div class="row" style="margin-top: -18px;">
   		<ul>
-		  <li><a class="active" href="AddSupOrder.php">Add Orders</a></li>
-		  <li><a href="ViewSupOrder.php">View Orders</a></li>
-		  <li><a href="ManageSupOrder.php">Manage Orders</a></li>
+		  <li><a class="active" href="AddSupOrder.php">Add Supplier Order</a></li>
+		  <li><a href="ViewSupOrder.php">View Supplier Order</a></li>
+		  <li><a href="ManageSupOrder.php">Manage Supplier Order</a></li>
 		  <li><a href="PrintDetails.php">Print Details</a></li>
 		</ul>
   	</div>
@@ -61,7 +61,7 @@
 		    <input type="text" id="OrId" name="orderid" placeholder="Enter Order ID.." required> <br>
 			
 			<label for="Ordate">Order Date:</label>
-		    <input type="date" id="Ordate" name="orderdate" placeholder="Enter Order date.." required> <br>
+		    <input type="date" id="Ordate" name="orderdate" placeholder="Enter Order date.." required> <br> <br>
 			
 			<label for="SId">Supplier ID:</label>
 		    <input type="text" id="SId" name="supplierid" placeholder="Enter Supplier ID.." required> <br>
@@ -69,15 +69,12 @@
 		    <label for="Sname">Supplier Name:</label>
 		    <input type="text" id="Sname" name="suppliername" placeholder="Your name.." required> <br>
 
-			<label for="Unum">Utility No:</label>
-		    <input type="text" id="Unum" name="utilitynumber" placeholder="Enter utility no.." required> <br>
-
 		    <label for="Units">No. of Units:</label>
 		    <input type="text" id="Units" name="numofunits" placeholder="Enter No. of units.." required> <br>
 
 			<label for="Arridate">Arriving Date:</label>
 		    <input type="date" id="Arridate" name="arrivingdate" placeholder="Enter arriving date.." required>
-			<br>
+			<br> <br>
 
 		    <label for="Tprice">Total Price:</label>
 		    <input type="text" id="Tprice" name="totalprice" placeholder="price.." required> <br>

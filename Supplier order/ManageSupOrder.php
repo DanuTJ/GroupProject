@@ -55,9 +55,9 @@ if (mysqli_num_rows($result) > 0) {
   	<br>
   	<div class="row" style="margin-top: -18px;">
   		<ul>
-		  <li><a href="AddSupOrder.php">Add Orders</a></li>
-		  <li><a href="ViewSupOrder.php">View Orders</a></li>
-		  <li><a class="active" href="ManageSupOrder.php">Manage Orders</a></li>
+		  <li><a href="AddSupOrder.php">Add Supplier Order</a></li>
+		  <li><a href="ViewSupOrder.php">View Supplier Order</a></li>
+		  <li><a class="active" href="ManageSupOrder.php">Manage Supplier Order</a></li>
 		  <li><a href="PrintDetails.php">Print Details</a></li>
 		</ul>
   	</div>
@@ -74,7 +74,6 @@ if (mysqli_num_rows($result) > 0) {
 				<th>Order Date</th>
 				<th>Supplier ID</th>
 			    <th>Supplier Name</th>
-			    <th>Utility No</th>
 				<th>No.of Units</th>
 			    <th>Arriving Date</th>
 			    <th>Total Price</th>
@@ -91,7 +90,6 @@ if (mysqli_num_rows($result) > 0) {
 				<td><?php echo $row["orderdate"]; ?></td>
 				<td><?php echo $row["supplierid"]; ?></td>
 			    <td><?php echo $row["suppliername"]; ?></td>
-			    <td><?php echo $row["utilitynumber"]; ?></td>
 				<td><?php echo $row["numofunits"]; ?></td>
 			    <td><?php echo $row["arrivingdate"]; ?></td>
 			    <td><?php echo $row["totalprice"]; ?></td>
