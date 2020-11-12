@@ -58,28 +58,29 @@
   		<form action="inserted.php" method="POST">
 
 		  	<label for="OrId">Order ID:</label>
-		    <input type="text" id="OrId" name="orderid" placeholder="Enter Order ID.." required>
-
+		    <input type="text" id="OrId" name="orderid" placeholder="Enter Order ID.." required> <br>
+			
 			<label for="Ordate">Order Date:</label>
-		    <input type="text" id="Ordate" name="orderdate" placeholder="Enter Order date.." required>
-
+		    <input type="date" id="Ordate" name="orderdate" placeholder="Enter Order date.." required> <br>
+			
 			<label for="SId">Supplier ID:</label>
-		    <input type="text" id="SId" name="supplierid" placeholder="Enter Supplier ID.." required>
+		    <input type="text" id="SId" name="supplierid" placeholder="Enter Supplier ID.." required> <br>
 
 		    <label for="Sname">Supplier Name:</label>
-		    <input type="text" id="Sname" name="suppliername" placeholder="Your name.." required>
+		    <input type="text" id="Sname" name="suppliername" placeholder="Your name.." required> <br>
 
 			<label for="Unum">Utility No:</label>
-		    <input type="text" id="Unum" name="utilitynumber" placeholder="Enter utility no.." required>
+		    <input type="text" id="Unum" name="utilitynumber" placeholder="Enter utility no.." required> <br>
 
 		    <label for="Units">No. of Units:</label>
-		    <input type="text" id="Units" name="numofunits" placeholder="Enter No. of units.." required>
+		    <input type="text" id="Units" name="numofunits" placeholder="Enter No. of units.." required> <br>
 
 			<label for="Arridate">Arriving Date:</label>
-		    <input type="text" id="Arridate" name="arrivingdate" placeholder="Enter arriving date.." required>
+		    <input type="date" id="Arridate" name="arrivingdate" placeholder="Enter arriving date.." required>
+			<br>
 
 		    <label for="Tprice">Total Price:</label>
-		    <input type="text" id="Tprice" name="totalprice" placeholder="price.." required>
+		    <input type="text" id="Tprice" name="totalprice" placeholder="price.." required> <br>
 
 			<label for="Aid">Admin ID:</label>
 		    <input type="text" id="Aid" name="adminid" placeholder="Your ID.." required>
