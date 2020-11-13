@@ -75,7 +75,7 @@
 		    <label for="manu">Manufacturer:</label>
 		    <input type="text" id="manu" name="manufacturer" placeholder="The manufacturer.." required>
 			
-			<label for="Description">Item description:</label>
+			<label for="Description">Item Description:</label>
 		    <input type="text" id="Ides" name="ides" placeholder="Item description.." required>
 			
 			<label for="Unit">Unit:</label>
@@ -84,13 +84,13 @@
 			<label for="Price">Price:</label>
 		    <input type="text" id="Price" name="price" placeholder="Price.." required>
 
-		    <label for="Iquantity">Item quantity:</label>
+		    <label for="Iquantity">Item Quantity:</label>
 		    <input type="text" id="Iquantity" name="iquantity" placeholder="Item quantity.." required>
 			
 			<label for="Total">Total:</label>
 		    <input type="text" id="Total" name="total" placeholder="Total.." required>
 			
-			<label for="Invoiceno">Order invoice no:</label>
+			<label for="Invoiceno">Order Invoice No:</label>
 		    <input type="text" id="Invoiceno" name="invoice" placeholder="Invoice no.." required>
 			
 			<label for="AdminId">Admin ID</label>
