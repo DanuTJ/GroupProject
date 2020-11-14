@@ -1,16 +1,16 @@
 <?php
 include_once 'connection.php';
-$result = mysqli_query($conn,"SELECT * FROM details");
+$result = mysqli_query($conn,"SELECT * FROM sorders");
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Item Details</title>
+<title>Supplier Details</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="Css/ManageItemCSS.css">
+<link rel="stylesheet" href="Css/ManageSupOrdercss.css">
 
 </head>
 <body>
@@ -55,9 +55,9 @@ if (mysqli_num_rows($result) > 0) {
   	<br>
   	<div class="row" style="margin-top: -18px;">
   		<ul>
-		  <li><a href="AddItemDetails.php">Add Item</a></li>
-		  <li><a href="ViewItem.php">View Item</a></li>
-		  <li><a class="active" href="ManageItem.php">Manage Item</a></li>
+		  <li><a href="AddSupOrder.php">Add Supplier Order</a></li>
+		  <li><a href="ViewSupOrder.php">View Supplier Order</a></li>
+		  <li><a class="active" href="ManageSupOrder.php">Manage Supplier Order</a></li>
 		  <li><a href="PrintDetails.php">Print Details</a></li>
 		</ul>
   	</div>
@@ -70,16 +70,13 @@ if (mysqli_num_rows($result) > 0) {
 		  	<br>
 		  	<table>
 			  <tr>
-			    <th>Item ID</th>
-			    <th>Item Name</th>
-			    <th>Item Category</th>
-			    <th>Manufacturer</th>
-			    <th>Item Description</th>
-		        <th>Unit</th>
-                <th>Price</th>
-			    <th>Item Quantity</th>
-				<th>Total</th>
-				<th>Order Invoice No</th>
+			    <th>Order ID</th>
+				<th>Order Date</th>
+				<th>Supplier ID</th>
+			    <th>Supplier Name</th>
+				<th>No.of Units</th>
+			    <th>Arriving Date</th>
+			    <th>Total Price</th>
 				<th>Admin ID</th>
 			    <th>Edit</th>
 			    <th>Delete</th>
@@ -89,19 +86,17 @@ if (mysqli_num_rows($result) > 0) {
 					while($row = mysqli_fetch_array($result)) {
 				?>
 			  <tr>
-			    <td><?php echo $row["id"]; ?></td>
-			    <td><?php echo $row["itemname"]; ?></td>
-			    <td><?php echo $row["category"]; ?></td>
-			    <td><?php echo $row["manufacturer"]; ?></td>
-			    <td><?php echo $row["ides"]; ?></td>
-				<td><?php echo $row["unit"]; ?></td>
-				<td><?php echo $row["price"]; ?></td>
-                <td><?php echo $row["iquantity"]; ?></td>
-				<td><?php echo $row["total"]; ?></td>
-				<td><?php echo $row["invoice"]; ?></td>
+			    <td><?php echo $row["orderid"]; ?></td>
+				<td><?php echo $row["orderdate"]; ?></td>
+				<td><?php echo $row["supplierid"]; ?></td>
+			    <td><?php echo $row["suppliername"]; ?></td>
+				<td><?php echo $row["numofunits"]; ?></td>
+			    <td><?php echo $row["arrivingdate"]; ?></td>
+			    <td><?php echo $row["totalprice"]; ?></td>
 				<td><?php echo $row["adminid"]; ?></td>
-				<td><a href="updated.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
-				<td><a href="deleted.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red"></i></a></td>
+			    
+				<td><a href="updated.php?id=<?php echo $row["orderid"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
+				<td><a href="deleted.php?id=<?php echo $row["orderid"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red"></i></a></td>
 
 			  </tr>
 			  	<?php

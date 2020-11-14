@@ -75,12 +75,12 @@ if (mysqli_num_rows($result) > 0) {
 			    <th>Item Name</th>
 			    <th>Item Category</th>
 			    <th>Manufacturer</th>
-			    <th>Item description</th>
+			    <th>Item Description</th>
 				<th>Unit</th>
                 <th>Price</th>
-			    <th>Item quantity</th>
+			    <th>Item Quantity</th>
 				<th>Total</th>
-				<th>Order Invoice no</th>
+				<th>Order Invoice No</th>
 				<th>Admin ID</th>
 			  </tr>
 			  	<?php
