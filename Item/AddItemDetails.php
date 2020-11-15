@@ -10,39 +10,7 @@
 </head>
 <body>
 
-<div class="sidenav">
-	<div class="row">
-  		<center><p style="font-size: 35px;"><b>IHealth</b></p>
-		<hr></center>
-  	</div>
-  	<div class="row">
-  		<center><p style="font-size: 20px;"><b>Dashboard</b></p>
-		<hr></center>
-  	</div>
-	<div class="row">
-  		<center><a href="#">Customer</a><hr>
-		<a href="#">Stock</a><hr>
-		<a href="#">Item</a><hr>
-		<a href="#">Supplier</a><hr>
-		<a href="#">Supplier Order</a><hr>
-		<a href="#">Customer Order</a><hr>
-		<a href="#">Employee</a><hr>
-		<a href="#">Finance</a></center>
-  	</div>
-	
-</div>
-
-<div class="content">
-  	<div class="row end">
-  		<div class="row">
-	  		<br>
-	  		<a href=""><i class="fa fa-address-book" style="font-size:35px;color:blue"></i></a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  		<a href=""><i class="fa fa-sign-out" style="font-size:35px;color:red"></i></a> 
-	  		<br>Edit Profile &nbsp;&nbsp;&nbsp;&nbsp; Sign Out
-  		</div>
-  		<br>
-  		<hr>
-  	</div>
+<?php include('../header.php') ?>
   	<br>
   	<div class="row" style="margin-top: -18px;">
   		<ul>
@@ -75,7 +43,7 @@
 		    <label for="manu">Manufacturer:</label>
 		    <input type="text" id="manu" name="manufacturer" placeholder="The manufacturer.." required>
 			
-			<label for="Description">Item description:</label>
+			<label for="Description">Item Description:</label>
 		    <input type="text" id="Ides" name="ides" placeholder="Item description.." required>
 			
 			<label for="Unit">Unit:</label>
@@ -84,13 +52,13 @@
 			<label for="Price">Price:</label>
 		    <input type="text" id="Price" name="price" placeholder="Price.." required>
 
-		    <label for="Iquantity">Item quantity:</label>
+		    <label for="Iquantity">Item Quantity:</label>
 		    <input type="text" id="Iquantity" name="iquantity" placeholder="Item quantity.." required>
 			
 			<label for="Total">Total:</label>
 		    <input type="text" id="Total" name="total" placeholder="Total.." required>
 			
-			<label for="Invoiceno">Order invoice no:</label>
+			<label for="Invoiceno">Order Invoice No:</label>
 		    <input type="text" id="Invoiceno" name="invoice" placeholder="Invoice no.." required>
 			
 			<label for="AdminId">Admin ID</label>

@@ -1,3 +1,6 @@
+<?php include('connection.php') ?>
+<?php include('session.php') ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +18,7 @@
             <img src="img/ihealth.png" width="10" height="500">
         </div>
         <div class="login-content">
-            <form action="index.html">
+        <form action="login-submit.php" method="post">
                 <img src="img/user.png">
                 <h2 class="title">Login</h2>
                 <div class="input-div one">
@@ -23,8 +26,8 @@
                         <i class="fas fa-user"></i>
                     </div>
                     <div class="div">
-                        <h5>Username</h5>
-                        <input type="text" class="input">
+                        <h5>Email</h5>
+                        <input type="text" class="input" name="email">
                     </div>
                 </div>
                 <div class="input-div pass">
@@ -33,13 +36,13 @@
                     </div>
                     <div class="div">
                         <h5>Password</h5>
-                        <input type="password" class="input">
+                        <input type="password" class="input" name="password">
                     </div>
                 </div>
 
                 <input type="submit" class="btn" value="Sign in">
                 <a href="#"><center>Don't have an account?</center></a>
-                <input type="submit" class="btn" value="Register">
+                
             </form>
         </div>
     </div>
