@@ -10,7 +10,8 @@ $result = mysqli_query($conn,"SELECT * FROM sorders");
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="Css/ManageSupOrdercss.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/Manage.css">
 
 </head>
 <body>
@@ -22,12 +23,14 @@ if (mysqli_num_rows($result) > 0) {
 <?php include('../header.php') ?>
   	<br>
   	<div class="row" style="margin-top: -18px;">
+	<div class="navbar">
   		<ul>
 		  <li><a href="AddSupOrder.php">Add Supplier Order</a></li>
 		  <li><a href="ViewSupOrder.php">View Supplier Order</a></li>
 		  <li><a class="active" href="ManageSupOrder.php">Manage Supplier Order</a></li>
 		  <li><a href="PrintDetails.php">Print Details</a></li>
 		</ul>
+		</div>
   	</div>
   	<br>
   	<div class="row form1">
