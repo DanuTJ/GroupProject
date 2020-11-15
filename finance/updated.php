@@ -12,7 +12,8 @@ $row= mysqli_fetch_array($result);
 <html>
 <head>
 <title>Update Utility Details</title>
-<link rel="stylesheet" href="Css/ViewUtilityCSS.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/View.css">
 </head>
 <body>
 	<div class="sidenav">
@@ -50,6 +51,7 @@ $row= mysqli_fetch_array($result);
   	</div>
   	<br>
   	<div class="row" style="margin-top: -18px;">
+	<div class="navbar">
   		<ul>
 		  <li><a href="AddUtility.php">Add Utility</a></li>
 		  <li><a href="ViewUtility.php">View Utility</a></li>
@@ -57,6 +59,7 @@ $row= mysqli_fetch_array($result);
 		  
 		  <li><a href="PrintDetails.php">Print Details</a></li>
 		</ul>
+		</div>
   	</div>
   	<br>
   	<div class="row form1">
@@ -83,7 +86,8 @@ $row= mysqli_fetch_array($result);
 		<input type="text" name="utilitydes" class="txtField" value="<?php echo $row['utilitydes']; ?>">
 		<br>
 		Date:<br>
-		<input type="date" name="date" class="txtField" value="<?php echo $row['date']; ?>">
+		<input type="date" name="date" class="txtField" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  margin: 8px 0;" value="<?php echo $row['date']; ?>">
 		<br>
 		Amount:<br>
 		<input type="text" name="amount" class="txtField" value="<?php echo $row['amount']; ?>">
