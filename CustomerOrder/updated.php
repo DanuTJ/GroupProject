@@ -10,7 +10,8 @@ $row= mysqli_fetch_array($result);
 <html>
 <head>
 <title>Update Customer Order Details</title>
-<link rel="stylesheet" href="Css/ViewCustomercss.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/View.css">
 </head>
 <body>
 	<div class="sidenav">
@@ -48,12 +49,14 @@ $row= mysqli_fetch_array($result);
   	</div>
   	<br>
   	<div class="row" style="margin-top: -18px;">
+	<div class="navbar">
   		<ul>
 		  <li><a href="AddCusOrder.php">Add Customer Order</a></li>
 		  <li><a href="ViewCustomerOrder.php">View Customer Order</a></li>
 		  <li><a class="active" href="ManageCustomerOrder.php">Manage Customer Order</a></li>
 		  <li><a href="PrintOrderDetails.php">Print Order Details</a></li>
 		</ul>
+		</div>
   	</div>
   	<br>
   	<div class="row form1">
