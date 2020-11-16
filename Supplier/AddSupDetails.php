@@ -28,23 +28,23 @@
   		<br>
   		<form action="inserted.php" method="POST">
 		    <label for="Sname">Supplier Name:</label>
-		    <input type="text" id="Sname" name="suppliername" placeholder="Your name.." required>
+		    <input type="text" id="Sname" name="suppliername" placeholder="Enter name.." required>
 			<br>
 
 			<label for="Cname">Company Name:</label>
-		    <input type="text" id="Cname" name="companyname" placeholder="Your Company name.." required>
+		    <input type="text" id="Cname" name="companyname" placeholder="Enter company name.." required>
 			<br>
 
 			<label for="Caddress">Company Address:</label>
-		    <input type="text" id="Caddress" name="companyaddress" placeholder="Your company address.." required>
+		    <input type="text" id="Caddress" name="companyaddress" placeholder="Enter company address.." required>
 			<br>
 
 		    <label for="Pno">Company Telephone:</label>
-		    <input type="text" id="pno" name="phoneno" placeholder="Your phone number.." required>
+		    <input type="text" id="pno" name="phoneno" placeholder="Enter phone number.." required>
 			<br>
 
 		    <label for="Email">Company Email:</label>
-		    <input type="text" id="email" name="email" placeholder="Your email.." required>
+		    <input type="text" id="email" name="email" placeholder="abc@gmail.com" required>
 			<br>
 		  	
 		  	<input type="submit" name="submit" value="Submit">
