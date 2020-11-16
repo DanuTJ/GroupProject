@@ -1,35 +1,20 @@
 
-<?php require_once('../connection.php'); ?>
-  <?php require_once('../session.php'); ?>
+<div class="navigation">
+        <div class="row-100 bg-grey">
+                <ul class="left-nav">
+                      <li><a class="home-active" href="index.php">Dashboard</a></li>
+                      <li><a class="products-active" href="products.php">Add Users</a></li>
+                      <li><a class="facilities-active" href="facilities.php">View Users</a></li>                      
+                      <li><a class="help-active" href="help.php">Help</a></li>
+                </ul>
+                
+                <div class="right-nav">
+                <?php 
+                require_once('../connection.php'); 
+                require_once('../session.php'); 
 
 
-<div class="sidenav">
-	<div class="row">
-  		<center><p style="font-size: 35px;"><b>IHealth</b></p>
-		<hr></center>
-  	</div>
-  	<div class="row">
-  		<center><p style="font-size: 20px;"><b>Dashboard</b></p>
-		<hr></center>
-  	</div>
-	<div class="row">
-  		<center><a href="../Customer/AddCusDetails.php">Customer</a><hr>
-		<a href="#">Stock</a><hr>
-		<a href="../Item/AddItemDetails.php">Item</a><hr>
-		<a href="../Supplier/AddSupDetails.php">Supplier</a><hr>
-		<a href="../Supplier order/AddSupOrder.php">Supplier Order</a><hr>
-		<a href="../CustomerOrder/AddCusOrder.php">Customer Order</a><hr>
-		<a href="#">Employee</a><hr>
-		<a href="../finance/AddUtility.php">Finance</a></center>
-  	</div>
-	
-</div>
-
-<div class="content">
-  	<div class="row end">
-  		<div class="row">
-	  		<br>  
-			   <?php 
+              
 					checkSession();
 					if(isset($_SESSION['name'])){
                         	
@@ -42,14 +27,14 @@
                                 echo "<br><p class=\"logged-in-msg\">You are Logged in as " . $_SESSION['name']. " (Admin)</p>";
 				            }
                             elseif("{$_SESSION['usertype']}" == 's'){ ?>
-								<a href="../EditProfile/EditProfile.php"><i class="fa fa-address-book" style="font-size:35px;color:blue"></i></a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;<a href=""><i class="fa fa-address-book" style="font-size:35px;color:blue"></i></a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  							<a href="../logout.php"><i class="fa fa-sign-out" style="font-size:35px;color:red"></i></a> 
 	  							<br>Edit Profile &nbsp;&nbsp;&nbsp;&nbsp; Sign Out
 								<?php
                                 echo "<br><p class=\"logged-in-msg\">You are Logged in as " . $_SESSION['name']. " (Stock Manager)</p>";
 				            }
 							elseif("{$_SESSION['usertype']}" == 'acc'){ ?>
-								<a href="../EditProfile/EditProfile.php"><i class="fa fa-address-book" style="font-size:35px;color:blue"></i></a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href=""><i class="fa fa-address-book" style="font-size:35px;color:blue"></i></a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  							<a href="../logout.php"><i class="fa fa-sign-out" style="font-size:35px;color:red"></i></a> 
 	  							<br>Edit Profile &nbsp;&nbsp;&nbsp;&nbsp; Sign Out
 								  <?php
@@ -62,11 +47,13 @@
 						echo "<li><a href=\"register.php\">Register</a></li>";
 						}
                 ?>
+         
 	  		
-  		</div>
-  		<br>
-  		<hr>
-  	</div>
-
-
-    
+                
+                    </div>
+                
+                
+            
+                
+        </div>
+                    </div>

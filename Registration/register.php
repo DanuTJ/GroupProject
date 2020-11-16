@@ -1,35 +1,59 @@
 <?php
- 
-include('connection.php');
-session_start();
- 
-if (isset($_POST['submit'])) {
- 
-  $type = $_POST['type'];
-	 $fname = $_POST['fname'];
-	 $address = $_POST['address'];
-	 $nic = $_POST['nic'];
-	 $telephone = $_POST['telephone'];
-	 $email = $_POST['email'];
-	 $pass = $_POST['pass'];
-	 $password_hash = password_hash($pass, PASSWORD_BCRYPT);
-     $cpass = $_POST['cpass'];
-	 $password_verify = password_verify($cpass, PASSWORD_BCRYPT);
+
+include('../connection.php');
+
+if(isset($_POST['submit'])){
 	
- 
-  
-    
- 
+    // Assign input data from form to variables
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$password = sha1($_POST['password']);
+	$cpass = sha1($_POST['cpass']);
+    $userType = $_POST['userType'];
+    $contact = $_POST['contact'];
    
-       $sql= "INSERT INTO register (type,fname,address,nic,telephone,email,pass,cpass)
-	 VALUES ('$type','$fname','$address','$nic','$telephone','$email','$password_hash','$password_verify')";
-       
-  if (mysqli_query($conn, $sql)) {
-		echo "You have registered successfully !";
-	 } else {
-		echo "Error: " . $sql . "
-" . mysqli_error($conn);
-	 }
-	 mysqli_close($conn);
+
+    if ($password != $cpass){
+        $message = base64_encode(urlencode("Passwords do not match"));
+        header('Location:registration.php?msg=' . $message);
+        exit();
+		}
+	else{
+        //Check if email already exists
+        $selectmail= "SELECT * FROM users WHERE email ='$email' " ;
+        $allmailquery = mysqli_query($conn, $selectmail ) ;  
+        $num = mysqli_num_rows($allmailquery);
+    
+        if($num > 0){
+        $message = base64_encode(urlencode("Email already exists"));
+        header('Location:registration.php?msg=' . $message);
+        exit();
+        }
+        
+        //Insert to Database
+        else {
+            $registrationQuery = "INSERT INTO users (name, email, password, usertype, contact) VALUES ('$name', '$email', '$password', '$userType', '$contact')";
+            
+            if (mysqli_query($conn,$registrationQuery) === TRUE) {
+                $message = base64_encode(urlencode("Registration Successful"));
+				header('Location:registration.php?msg=' . $message);
+				exit();
+            } 
+            
+            else {
+                $message = base64_encode(urlencode("SQL Error while Registering"));
+				header('Location:registration.php?msg=' . $message);
+				exit();
+            }
+        }
+        
+	}
 }
+
+
+
+mysqli_close($conn);
+   
+
+
 ?>

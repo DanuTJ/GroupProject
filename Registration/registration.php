@@ -22,36 +22,13 @@
 	<img src="img/user.png" style="width:80px;height:50px;" class="center">
 	<h1 class="h1">REGISTER</h1>
 	<div class="form-element">
-	<label for="type">User Type:</label>
-	<select id="type" name="type">
-    <option value="Manager">Manager</option>
-    <option value="Stock Manager">Stock Manager</option>
-     <option value="Accountant">Accountant</option>
-     </select>
 	
 	
     <div class="form-element">
 	
 	<label>Full name:</label>
-        <input type="text" name="fname"  required />
+        <input type="text" name="name"  required />
     </div>
-	
-	<div class="form-element">
-	 <label>Address:</label>
-     <input type="text"  name="address" required />
-    </div>
-	
-	
-	
-	 <div class="form-element">
-	 <label>NIC:</label>
-	<input type="text" name="nic" required />
-	</div>
-	
-	 <div class="form-element">
-	 <label>Telephone:</label>
-     <input type="text" name="telephone" required />
-	 </div>
 	 
 	 
 	 <div class="form-element">
@@ -61,7 +38,7 @@
 	 
     <div class="form-element">
         <label>Password:</label>
-        <input type="password" id="password" name="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required />
+        <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required />
     </div>
 	 
 	 <div class="form-element">
@@ -73,16 +50,30 @@
 	<script> var password = document.getElementById("password"), confirm_password = document.getElementById("confirm_password");
 
     function validatePassword(){
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords Don't Match");
-  } else {
-    confirm_password.setCustomValidity('');
-  }
-}
+        if(password.value != confirm_password.value) {
+         confirm_password.setCustomValidity("Passwords Don't Match");
+         } else {
+         confirm_password.setCustomValidity('');
+         }
+    }
 
 password.onchange = validatePassword;
 confirm_password.onkeyup = validatePassword;
 </script>
+
+
+
+<label for="type">User Type:</label>
+	<select id="userType" name="userType">
+    <option value="a">Admin</option>
+    <option value="s">Stock Manager</option>
+     <option value="acc">Accountant</option>
+     </select>
+
+<div class="form-element">
+	 <label>Telephone:</label>
+     <input type="text" name="contact" required />
+	 </div>
 	
     <button type="submit" name="submit" value="submit">Submit</button>
 	<button type="reset" name="reset" value="reset">Reset</button>
