@@ -41,14 +41,15 @@ if (mysqli_num_rows($result) > 0) {
 		  	<br>
 		  	<table>
 			  <tr>
-			  <th>ID</th>
-				<th>Date</th>
+			  
+			    <th>ID</th>				
 				<th>Customer Name</th>
 			    <th>Telephone Number</th>
 			    <th>Order</th>
 				<th>Price</th>
-				<th>Customer ID</th>
-			    <th>Admin ID</th>
+				<th>Date</th>
+				
+			  
 			    <th>Edit</th>
 			    <th>Delete</th>
 			  </tr>
@@ -57,14 +58,14 @@ if (mysqli_num_rows($result) > 0) {
 					while($row = mysqli_fetch_array($result)) {
 				?>
 			  <tr>
-			  <td><?php echo $row["id"]; ?></td>
-				<td><?php echo $row["date"]; ?></td>
+			  <td><?php echo $row["id"]; ?></td>				
 			    <td><?php echo $row["customername"]; ?></td>
 				<td><?php echo $row["phoneno"]; ?></td>
 			    <td><?php echo $row["orderdes"]; ?></td>
 			    <td><?php echo $row["price"]; ?></td>
-				<td><?php echo $row["customerid"]; ?></td>
-			    <td><?php echo $row["adminid"]; ?></td>
+				<td><?php echo $row["date"]; ?></td>
+				
+			   
 				<td><a href="updated.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
 				<td><a href="deleted.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red"></i></a></td>
 

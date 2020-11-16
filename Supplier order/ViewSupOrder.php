@@ -43,12 +43,11 @@ if (mysqli_num_rows($result) > 0) {
 			  <tr>
 			    <th>Order ID</th>
 				<th>Order Date</th>
-				<th>Supplier ID</th>
 			    <th>Supplier Name</th>
 				<th>No.of Units</th>
 			    <th>Arriving Date</th>
 			    <th>Total Price</th>
-				<th>Admin ID</th>
+				
 			    
 			  </tr>
 			  	<?php
@@ -58,12 +57,11 @@ if (mysqli_num_rows($result) > 0) {
 			  <tr>
 			    <td><?php echo $row["orderid"]; ?></td>
 				<td><?php echo $row["orderdate"]; ?></td>
-				<td><?php echo $row["supplierid"]; ?></td>
 			    <td><?php echo $row["suppliername"]; ?></td>
 				<td><?php echo $row["numofunits"]; ?></td>
 			    <td><?php echo $row["arrivingdate"]; ?></td>
 			    <td><?php echo $row["totalprice"]; ?></td>
-				<td><?php echo $row["adminid"]; ?></td>
+				
 			    
 			  </tr>
 			  	<?php

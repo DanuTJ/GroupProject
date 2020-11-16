@@ -43,27 +43,25 @@ if (mysqli_num_rows($result) > 0) {
 		  	<table>
 			  <tr>
 			    <th>ID</th>
-				<th>Date</th>
 				<th>Customer Name</th>
 			    <th>Telephone Number</th>
 			    <th>Order</th>
 				<th>Price</th>
-				<th>Customer ID</th>
-			    <th>Admin ID</th>
+				<th>Date</th>
+				
 			  </tr>
 			  	<?php
 					$i=0;
 					while($row = mysqli_fetch_array($result)) {
 				?>
 			  <tr>
-			    <td><?php echo $row["id"]; ?></td>
-				<td><?php echo $row["date"]; ?></td>
+			    <td><?php echo $row["id"]; ?></td>				
 			    <td><?php echo $row["customername"]; ?></td>
 				<td><?php echo $row["phoneno"]; ?></td>
 			    <td><?php echo $row["orderdes"]; ?></td>
 			    <td><?php echo $row["price"]; ?></td>
-				<td><?php echo $row["customerid"]; ?></td>
-			    <td><?php echo $row["adminid"]; ?></td>
+				<td><?php echo $row["date"]; ?></td>
+				
 			  </tr>
 			  	<?php
 					$i++;

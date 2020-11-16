@@ -64,15 +64,21 @@
 		    <input type="text" id="Eid" name="Employee ID" placeholder="Employee Name.." required>
 			<br>
 			
+			<label for="LeaveType">Leave Type:</label>
+		    <select id="type" name="type">
+		      <option value="Short Leave">Short Leave</option>
+		      <option value="Full Day">Full Day</option>
+		      
+		    </select>
+			<br>
+			
+			
 		    <label for="Date">Date:</label>
 		    <input type="date" id="Date" name="Date" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required>
            <br>
 
-            <label for="Time">Time:</label>
-		    <input type="time" id="Time" name="Time" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
-  margin: 8px 0;" required> 
-			<br> 
+            
 			<br>
 			<form action="/action_page.php">
 				

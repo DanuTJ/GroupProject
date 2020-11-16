@@ -10,7 +10,8 @@ $row= mysqli_fetch_array($result);
 <html>
 <head>
 <title>Update Customer Details</title>
-<link rel="stylesheet" href="Css/ViewCustomercss.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/View.css">
 </head>
 <body>
 	<div class="sidenav">
@@ -48,12 +49,14 @@ $row= mysqli_fetch_array($result);
   	</div>
   	<br>
   	<div class="row" style="margin-top: -18px;">
+	<div class="navbar">
   		<ul>
 		  <li><a href="AddCusDetails.php">Add Customer</a></li>
 		  <li><a href="ViewCustomer.php">View Customer</a></li>
 		  <li><a class="active" href="ManageCustomer.php">Manage Customer</a></li>
 		  <li><a href="PrintDetails.php">Print Details</a></li>
 		</ul>
+		</div>
   	</div>
   	<br>
   	<div class="row form1">
@@ -78,13 +81,11 @@ $row= mysqli_fetch_array($result);
 		</select>
 		<br>
 		Telephone Number:<br>
-		<input type="text" name="phoneno" class="txtField" value="<?php echo $row['phoneno']; ?>">
+		<input type="text" name="phoneno" class="txtField" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  value="<?php echo $row['phoneno']; ?>">
 		<br>
 		Email:<br>
-		<input type="text" name="email" class="txtField" value="<?php echo $row['email']; ?>">
+		<input type="email" name="email" class="txtField" value="<?php echo $row['email']; ?>">
 		<br>
-		Admin ID:<br>
-		<input type="text" name="adminid" class="txtField" value="<?php echo $row['adminid']; ?>">
 		<br>
 		<input type="submit" name="submit" value="Submit" class="buttom">
 

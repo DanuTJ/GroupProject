@@ -43,12 +43,11 @@ if (mysqli_num_rows($result) > 0) {
 			  <tr>
 			    <th>Order ID</th>
 				<th>Order Date</th>
-				<th>Supplier ID</th>
 			    <th>Supplier Name</th>
 				<th>No.of Units</th>
 			    <th>Arriving Date</th>
 			    <th>Total Price</th>
-				<th>Admin ID</th>
+				
 			    <th>Edit</th>
 			    <th>Delete</th>
 			  </tr>
@@ -59,12 +58,11 @@ if (mysqli_num_rows($result) > 0) {
 			  <tr>
 			    <td><?php echo $row["orderid"]; ?></td>
 				<td><?php echo $row["orderdate"]; ?></td>
-				<td><?php echo $row["supplierid"]; ?></td>
 			    <td><?php echo $row["suppliername"]; ?></td>
 				<td><?php echo $row["numofunits"]; ?></td>
 			    <td><?php echo $row["arrivingdate"]; ?></td>
 			    <td><?php echo $row["totalprice"]; ?></td>
-				<td><?php echo $row["adminid"]; ?></td>
+				
 			    
 				<td><a href="updated.php?id=<?php echo $row["orderid"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
 				<td><a href="deleted.php?id=<?php echo $row["orderid"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red"></i></a></td>
