@@ -46,8 +46,7 @@ if (mysqli_num_rows($result) > 0) {
 			    <th>Item Category</th>
 			    <th>Manufacturer</th>
 			    <th>Item Description</th>
-		        <th>Unit</th>
-                <th>Price</th>
+                <th>Unit Price</th>
 			    <th>Item Quantity</th>
 				<th>Total</th>
 				<th>Order Invoice No</th>
@@ -65,7 +64,6 @@ if (mysqli_num_rows($result) > 0) {
 			    <td><?php echo $row["category"]; ?></td>
 			    <td><?php echo $row["manufacturer"]; ?></td>
 			    <td><?php echo $row["ides"]; ?></td>
-				<td><?php echo $row["unit"]; ?></td>
 				<td><?php echo $row["price"]; ?></td>
                 <td><?php echo $row["iquantity"]; ?></td>
 				<td><?php echo $row["total"]; ?></td>
