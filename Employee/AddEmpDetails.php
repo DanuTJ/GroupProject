@@ -58,16 +58,16 @@
   		<br>
   		<form action="inserted.php" method="POST">
           	<label for="Eid">Employee ID:</label>
-		    <input type="text" id="Eid" name="Employee_ID" placeholder="Employee ID.." required>
+		    <input type="text" id="Eid" name="Employee_ID" placeholder="Enter employee id.." required>
 
 		    <label for="Ename">Employee Name:</label>
-		    <input type="text" id="Ename" name="name" placeholder="Employee name.." required>
+		    <input type="text" id="Ename" name="name" placeholder="Enter employee name.." required>
 
             <label for="Enic">NIC:</label>
-		    <input type="text" id="Eid" name="nic" placeholder="Employee nic.." required>
+		    <input type="text" id="Eid" name="nic" placeholder="Enter nic.." required>
 
 			<label for="Eaddress">Address:</label>
-		    <input type="text" id="Eaddress" name="address" placeholder="Employee permenent address.." required>
+		    <input type="text" id="Eaddress" name="address" placeholder="Enter permenent address.." required>
 
             <label for="Egender">Gender:</label> </br></br>
 			<input type="radio" id="male" name="status" value="male">
@@ -77,13 +77,13 @@
 			  </br>
 			  </br>
 		    <label for="Tphone">Telephone No:</label>
-		    <input type="text" id="Tpno" name="Telephone_No" placeholder="Employee phone number.." required>
+		    <input type="text" id="Tpno" name="Telephone_No" placeholder="Enter phone number.." required>
 
 		    <label for="Email">Email:</label>
-		    <input type="text" id="Email" name="Email" placeholder="Employee email.." required>
+		    <input type="text" id="Email" name="Email" placeholder="Ex:abc@gmail.com" required>
             
 		  	<label for="Adminid">Admin ID:</label>
-		    <input type="text" id="Adminid" name="Admin_ID" placeholder="Admin id.." required>
+		    <input type="text" id="Adminid" name="Admin_ID" placeholder="Enter admin id.." required>
 
 		  	<input type="submit" name="submit" value="Submit">
 		    <input type="reset" value="Reset">

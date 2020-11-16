@@ -30,11 +30,11 @@
   		<form action="insert.php" method="POST">
 		
 		    <label for="Iid">Item ID:</label>
-		    <input type="text" id="Iid" name="id" placeholder="Item ID.." required>
+		    <input type="text" id="Iid" name="id" placeholder="Enter item id.." required>
 			<br>
 			
 		    <label for="Iname">Item Name:</label>
-		    <input type="text" id="Iname" name="itemname" placeholder="Item name.." required>
+		    <input type="text" id="Iname" name="itemname" placeholder="Enter item name.." required>
             <br>
 			
 		    <label for="Icategory">Item Category:</label>
@@ -48,35 +48,31 @@
 			<br>
 
 		    <label for="manu">Manufacturer:</label>
-		    <input type="text" id="manu" name="manufacturer" placeholder="The manufacturer.." required>
+		    <input type="text" id="manu" name="manufacturer" placeholder="Enter manufacturer name.." required>
 			<br>
 			
 			<label for="Description">Item Description:</label>
-		    <input type="text" id="Ides" name="ides" placeholder="Item description.." required>
+		    <input type="text" id="Ides" name="ides" placeholder="Enter item description.." required>
 			<br>
 			
-			<label for="Unit">Unit:</label>
-		    <input type="text" id="Unit" name="unit" placeholder="Unit.." required>
-			<br>
-			
-			<label for="Price">Price:</label>
-		    <input type="text" id="Price" name="price" placeholder="Price.." required>
+			<label for="Price">Unit Price:</label>
+		    <input type="text" id="Price" name="price" placeholder="Ex: xxx.xx" required>
             <br>
 			
 		    <label for="Iquantity">Item Quantity:</label>
-		    <input type="text" id="Iquantity" name="iquantity" placeholder="Item quantity.." required>
+		    <input type="text" id="Iquantity" name="iquantity" placeholder="Ex: xxx" required>
 			<br>
 			
 			<label for="Total">Total:</label>
-		    <input type="text" id="Total" name="total" placeholder="Total.." required>
+		    <input type="text" id="Total" name="total" placeholder="Ex: xxx.xx" required>
 			<br>
 			
 			<label for="Invoiceno">Order Invoice No:</label>
-		    <input type="text" id="Invoiceno" name="invoice" placeholder="Invoice no.." required>
+		    <input type="text" id="Invoiceno" name="invoice" placeholder="Enter invoice no.." required>
 			<br>
 			
 			<label for="AdminId">Admin ID</label>
-		    <input type="text" id="AdminId" name="adminid" placeholder="Admin ID.." required>
+		    <input type="text" id="AdminId" name="adminid" placeholder="Enter admin id.." required>
 			<br>
 			
 		  	

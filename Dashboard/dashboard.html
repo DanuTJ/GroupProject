@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+  <!--Header Background -->
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="first-header">
+        <h2 class="welcome">Welcome to iHealth Dashboard>></h2>
+      </div>
+      <div class="toggle-button">
+        <label for="toggle">Dark Mode</label>
+        <label class="button-switch"><input id="toggle" type="checkbox" checked />
+          <span id="slider" class="slider round "></span>
+        </label>
+      </div>
+    </header>
+
+    <div class="heading-container"></div>
+
+    <!-- Cards -->
+    <section class="dash">
+
+      <div class="column">
+        <div class="row">
+          <div class="counter-card add">
+            <div class="arrow-div"><img src="images/add.png" alt="add-icon">
+              <p class="tags">iHealth</p>
+            </div>
+            <h2>Add Users</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="counter-card add">
+            <div class="arrow-div"><img src="images/edit.png" alt="edit-icon">
+              <p class="tags">iHealth</p>
+            </div>
+            <h2>Edit Users</h2>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="column">
+        <div class="row">
+          <div>
+            <!-- <div class="image">
+              <img src="images/img1.png" alt="abc" style="float:right; width: 80%;">
+            </div>  -->
+            <div class="counter-card add">
+              <div class="arrow-div"><img src="images/view.png" alt="view-icon">
+                <p class="tags">iHealth</p>
+              </div>
+              <h2>View Users</h2>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <div class="counter-card add">
+              <div class="arrow-div"><img src="images/func.png" alt="func-icon">
+                <p class="tags">iHealth</p>
+              </div>
+              <h2>Functions</h2>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+
+</html>
