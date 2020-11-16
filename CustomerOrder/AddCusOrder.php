@@ -29,12 +29,12 @@
   		<form action="inserted.php" method="POST">
 		    
 		    <label for="Cname">Customer Name:</label>
-			<input type="text" id="Cname" name="customername" placeholder="Enter customer name" required>
+			<input type="text" id="Cname" name="customername" placeholder="Enter customer name.." required>
 			<br>
 		 
 
 		    <label for="Pno">Telephone Number:</label>
-		    <input type="text" id="pno" name="phoneno" placeholder="Customer phone number.." required>
+		    <input type="text" id="pno" name="phoneno" placeholder="Enter phone number.." required>
 			<br>
 
 		    <label for="Order">Order:</label>
@@ -42,11 +42,11 @@
 			<br>
 
 			<label for="Price">Price:</label>
-		    <input type="text" id="Price" name="price" placeholder="Price.." required>
+		    <input type="text" id="Price" name="price" placeholder="Ex: xxx.xx" required>
 			<br>
 
 			<label for="Cid">Customer ID:</label>
-		    <input type="text" id="Cid" name="customerid" placeholder="Your ID.." required>
+		    <input type="text" id="Cid" name="customerid" placeholder="Enter customer id.." required>
 			<br>
 			
 			<label for="date">Date:</label>
@@ -56,7 +56,7 @@
 		  	
 
 		    <label for="Aid">Admin ID:</label>
-		    <input type="text" id="Aid" name="adminid" placeholder="Your ID.." required>
+		    <input type="text" id="Aid" name="adminid" placeholder="Enter admin id.." required>
 			<br>
 		  	
 		  	<input type="submit" name="submit" value="Submit">
