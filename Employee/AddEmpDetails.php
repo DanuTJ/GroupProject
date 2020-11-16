@@ -69,7 +69,7 @@
 			<br>
 
             <label for="Enic">NIC:</label>
-		    <input type="text" id="Eid" name="nic" placeholder="Enter nic.." required>
+		    <input type="text" id="Eid" name="nic" pattern="[A-Z0-9]+"  placeholder="Enter nic.." required>
 			<br>
 
 			<label for="Eaddress">Address:</label>
@@ -85,16 +85,15 @@
 			  </br>
 			  </br>
 		    <label for="Tphone">Telephone No:</label>
-		    <input type="text" id="Tpno" name="Telephone_No" placeholder="Enter phone number.." required>
+		    <input type="text" id="Tpno" name="Telephone_No"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Enter phone number.." required>
 			<br>
 
 		    <label for="Email">Email:</label>
-		    <input type="text" id="Email" name="Email" placeholder="Ex:abc@gmail.com" required>
+		    <input type="email" id="Email" name="Email" placeholder="Ex:abc@gmail.com" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  margin: 8px 0;" required>
 			<br>
             
-		  	<label for="Adminid">Admin ID:</label>
-		    <input type="text" id="Adminid" name="Admin_ID" placeholder="Enter admin id.." required>
-			<br> <br>
+		   <br>
 
 		  	<input type="submit" name="submit" value="Submit">
 		    <input type="reset" value="Reset">
