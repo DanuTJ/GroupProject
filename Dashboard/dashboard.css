@@ -9,16 +9,13 @@
     hsl(146, 68%, 55%);
 }
 html {
-  --text-color-subheading: hsl(220, 7%, 9%);
   --text-color-heading: hsl(230, 17%, 14%);
-  --background-top: hsl(240, 22%, 96%);
   --background-main: hsl(0, 0%, 100%);
   --card-background: hsl(194, 79%, 63%);
   --card-background-hover: hsl(248, 26%, 52%);
 }
 
 html.dark {
-  --text-color-subheading: hsl(228, 34%, 66%);
   --text-color-heading: hsl(0, 0%, 100%);
   --background-main: hsl(230, 17%, 14%);
   --card-background: hsl(228, 28%, 20%);
@@ -63,7 +60,7 @@ header {
   padding: 20px 0;
   padding-bottom: 35px;
 }
-.media {
+.welcome {
   font-size: 40px;
   font-family: cursive;
   font-weight: 900;
@@ -161,7 +158,7 @@ input:checked + .slider:before {
 }
 
 /* Counter Cards */
-.social-media {
+.dash {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -173,7 +170,6 @@ input:checked + .slider:before {
   justify-items: center;
   
 }
-
 .row {
   margin: 30px -5px;
 }
@@ -214,12 +210,6 @@ div.counter-card h2 {
 div.counter-card.add {
   border-color: hsl(241, 53%, 35%);
 }
-
-div.counter-card.image {
-  border: none;
-  margin: 4px 0 0 0;
-  border-radius: unset;
-}
 /*
 .image{
   float: right;
@@ -240,7 +230,7 @@ div.counter-card:hover {
     gap: 20px;
     width: 100%;
   }
-.social-media {
+.dash {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 20px;
