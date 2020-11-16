@@ -70,29 +70,25 @@ $row= mysqli_fetch_array($result);
 		<input type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>">
 		<input type="text" name="id"  value="<?php echo $row['id']; ?>">
 		<br>
-		Date: <br>
-		<input type="date" name="date" class="txtField" value="<?php echo $row['date']; ?>">
-	
-		<br>
+		
 
 		Customer Name: <br>
 		<input type="text" name="customername" class="txtField" value="<?php echo $row['customername']; ?>">
 		<br>
 	
 		Telephone Number:<br>
-		<input type="text" name="phoneno" class="txtField" value="<?php echo $row['phoneno']; ?>">
+		<input type="text" name="phoneno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="txtField" value="<?php echo $row['phoneno']; ?>">
 		<br>
 		Order Description:<br>
 		<input type="text" name="orderdes" class="txtField" value="<?php echo $row['orderdes']; ?>">
 		<br>
 		Price:<br>
-		<input type="text" name="price" class="txtField" value="<?php echo $row['price']; ?>">
+		<input type="text" name="price" class="txtField" pattern="[0-9]+" value="<?php echo $row['price']; ?>">
 		<br>
-		ustomer ID:<br>
-		<input type="text" name="customerid" class="txtField" value="<?php echo $row['customerid']; ?>">
+		Date: <br>
+		<input type="date" name="date" class="txtField" max="<?php echo date("Y-m-d"); ?>" value="<?php echo $row['date']; ?>">
+	
 		<br>
-		Admin ID:<br>
-		<input type="text" name="adminid" class="txtField" value="<?php echo $row['adminid']; ?>">
 		<br>
 		<input type="submit" name="submit" value="Submit" class="buttom">
 

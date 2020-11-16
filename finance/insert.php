@@ -7,11 +7,10 @@ if(isset($_POST['submit']))
 	 $utilitydes = $_POST['utilitydes'];
 	 $date = $_POST['date'];
 	 $amount = $_POST['amount'];
-	 $adminid = $_POST['adminid'];
 
 	 
-	 $sql = "INSERT INTO finance (id,type,utilitydes,date,amount,adminid)
-	 VALUES ('$id','$type','$utilitydes','$date','$amount','$adminid')";
+	 $sql = "INSERT INTO finance (id,type,utilitydes,date,amount)
+	 VALUES ('$id','$type','$utilitydes','$date','$amount')";
 	 if (mysqli_query($conn, $sql)) {
 		echo "New record created successfully !";
 	 } else {

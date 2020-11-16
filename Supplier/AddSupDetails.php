@@ -40,11 +40,13 @@
 			<br>
 
 		    <label for="Pno">Company Telephone:</label>
-		    <input type="text" id="pno" name="phoneno" placeholder="Enter phone number.." required>
+		    <input type="text" id="pno" name="phoneno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Enter phone number.." required>
 			<br>
 
 		    <label for="Email">Company Email:</label>
-		    <input type="text" id="email" name="email" placeholder="abc@gmail.com" required>
+		    <input type="email" id="email" name="email" placeholder="abc@gmail.com" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  margin: 8px 0;" required>
+			<br>
 			<br>
 		  	
 		  	<input type="submit" name="submit" value="Submit">
