@@ -71,7 +71,7 @@ $row= mysqli_fetch_array($result);
 		<input type="text" name="id"  value="<?php echo $row['id']; ?>">
 		<br>
 		Employee Name: <br>
-		<input type="text" name="employeename" class="txtField" value="<?php echo $row['employeename']; ?>">
+		<input type="text" name="employeename" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['employeename']; ?>">
 		<br>
 		NIC: <br>
 		<input type="text" name="employeenic" pattern="[A-Z0-9]+" class="txtField" value="<?php echo $row['employeenic']; ?>">

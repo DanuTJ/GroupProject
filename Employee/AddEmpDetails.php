@@ -65,7 +65,7 @@
 			<br>
 
 		    <label for="Ename">Employee Name:</label>
-		    <input type="text" id="Ename" name="name" placeholder="Enter employee name.." required>
+		    <input type="text" id="Ename" name="name" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" placeholder="Enter employee name.." required>
 			<br>
 
             <label for="Enic">NIC:</label>
@@ -85,7 +85,7 @@
 			  </br>
 			  </br>
 		    <label for="Tphone">Telephone No:</label>
-		    <input type="text" id="Tpno" name="Telephone_No"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Enter phone number.." required>
+		    <input type="text" id="Tpno" name="Telephone_No"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Ex: 000-000-0000" required>
 			<br>
 
 		    <label for="Email">Email:</label>

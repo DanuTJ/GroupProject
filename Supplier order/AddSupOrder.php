@@ -33,7 +33,7 @@
 		    <input type="text" id="OrId" name="orderid" placeholder="Enter order id.." required> <br>
 
 		    <label for="Sname">Supplier Name:</label>
-		    <input type="text" id="Sname" name="suppliername" placeholder="Enter supplier name.." required> <br>
+		    <input type="text" id="Sname" name="suppliername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" placeholder="Enter supplier name.." required> <br>
 
 		    <label for="Units">No. of Units:</label>
 		    <input type="text" id="Units" name="numofunits" placeholder="Enter quantity.." required> <br>
