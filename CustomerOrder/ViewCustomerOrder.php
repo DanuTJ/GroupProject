@@ -48,6 +48,7 @@ if (mysqli_num_rows($result) > 0) {
 			    <th>Order</th>
 				<th>Price</th>
 				<th>Date</th>
+				<th>Admin ID</th>
 				
 			  </tr>
 			  	<?php
@@ -61,6 +62,7 @@ if (mysqli_num_rows($result) > 0) {
 			    <td><?php echo $row["orderdes"]; ?></td>
 			    <td><?php echo $row["price"]; ?></td>
 				<td><?php echo $row["date"]; ?></td>
+				<td><?php echo $row["adminid"]; ?></td>
 				
 			  </tr>
 			  	<?php
