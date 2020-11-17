@@ -29,7 +29,7 @@
   		<form action="insert.php" method="POST">
 		
 		    <label for="Uno">Utility no:</label>
-		    <input type="text" id="Uno" name="id" placeholder="Utility number.." required>
+		    <input type="text" id="Uno" name="id" placeholder="Enter utility number.." required>
 			<br>
 			
 		    <label for="Utype">Utility type:</label>
@@ -41,24 +41,22 @@
 			<br>
 
             <label for="Udes">Description:</label>
-		    <input type="text" id="Udes" name="utilitydes" placeholder="Utility description.." required>
+		    <input type="text" id="Udes" name="utilitydes" placeholder="Enter utility description.." required>
 			<br>
 			
             
 		  
 			
 			<label for="amount">Amount:</label>
-		    <input type="text" id="amount" name="amount" placeholder="Amount.." required>
+		    <input type="text" id="amount" name="amount" pattern="[0-9]+" placeholder="Ex: xxx.xx" required>
 			<br>
 			
-		    <label for="AID">Admin ID:</label>
-		    <input type="text" id="AId" name="adminid" placeholder="Admin ID.." required>
-			<br>
+		  
 			  <label for="date">Date:</label>
-		    <input type="date" id="date" name="date" placeholder="Date.." style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="date" id="date" name="date" max="<?php echo date("Y-m-d"); ?>" placeholder="Date.." style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required>
 			<br>
-		  	
+		  	<br>
 		  	<input type="submit" name="submit" value="Submit">
 		    <input type="reset" value="Reset">
 

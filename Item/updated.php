@@ -1,7 +1,7 @@
 <?php
 include_once 'connection.php';
 if(count($_POST)>0) {
-mysqli_query($conn,"UPDATE details set id='" . $_POST['id'] . "', itemname='" . $_POST['itemname'] . "', category='" . $_POST['category'] . "', manufacturer='" . $_POST['manufacturer'] . "', ides='" . $_POST['ides'] . "', unit='" .$_POST['unit'] ."', price='" . $_POST['price'] ."' ,iquantity='" . $_POST['iquantity'] . "', total='" .$_POST['total'] ."' ,invoice='" . $_POST['invoice'] . "' ,adminid='" . $_POST['adminid'] . "' WHERE id='" . $_POST['id'] . "'");
+mysqli_query($conn,"UPDATE details set id='" . $_POST['id'] . "', itemname='" . $_POST['itemname'] . "', category='" . $_POST['category'] . "', manufacturer='" . $_POST['manufacturer'] . "', ides='" . $_POST['ides'] . "', price='" . $_POST['price'] ."' ,iquantity='" . $_POST['iquantity'] . "', total='" .$_POST['total'] ."' ,invoice='" . $_POST['invoice'] . "' ,adminid='" . $_POST['adminid'] . "' WHERE id='" . $_POST['id'] . "'");
 $message = "Record Modified Successfully";
 }
 
@@ -90,23 +90,21 @@ $row= mysqli_fetch_array($result);
 		Item description:<br>
 		<input type="text" name="ides" class="txtField" value="<?php echo $row['ides']; ?>">
 		<br>
-		Unit:<br>
-		<input type="text" name="unit" class="txtField" value="<?php echo $row['unit']; ?>">
-		<br>
-		Price:<br>
-		<input type="text" name="price" class="txtField" value="<?php echo $row['price']; ?>">
+		Unit Price:<br>
+		<input type="float" name="price" pattern="[0-9]+" class="txtField" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  margin: 8px 0;" value="<?php echo $row['price']; ?>">
 		<br>
 		Item quantity:<br>
-		<input type="text" name="iquantity" class="txtField" value="<?php echo $row['iquantity']; ?>">
+		<input type="number" name="iquantity" min="1" class="txtField" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  margin: 8px 0;" value="<?php echo $row['iquantity']; ?>">
 		<br>
 		Total:<br>
-		<input type="text" name="total" class="txtField" value="<?php echo $row['total']; ?>">
+		<input type="float" name="total" class="txtField" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  margin: 8px 0;" value="<?php echo $row['total']; ?>">
 		<br>
 		Order Invoice no:<br>
 		<input type="text" name="invoice" class="txtField" value="<?php echo $row['invoice']; ?>">
 		<br>
-		Admin ID:<br>
-		<input type="text" name="adminid" class="txtField" value="<?php echo $row['adminid']; ?>">
 		<br>
 		<input type="submit" name="submit" value="Submit" class="buttom">
 

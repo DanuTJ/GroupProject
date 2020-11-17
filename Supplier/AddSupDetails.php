@@ -11,6 +11,9 @@
 </head>
 <body>
 
+
+
+
 <?php include('../header.php') ?>
   	<br>
   	<div class="row" style="margin-top: -18px;">
@@ -28,23 +31,25 @@
   		<br>
   		<form action="inserted.php" method="POST">
 		    <label for="Sname">Supplier Name:</label>
-		    <input type="text" id="Sname" name="suppliername" placeholder="Your name.." required>
+		    <input type="text" id="Sname" name="suppliername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" placeholder="Enter name.." required>
 			<br>
 
 			<label for="Cname">Company Name:</label>
-		    <input type="text" id="Cname" name="companyname" placeholder="Your Company name.." required>
+		    <input type="text" id="Cname" name="companyname" placeholder="Enter company name.." required>
 			<br>
 
 			<label for="Caddress">Company Address:</label>
-		    <input type="text" id="Caddress" name="companyaddress" placeholder="Your company address.." required>
+		    <input type="text" id="Caddress" name="companyaddress" placeholder="Enter company address.." required>
 			<br>
 
 		    <label for="Pno">Company Telephone:</label>
-		    <input type="text" id="pno" name="phoneno" placeholder="Your phone number.." required>
+		    <input type="text" id="pno" name="phoneno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Ex: 000-000-0000" required>
 			<br>
 
 		    <label for="Email">Company Email:</label>
-		    <input type="text" id="email" name="email" placeholder="Your email.." required>
+		    <input type="email" id="email" name="email" placeholder="abc@gmail.com" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  margin: 8px 0;" required>
+			<br>
 			<br>
 		  	
 		  	<input type="submit" name="submit" value="Submit">

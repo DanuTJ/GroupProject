@@ -72,27 +72,24 @@ $row= mysqli_fetch_array($result);
 		<input type="text" name="orderid"  value="<?php echo $row['orderid']; ?>">
 		<br>
 		Order Date: <br>
-		<input type="date" name="orderdate" class="txtField" value="<?php echo $row['orderdate']; ?>">
+		<input type="date" name="orderdate" max="<?php echo date("Y-m-d"); ?>" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  margin: 8px 0;" class="txtField" value="<?php echo $row['orderdate']; ?>">
 
-		<br>
-
-		Supplier ID:<br>
-		<input type="text" name="supplierid" class="txtField" value="<?php echo $row['supplierid']; ?>">
 		<br>
 		Supplier Name: <br>
-		<input type="text" name="suppliername" class="txtField" value="<?php echo $row['suppliername']; ?>">
+		<input type="text" name="suppliername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['suppliername']; ?>">
 		<br>
 		No. of Units: <br>
-		<input type="text" name="numofunits" class="txtField" value="<?php echo $row['numofunits']; ?>">
+		<input type="number" name="numofunits" min="1" style="width:515px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  margin: 8px 0;" class="txtField" value="<?php echo $row['numofunits']; ?>">
 		<br>
 		Arriving Date:<br>
-		<input type="date" name="arrivingdate" class="txtField" value="<?php echo $row['arrivingdate']; ?>">
+		<input type="date" name="arrivingdate" class="txtField" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  margin: 8px 0;" value="<?php echo $row['arrivingdate']; ?>">
 		<br>
 		Total Price:<br>
-		<input type="text" name="totalprice" class="txtField" value="<?php echo $row['totalprice']; ?>">
+		<input type="text" name="totalprice"  pattern="[0-9]+" class="txtField" value="<?php echo $row['totalprice']; ?>">
 		<br>
-		Admin ID:<br>
-		<input type="text" name="adminid" class="txtField" value="<?php echo $row['adminid']; ?>">
 		<br>
 		<input type="submit" name="submit" value="Submit" class="buttom">
 

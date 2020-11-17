@@ -29,12 +29,12 @@
   		<form action="inserted.php" method="POST">
 		    
 		    <label for="Cname">Customer Name:</label>
-			<input type="text" id="Cname" name="customername" placeholder="Enter customer name" required>
+			<input type="text" id="Cname" name="customername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" placeholder="Enter customer name.." required>
 			<br>
 		 
 
 		    <label for="Pno">Telephone Number:</label>
-		    <input type="text" id="pno" name="phoneno" placeholder="Customer phone number.." required>
+		    <input type="text" id="pno" name="phoneno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Ex: 000-000-0000" required>
 			<br>
 
 		    <label for="Order">Order:</label>
@@ -42,21 +42,17 @@
 			<br>
 
 			<label for="Price">Price:</label>
-		    <input type="text" id="Price" name="price" placeholder="Price.." required>
+		    <input type="text" id="Price" name="price" pattern="[0-9]+" placeholder="Ex: xxx.xx" required>
 			<br>
 
-			<label for="Cid">Customer ID:</label>
-		    <input type="text" id="Cid" name="customerid" placeholder="Your ID.." required>
-			<br>
 			
 			<label for="date">Date:</label>
-		    <input type="date" id="date" name="date" placeholder="Date of the Order.." style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="date" id="date" name="date" max="<?php echo date("Y-m-d"); ?>" placeholder="Date of the Order.." style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required>
 			<br> 
 		  	
 
-		    <label for="Aid">Admin ID:</label>
-		    <input type="text" id="Aid" name="adminid" placeholder="Your ID.." required>
+		   
 			<br>
 		  	
 		  	<input type="submit" name="submit" value="Submit">

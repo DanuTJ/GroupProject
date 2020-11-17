@@ -79,7 +79,8 @@ if (mysqli_num_rows($result) > 0) {
 			    <th>Type</th>
 			    <th>Telephone Number</th>
 			    <th>Email</th>
-			    <th>Admin ID</th>
+				<th>Admin ID</th>
+
 			  </tr>
 			  	<?php
 					$i=0;
@@ -91,7 +92,8 @@ if (mysqli_num_rows($result) > 0) {
 			    <td><?php echo $row["type"]; ?></td>
 			    <td><?php echo $row["phoneno"]; ?></td>
 			    <td><?php echo $row["email"]; ?></td>
-			    <td><?php echo $row["adminid"]; ?></td>
+				<td><?php echo $row["adminid"]; ?></td>
+			  
 			  </tr>
 			  	<?php
 					$i++;

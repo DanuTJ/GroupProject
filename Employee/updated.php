@@ -10,7 +10,8 @@ $row= mysqli_fetch_array($result);
 <html>
 <head>
 <title>Update Employee Details</title>
-<link rel="stylesheet" href="Css/Viewcss.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/View.css">
 </head>
 <body>
 	<div class="sidenav">
@@ -48,12 +49,14 @@ $row= mysqli_fetch_array($result);
   	</div>
   	<br>
   	<div class="row" style="margin-top: -18px;">
+	<div class = "navbar">
   		<ul>
 		  <li><a href="AddEmpDetails.php">Add Employee</a></li>
 		  <li><a class="active" href="ManageEmployee.php">Manage Employee</a></li>
 		  <li><a href="MarkAttendence.php">Mark Attendence</a></li>
 		  <li><a href="PrintDetails.php">Print Details</a></li>
 		</ul>
+		</div>
   	</div>
   	<br>
   	<div class="row form1">
@@ -68,10 +71,10 @@ $row= mysqli_fetch_array($result);
 		<input type="text" name="id"  value="<?php echo $row['id']; ?>">
 		<br>
 		Employee Name: <br>
-		<input type="text" name="employeename" class="txtField" value="<?php echo $row['employeename']; ?>">
+		<input type="text" name="employeename" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['employeename']; ?>">
 		<br>
 		NIC: <br>
-		<input type="text" name="employeenic" class="txtField" value="<?php echo $row['employeenic']; ?>">
+		<input type="text" name="employeenic" pattern="[A-Z0-9]+" class="txtField" value="<?php echo $row['employeenic']; ?>">
 		<br>
 		Gender: <br>
 		<input type="radio" name="male" value="Male" class="radio" value="<?php echo $row['gender']; ?>">
@@ -81,11 +84,12 @@ $row= mysqli_fetch_array($result);
 		<input type="text" name="employeeaddress" class="txtField" value="<?php echo $row['employeeaddress']; ?>">
 		<br>
 		Telephone No:<br>
-		<input type="text" name="phoneno" class="txtField" value="<?php echo $row['phoneno']; ?>">
+		<input type="text" name="phoneno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="txtField" value="<?php echo $row['phoneno']; ?>">
 		<br>
 		Email:<br>
-		<input type="text" name="email" class="txtField" value="<?php echo $row['email']; ?>">
-		<br>
+		<input type="email" name="email" class="txtField" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  margin: 8px 0;" value="<?php echo $row['email']; ?>">
+		<br><br>
 		<input type="submit" name="submit" value="Submit" class="buttom">
 
 	</form>
