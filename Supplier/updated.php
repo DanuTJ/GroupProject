@@ -71,7 +71,7 @@ $row= mysqli_fetch_array($result);
 		<input type="text" name="id"  value="<?php echo $row['id']; ?>">
 		<br>
 		Supplier Name: <br>
-		<input type="text" name="suppliername" class="txtField" value="<?php echo $row['suppliername']; ?>">
+		<input type="text" name="suppliername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['suppliername']; ?>">
 		<br>
 		Company Name: <br>
 		<input type="text" name="companyname" class="txtField" value="<?php echo $row['companyname']; ?>">

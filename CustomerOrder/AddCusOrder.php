@@ -29,12 +29,12 @@
   		<form action="inserted.php" method="POST">
 		    
 		    <label for="Cname">Customer Name:</label>
-			<input type="text" id="Cname" name="customername" placeholder="Enter customer name.." required>
+			<input type="text" id="Cname" name="customername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" placeholder="Enter customer name.." required>
 			<br>
 		 
 
 		    <label for="Pno">Telephone Number:</label>
-		    <input type="text" id="pno" name="phoneno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Enter phone number.." required>
+		    <input type="text" id="pno" name="phoneno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Ex: 000-000-0000" required>
 			<br>
 
 		    <label for="Order">Order:</label>

@@ -71,7 +71,7 @@ $row= mysqli_fetch_array($result);
 		<input type="text" name="id"  value="<?php echo $row['id']; ?>">
 		<br>
 		Customer Name: <br>
-		<input type="text" name="customername" class="txtField" value="<?php echo $row['customername']; ?>">
+		<input type="text" name="customername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['customername']; ?>">
 		<br>
 		Customer Type:<br>
 		<select id="type" name="type">
