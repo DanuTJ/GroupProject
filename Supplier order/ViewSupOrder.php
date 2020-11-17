@@ -47,6 +47,7 @@ if (mysqli_num_rows($result) > 0) {
 				<th>No.of Units</th>
 			    <th>Arriving Date</th>
 			    <th>Total Price</th>
+				<th>Admin ID</th>
 				
 			    
 			  </tr>
@@ -61,6 +62,7 @@ if (mysqli_num_rows($result) > 0) {
 				<td><?php echo $row["numofunits"]; ?></td>
 			    <td><?php echo $row["arrivingdate"]; ?></td>
 			    <td><?php echo $row["totalprice"]; ?></td>
+				<td><?php echo $row["adminid"]; ?></td>
 				
 			    
 			  </tr>

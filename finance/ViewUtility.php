@@ -47,6 +47,7 @@ if (mysqli_num_rows($result) > 0) {
 			    <th>Description</th>
 			    <th>Date</th>
 			    <th>Amount</th>
+				<th>Admin ID</th>
 				
 			  </tr>
 			  	<?php
@@ -59,6 +60,7 @@ if (mysqli_num_rows($result) > 0) {
 			    <td><?php echo $row["utilitydes"]; ?></td>
 			    <td><?php echo $row["date"]; ?></td>
 			    <td><?php echo $row["amount"]; ?></td>
+				<td><?php echo $row["adminid"]; ?></td>
 				
 				
 			  </tr>
