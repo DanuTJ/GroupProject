@@ -95,7 +95,7 @@ $row= mysqli_fetch_array($result);
   margin: 8px 0;" value="<?php echo $row['price']; ?>">
 		<br>
 		Item quantity:<br>
-		<input type="int" name="iquantity" class="txtField" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="number" name="iquantity" min="1" class="txtField" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" value="<?php echo $row['iquantity']; ?>">
 		<br>
 		Total:<br>

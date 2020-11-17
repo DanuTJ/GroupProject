@@ -31,7 +31,7 @@
   		<br>
   		<form action="inserted.php" method="POST">
 		    <label for="Sname">Supplier Name:</label>
-		    <input type="text" id="Sname" name="suppliername" placeholder="Enter name.." required>
+		    <input type="text" id="Sname" name="suppliername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" placeholder="Enter name.." required>
 			<br>
 
 			<label for="Cname">Company Name:</label>
@@ -43,7 +43,7 @@
 			<br>
 
 		    <label for="Pno">Company Telephone:</label>
-		    <input type="text" id="pno" name="phoneno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Enter phone number.." required>
+		    <input type="text" id="pno" name="phoneno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Ex: 000-000-0000" required>
 			<br>
 
 		    <label for="Email">Company Email:</label>
