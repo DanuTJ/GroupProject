@@ -73,7 +73,7 @@ $row= mysqli_fetch_array($result);
 		
 
 		Customer Name: <br>
-		<input type="text" name="customername" class="txtField" value="<?php echo $row['customername']; ?>">
+		<input type="text" name="customername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['customername']; ?>">
 		<br>
 	
 		Telephone Number:<br>

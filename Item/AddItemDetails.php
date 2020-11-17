@@ -61,7 +61,7 @@
             <br>
 			
 		    <label for="Iquantity">Item Quantity:</label>
-		    <input type="int" id="Iquantity" name="iquantity" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="number" id="Iquantity" name="iquantity" min="1" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" placeholder="Ex: xxx" required>
 			<br>
 			
