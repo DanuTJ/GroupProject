@@ -48,6 +48,7 @@ if (mysqli_num_rows($result) > 0) {
 				<th>Address</th>
 			    <th>Telephone Number</th>
 			    <th>Email</th>
+				<th>Admin ID</th>
 			    
 			  </tr>
 			  	<?php
@@ -61,6 +62,7 @@ if (mysqli_num_rows($result) > 0) {
 				<td><?php echo $row["companyaddress"]; ?></td>
 			    <td><?php echo $row["phoneno"]; ?></td>
 			    <td><?php echo $row["email"]; ?></td>
+				<td><?php echo $row["adminid"]; ?></td>
 			    
 			  </tr>
 			  	<?php
