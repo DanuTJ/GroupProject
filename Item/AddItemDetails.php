@@ -56,17 +56,17 @@
 			<br>
 			
 			<label for="Price">Unit Price:</label>
-		    <input type="float" id="Price" name="price" pattern="[0-9]+" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="float" id="Price" name="price" pattern="[0-9]+" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" placeholder="Ex: xxx.xx" required>
             <br>
 			
 		    <label for="Iquantity">Item Quantity:</label>
-		    <input type="number" id="Iquantity" name="iquantity" min="1" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="number" id="Iquantity" name="iquantity" min="1" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" placeholder="Ex: xxx" required>
 			<br>
 			
 			<label for="Total">Total:</label>
-		    <input type="float" id="Total" name="total" pattern="[0-9]+" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="float" id="Total" name="total" pattern="[0-9]+" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" placeholder="Ex: xxx.xx" required>
 			<br>
 			
