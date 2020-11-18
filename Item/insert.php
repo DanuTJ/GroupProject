@@ -14,7 +14,7 @@ if(isset($_POST['submit']))
 	
 
 	 
-	 $sql = "INSERT INTO details (id,itemname,category,manufacturer,ides,price,iquantity,total,invoice)
+	 $sql = "INSERT INTO items (id,itemname,category,manufacturer,ides,price,iquantity,total,invoice)
 	 VALUES ('$id','$itemname','$category','$manufacturer','$ides','$price','$iquantity','$total','$invoice')";
 	 if (mysqli_query($conn, $sql)) {
 		echo "New record created successfully !";

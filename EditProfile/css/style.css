@@ -9,6 +9,36 @@ body {
 	overflow: hidden;
 	
 }
+.content {
+	margin-left: 350px;
+	margin-right: 15px;
+	padding-left: 20px;
+	text-align:center;
+	
+  }
+  .end {
+	text-align: end;
+
+	
+  }
+  .row-25, .row-50, .row-75, .row-100{
+    float: left;
+    position: relative;
+    padding: 15px;
+    
+}
+.row-100 {
+    width: 100%;
+   
+}
+  .navigation .right-nav{
+    float: right;
+}
+.navigation .left-nav{
+    float: left;
+}
+
+
 
 .back {
 	position: fixed;

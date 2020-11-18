@@ -33,34 +33,6 @@
                 </div>
                 <div class="input-div one">
                     <div class="i">
-                        <i class="fas fa-address-book"></i>
-                    </div>
-                    <div class="div">
-                        <h5>Address</h5>
-                        <input type="text" class="input">
-                    </div>
-                </div>
-                <div class="input-div one">
-                    <div class="i">
-                        <i class="fas fa-id-card"></i>
-                    </div>
-                    <div class="div">
-                        <h5>NIC</h5>
-                        <input type="text" class="input">
-                    </div>
-                </div>
-                <div class="input-div one">
-                    <div class="i">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="div">
-                        <h5>Telephone</h5>
-                        <input type="text" class="input">
-                    </div>
-
-                </div>
-                <div class="input-div one">
-                    <div class="i">
                         <i class="fas fa-envelope"></i>
                     </div>
                     <div class="div">
@@ -68,6 +40,7 @@
                         <input type="text" class="input">
                     </div>
                 </div>
+          
                 <div class="input-div pass">
                     <div class="i">
                         <i class="fas fa-lock"></i>
@@ -85,6 +58,17 @@
                     <div class="div">
                         <h5>Confirm Password</h5>
                         <input type="password" class="input">
+                    </div>
+
+                </div>
+            </br>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="div">
+                        <h5>Telephone</h5>
+                        <input type="text" class="input">
                     </div>
 
                 </div>
