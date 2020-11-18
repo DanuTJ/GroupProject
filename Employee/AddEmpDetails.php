@@ -28,6 +28,7 @@
   	<div class="row form1">
   		<br>
   		<form action="inserted.php" method="POST">
+		  <h3 class="error-msg"><?php include('../messege.php'); ?></h3>
           	<label for="Eid">Employee ID:</label>
 		    <input type="text" id="Eid" name="Employee_ID" placeholder="Enter employee id.." required>
 			<br>

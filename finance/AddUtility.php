@@ -27,6 +27,8 @@
   	<div class="row form1">
   		<br>
   		<form action="insert.php" method="POST">
+
+		  <h3 class="error-msg"><?php include('../messege.php'); ?></h3>
 		
 		    <label for="Uno">Utility no:</label>
 		    <input type="text" id="Uno" name="id" placeholder="Enter utility number.." required>

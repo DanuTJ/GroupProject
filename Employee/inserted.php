@@ -18,6 +18,7 @@ if(isset($_POST['submit']))
 	 
 	 $sql = "INSERT INTO emp (Employee_ID,Employee_Name,NIC,Address,Gender,Telephone_No,Email,adminid) VALUES ('$employeeid','$name','$nic','$address','$gender','$telephoneno','$email','$adminid')";
 	 if (mysqli_query($conn, $sql)) {
+		$message = base64_encode(urlencode("Record Added  Successfully"));
 		header('Location:AddEmpDetails.php?msg=' . $message);
 	 } else {
 		echo "Error: " . $sql . "

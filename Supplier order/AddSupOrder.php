@@ -27,6 +27,7 @@
   	<div class="row form1">
   		<br>
   		<form action="inserted.php" method="POST">
+		  <h3 class="error-msg"><?php include('../messege.php'); ?></h3>
 		
 
 		  	<label for="OrId">Order ID:</label>

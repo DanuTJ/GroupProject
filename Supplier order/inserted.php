@@ -15,6 +15,7 @@ if(isset($_POST['submit']))
 	 $sql = "INSERT INTO sorders (id,orderdate,suppliername,numofunits,arrivingdate,totalprice,adminid)
 	 VALUES ('$id','$orderdate','$suppliername','$numofunits','$arrivingdate','$totalprice','$adminid')";
 	 if (mysqli_query($conn, $sql)) {
+		$message = base64_encode(urlencode("Record Added  Successfully"));
 		header('Location:AddSupOrder.php?msg=' . $message);
 	 } else {
 		echo "Error: " . $sql . "
