@@ -46,7 +46,7 @@ if (mysqli_num_rows($result) > 0) {
 			    <th>Supplier Name</th>
 				<th>No.of Units</th>
 			    <th>Arriving Date</th>
-			    <th>Total Price</th>
+			    <th>Price</th>
 				<th>Admin ID</th>
 				
 			    
@@ -56,7 +56,7 @@ if (mysqli_num_rows($result) > 0) {
 					while($row = mysqli_fetch_array($result)) {
 				?>
 			  <tr>
-			    <td><?php echo $row["orderid"]; ?></td>
+			    <td><?php echo $row["id"]; ?></td>
 				<td><?php echo $row["orderdate"]; ?></td>
 			    <td><?php echo $row["suppliername"]; ?></td>
 				<td><?php echo $row["numofunits"]; ?></td>

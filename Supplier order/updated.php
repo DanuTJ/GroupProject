@@ -1,10 +1,10 @@
 <?php
 include_once 'connection.php';
 if(count($_POST)>0) {
-mysqli_query($conn,"UPDATE sorders set orderid='" . $_POST['orderid'] . "', orderdate='" . $_POST['orderdate'] . "',supplierid='" . $_POST['supplierid'] . "',suppliername='" . $_POST['suppliername'] . "',numofunits='" . $_POST['numofunits'] . "', arrivingdate='" . $_POST['arrivingdate'] . "', totalprice='" . $_POST['totalprice'] . "', adminid='" . $_POST['adminid'] . "' WHERE orderid='" . $_POST['orderid'] . "'");
+mysqli_query($conn,"UPDATE sorders set id='" . $_POST['id'] . "', orderdate='" . $_POST['orderdate'] . "',suppliername='" . $_POST['suppliername'] . "', numofunits='" . $_POST['numofunits'] . "', arrivingdate='" . $_POST['arrivingdate'] . "', totalprice='" . $_POST['totalprice'] . "' WHERE id='" . $_POST['id'] . "'");
 $message = "Record Modified Successfully";
 }
-$result = mysqli_query($conn,"SELECT * FROM sorders WHERE orderid='" . $_GET['id'] . "'");
+$result = mysqli_query($conn,"SELECT * FROM sorders WHERE id='" . $_GET['id'] . "'");
 $row= mysqli_fetch_array($result);
 ?>
 <html>
@@ -68,12 +68,12 @@ $row= mysqli_fetch_array($result);
 		</div>
 
 		Order ID: <br>
-		<input type="hidden" name="orderid" class="txtField" value="<?php echo $row['orderid']; ?>">
-		<input type="text" name="orderid"  value="<?php echo $row['orderid']; ?>">
+		<input type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>">
+		<input type="text" name="id"  value="<?php echo $row['id']; ?>">
 		<br>
 		Order Date: <br>
 		<input type="date" name="orderdate" max="<?php echo date("Y-m-d"); ?>" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
-  margin: 8px 0;" class="txtField" value="<?php echo $row['orderdate']; ?>">
+ 			 margin: 8px 0;" class="txtField" value="<?php echo $row['orderdate']; ?>">
 
 		<br>
 		Supplier Name: <br>
@@ -88,7 +88,7 @@ $row= mysqli_fetch_array($result);
   margin: 8px 0;" value="<?php echo $row['arrivingdate']; ?>">
 		<br>
 		Total Price:<br>
-		<input type="text" name="totalprice"  pattern="[0-9]+" class="txtField" value="<?php echo $row['totalprice']; ?>">
+		<input type="text" name="totalprice"  pattern="[0-9]*[.]?[0-9]+" class="txtField" value="<?php echo $row['totalprice']; ?>">
 		<br>
 		<br>
 		<input type="submit" name="submit" value="Submit" class="buttom">

@@ -1,6 +1,6 @@
 <?php
 include_once 'connection.php';
-$result = mysqli_query($conn,"SELECT * FROM details");
+$result = mysqli_query($conn,"SELECT * FROM suppliers");
 ?>
 
 <!DOCTYPE html>
