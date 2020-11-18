@@ -2,9 +2,9 @@
 <div class="navigation">
         <div class="row-100 bg-grey">
                 <ul class="left-nav">
-                      <li><a class="home-active" href="../Dashboard/dashboard.php">Dashboard</a></li>
-                      <li><a class="products-active" href="../Registration/registration.php">Add Users</a></li>
-                      <li><a class="facilities-active" href="ViewAdminUsers.php">View Users</a></li>                      
+                      <li><a class="home-active" href="dashboard.php">Dashboard</a></li>
+                      <li><a class="products-active" href="registration.php">Add Users</a></li>
+                      <li><a class="facilities-active" href="ViewAccountantUsers.php">View Users</a></li>                      
                       <li><a class="help-active" href="EditUsers.php">Edit Users</a></li>
                 </ul>
                 
@@ -22,23 +22,24 @@
 
 								<a href="../EditProfile/EditProfile.php"><i class="fa fa-address-book" style="font-size:35px;color:blue"></i></a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  							<a href="../logout.php"><i class="fa fa-sign-out" style="font-size:35px;color:red"></i></a> 
-	  							<br>Edit Profile &nbsp;&nbsp;&nbsp;&nbsp; Sign Out
+	  							<br> <a>Edit Profile </a> &nbsp;&nbsp;&nbsp;&nbsp;<a> Sign Out </a>
 								<?php
                                 echo "<br><p class=\"logged-in-msg\">You are Logged in as " . $_SESSION['name']. " (Admin)</p>";
 				            }
                             elseif("{$_SESSION['usertype']}" == 's'){ ?>
-								&nbsp;&nbsp;<a href=""><i class="fa fa-address-book" style="font-size:35px;color:blue"></i></a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								&nbsp;&nbsp;<a href="../EditProfile/EditProfile.php"><i class="fa fa-address-book" style="font-size:35px;color:blue"></i></a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  							<a href="../logout.php"><i class="fa fa-sign-out" style="font-size:35px;color:red"></i></a> 
-	  							<br>Edit Profile &nbsp;&nbsp;&nbsp;&nbsp; Sign Out
+	  							<br> <a>Edit Profile </a> &nbsp;&nbsp;&nbsp;&nbsp; <a> Sign Out </a>
 								<?php
                                 echo "<br><p class=\"logged-in-msg\">You are Logged in as " . $_SESSION['name']. " (Stock Manager)</p>";
 				            }
-							elseif("{$_SESSION['usertype']}" == 'acc'){ ?>
+							elseif("{$_SESSION['usertype']}" == 'c'){ ?>
 								<a href=""><i class="fa fa-address-book" style="font-size:35px;color:blue"></i></a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  							<a href="../logout.php"><i class="fa fa-sign-out" style="font-size:35px;color:red"></i></a> 
-	  							<br>Edit Profile &nbsp;&nbsp;&nbsp;&nbsp; Sign Out
+								  <br> <a>Edit Profile </a> &nbsp;&nbsp;&nbsp;&nbsp; <a> Sign Out </a>
+								  <br>
 								  <?php
-                                echo "<br><p class=\"logged-in-msg\">You are Logged in as " . $_SESSION['name']. " (Accountant)</p>";
+                                echo "<br> <br> <p class=\"logged-in-msg\">You are Logged in as " . $_SESSION['name']. " (Accountant)</p>";
 				            }
                             
                         }

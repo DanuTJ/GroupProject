@@ -22,7 +22,7 @@
 
 								<a href="../EditProfile/EditProfile.php"><i class="fa fa-address-book" style="font-size:35px;color:blue"></i></a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  							<a href="../logout.php"><i class="fa fa-sign-out" style="font-size:35px;color:red"></i></a> 
-	  							<br>Edit Profile &nbsp;&nbsp;&nbsp;&nbsp; Sign Out
+	  							<br> <a>Edit Profile </a> &nbsp;&nbsp;&nbsp;&nbsp;<a> Sign Out </a>
 								<?php
                                 echo "<br><p class=\"logged-in-msg\">You are Logged in as " . $_SESSION['name']. " (Admin)</p>";
 				            }
