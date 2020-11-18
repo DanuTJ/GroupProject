@@ -41,13 +41,14 @@
 			    <th>Gender</th>
 			    <th>Telephone No</th>
 			    <th>Email</th>
+				<th>Admin ID</th>
 			  
 				<th>Edit</th>
 				<th>Delete</th>
 			  </tr>
 		 	  	<?php
-				   include_once('connection.php');
-				   $sql="SELECT * from details";
+				   include_once('../connection.php');
+				   $sql="SELECT * from emp";
 				   $result=mysqli_query($conn,$sql);
 					$i=0;
 					while($row = mysqli_fetch_array($result)) {
@@ -60,10 +61,11 @@
 			    <td><?php echo $row["Gender"]; ?></td>
 				<td><?php echo $row["Telephone_No"]; ?></td>
 			    <td><?php echo $row["Email"]; ?></td>
+				<td><?php echo $row["adminid"]; ?></td>
 			
 			    
-				<td><a href="updated.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
-				<td><a href="deleted.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red"></i></a></td>
+				<td><a href="updated.php?id=<?php echo $row["Employee_ID"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
+				<td><a href="deleted.php?id=<?php echo $row["Employee_ID"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red"></i></a></td>
 
 			  </tr>
 			  	<?php

@@ -53,7 +53,7 @@
 			  </br>
 			  </br>
 		    <label for="Tphone">Telephone No:</label>
-		    <input type="text" id="Tpno" name="Telephone_No"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Ex: 000-000-0000" required>
+		    <input type="text" id="Tpno" name="Telephone_No"  pattern="[0-9]{10}" placeholder="Ex: 000-000-0000" required>
 			<br>
 
 		    <label for="Email">Email:</label>

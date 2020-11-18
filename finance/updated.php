@@ -1,8 +1,13 @@
 <?php
-include_once 'connection.php';
+include_once '../connection.php';
+include_once '../session.php';
 if(count($_POST)>0) {
-mysqli_query($conn,"UPDATE finance set id='" . $_POST['id'] . "', type='" . $_POST['type'] . "', utilitydes='" . $_POST['utilitydes'] . "', date='" . $_POST['date'] . "', amount='" . $_POST['amount'] . "', adminid='" . $_POST['adminid'] . "' WHERE id='" . $_POST['id'] . "'");
+	checkSession();
+	if(isset($_SESSION['name'])){
+		$_POST['ID'] = $_SESSION['userID'];
+mysqli_query($conn,"UPDATE finance set id='" . $_POST['id'] . "', type='" . $_POST['type'] . "', utilitydes='" . $_POST['utilitydes'] . "', date='" . $_POST['date'] . "', amount='" . $_POST['amount'] . "', adminid='" . $_POST['ID'] . "' WHERE id='" . $_POST['id'] . "'");
 $message = "Record Modified Successfully";
+}
 }
 
 $result = mysqli_query($conn,"SELECT * FROM finance WHERE id='" . $_GET['id'] . "'");
@@ -72,7 +77,7 @@ $row= mysqli_fetch_array($result);
 		</div>
 		Utility no: <br>
 		<input type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>">
-		<input type="text" name="id"  value="<?php echo $row['id']; ?>">
+		<input type="text" name="id" disabled  value="<?php echo $row['id']; ?>">
 		<br>
 		
 		Utility type:<br>
