@@ -16,6 +16,7 @@ if(isset($_POST['submit']))
 	 $sql = "INSERT INTO suppliers (suppliername,companyname,companyaddress,phoneno,email,adminid)
 	 VALUES ('$suppliername','$companyname','$companyaddress','$phoneno','$email','$adminid')";
 	 if (mysqli_query($conn, $sql)) {
+		$message = base64_encode(urlencode("Record Added  Successfully"));
 		header('Location:AddSupDetails.php?msg=' . $message);
 	 } else {
 		echo "Error: " . $sql . "

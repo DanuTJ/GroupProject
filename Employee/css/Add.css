@@ -7,7 +7,12 @@ body {
   font-family: 'Poppins', sans-serif;
  
 }
-
+.error-msg{
+  font-size: 18px;
+  color: #F00;
+  text-align: center;
+  background-color: #FFF;
+}
 /* Style the side navigation */
 .sidenav {
   height: 103%;

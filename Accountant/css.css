@@ -10,6 +10,12 @@ body {
 	overflow:hidden;
 	
 }
+.error-msg{
+    font-size: 18px;
+    color: #F00;
+    text-align: center;
+    background-color: #FFF;
+}
 a{
     font-size: 14px;
     text-decoration: none;

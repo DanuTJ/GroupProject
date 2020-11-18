@@ -16,6 +16,7 @@ if(isset($_POST['submit']))
 	 $sql = "INSERT INTO finance (id,type,utilitydes,date,amount,adminid)
 	 VALUES ('$id','$type','$utilitydes','$date','$amount','$adminid')";
 	 if (mysqli_query($conn, $sql)) {
+		$message = base64_encode(urlencode("Record Added  Successfully"));
 		header('Location:AddUtility.php?msg=' . $message);
 	 } else {
 		echo "Error: " . $sql . "
