@@ -80,7 +80,8 @@ $row= mysqli_fetch_array($result);
 		<input type="text" name="suppliername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['suppliername']; ?>">
 		<br>
 		No. of Units: <br>
-		<input type="text" name="numofunits" class="txtField" value="<?php echo $row['numofunits']; ?>">
+		<input type="number" name="numofunits" min="1" style="width:515px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  margin: 8px 0;" class="txtField" value="<?php echo $row['numofunits']; ?>">
 		<br>
 		Arriving Date:<br>
 		<input type="date" name="arrivingdate" class="txtField" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;

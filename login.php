@@ -27,7 +27,7 @@
                     </div>
                     <div class="div">
                         <h5>Email</h5>
-                        <input type="text" class="input" name="email">
+                        <input type="text" class="input" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
                     </div>
                 </div>
                 <div class="input-div pass">
