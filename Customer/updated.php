@@ -59,7 +59,8 @@ $row= mysqli_fetch_array($result);
 		<input type="text" name="phoneno" class="txtField" pattern="[0-9]{10}"  value="<?php echo $row['phoneno']; ?>">
 		<br>
 		Email:<br>
-		<input type="email" name="email" class="txtField" value="<?php echo $row['email']; ?>">
+		<input type="email" name="email" class="txtField" style="width:515px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  margin: 8px 0;"value="<?php echo $row['email']; ?>">
 		<br>
 		<br>
 		<input type="submit" name="submit" value="Submit" class="buttom">
