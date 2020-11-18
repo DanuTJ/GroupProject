@@ -1,7 +1,7 @@
 <?php
 include_once 'connection.php';
 if(count($_POST)>0) {
-mysqli_query($conn,"UPDATE details set id='" . $_POST['id'] . "', customername='" . $_POST['customername'] . "', type='" . $_POST['type'] . "', phoneno='" . $_POST['phoneno'] . "', email='" . $_POST['email'] . "' ,adminid='" . $_POST['adminid'] . "' WHERE id='" . $_POST['id'] . "'");
+mysqli_query($conn,"UPDATE details set id='" . $_POST['id'] . "', customername='" . $_POST['customername'] . "', type='" . $_POST['type'] . "', phoneno='" . $_POST['phoneno'] . "', email='" . $_POST['email'] . "' WHERE id='" . $_POST['id'] . "'");
 $message = "Record Modified Successfully";
 }
 $result = mysqli_query($conn,"SELECT * FROM details WHERE id='" . $_GET['id'] . "'");
@@ -11,6 +11,7 @@ $row= mysqli_fetch_array($result);
 <head>
 <title>Update Customer Details</title>
 <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/View.css">
 </head>
 <body>
@@ -84,7 +85,8 @@ $row= mysqli_fetch_array($result);
 		<input type="text" name="phoneno" class="txtField" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"  value="<?php echo $row['phoneno']; ?>">
 		<br>
 		Email:<br>
-		<input type="email" name="email" class="txtField" value="<?php echo $row['email']; ?>">
+		<input type="email" name="email" class="txtField" style="width:515px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  margin: 8px 0;" value="<?php echo $row['email']; ?>">
 		<br>
 		<br>
 		<input type="submit" name="submit" value="Submit" class="buttom">

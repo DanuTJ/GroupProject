@@ -47,7 +47,7 @@
 			<br>
 
 		    <label for="Email">Company Email:</label>
-		    <input type="email" id="email" name="email" placeholder="abc@gmail.com" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="email" id="email" name="email" placeholder="abc@gmail.com" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required>
 			<br>
 			<br>

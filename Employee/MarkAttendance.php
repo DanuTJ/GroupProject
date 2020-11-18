@@ -33,17 +33,17 @@
 			<br>
 			
 		    <label for="Date">Date:</label>
-		    <input type="date" id="Date" name="Date" max="<?php echo date("Y-m-d"); ?>" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="date" id="Date" name="Date" max="<?php echo date("Y-m-d"); ?>" style="width:515px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required>
 			<br>
 
             <label for="Time">Time:</label>
-		    <input type="time" id="Time" name="Time" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="time" id="Time" name="Time" style="width:515px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required> 
 			<br> 
 			
 			<form action="/action_page.php">
-				<p style="width:285px"> Status: </p>
+				<p style="width:370px"> Status: </p>
 			  <input type="radio" id="present" name="status" value="present">
 			  <label for="present">Present</label>
 			  <br>
