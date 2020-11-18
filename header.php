@@ -88,7 +88,8 @@
                             
                         }
 					else{
-						echo "<li><a class=\"active\" href=\"login.php\">Login</a></li>";
+						$message = base64_encode(urlencode("Please Login"));
+						header('Location:../login.php?msg=' . $message);
 						echo "<li><a href=\"register.php\">Register</a></li>";
 						}
                 ?>
