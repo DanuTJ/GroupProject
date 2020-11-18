@@ -1,5 +1,5 @@
 <?php
-include_once 'connection.php';
+include_once '../connection.php';
 $result = mysqli_query($conn,"SELECT * FROM items");
 ?>
 

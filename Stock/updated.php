@@ -1,8 +1,13 @@
 <?php
-include_once 'connection.php';
+include_once '../connection.php';
+include_once '../session.php';
 if(count($_POST)>0) {
-mysqli_query($conn,"UPDATE stock set id='" . $_POST['id'] . "', quantity='" . $_POST['quantity'] . "', manufdate='" . $_POST['manufdate'] . "',expdate='" . $_POST['expdate'] . "', receivedate='" . $_POST['receivedate'] .  "', price='" . $_POST['price'] . "', supplier='" . $_POST['supplier'] . "' WHERE id='" . $_POST['id'] . "'");
+	checkSession();
+	if(isset($_SESSION['name'])){
+		$_POST['ID'] = $_SESSION['userID'];
+mysqli_query($conn,"UPDATE stock set id='" . $_POST['id'] . "', quantity='" . $_POST['quantity'] . "', manufdate='" . $_POST['manufdate'] . "',expdate='" . $_POST['expdate'] . "', receivedate='" . $_POST['receivedate'] .  "', price='" . $_POST['price'] . "', supplier='" . $_POST['supplier'] . "' , adminid='" . $_POST['ID'] . "' WHERE id='" . $_POST['id'] . "'");
 $message = "Record Modified Successfully";
+}
 }
 
 $result = mysqli_query($conn,"SELECT * FROM stock WHERE id='" . $_GET['id'] . "'");
@@ -70,7 +75,7 @@ $row= mysqli_fetch_array($result);
 
 		Stock ID: <br>
 		<input type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>">
-		<input type="text" name="id"  value="<?php echo $row['id']; ?>">
+		<input type="text" name="id" disabled value="<?php echo $row['id']; ?>">
 		<br>
 
 		Quantity: <br>

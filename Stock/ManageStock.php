@@ -1,5 +1,5 @@
 <?php
-include_once 'connection.php';
+include_once '../connection.php';
 $result = mysqli_query($conn,"SELECT * FROM stock");
 ?>
 
@@ -48,6 +48,7 @@ if (mysqli_num_rows($result) > 0) {
 			    <th>Received Date</th>
 			    <th>Price</th>
 				<th>Supplier</th>
+				<th>Admin ID</th>
 				<th>Edit</th>
 				<th>Delete</th>
 			  </tr>
@@ -63,6 +64,7 @@ if (mysqli_num_rows($result) > 0) {
 			    <td><?php echo $row["receivedate"]; ?></td>
 				<td><?php echo $row["price"]; ?></td>
 				<td><?php echo $row["supplier"]; ?></td>
+				<td><?php echo $row["adminid"]; ?></td>
 				
 			    
 				<td><a href="updated.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
