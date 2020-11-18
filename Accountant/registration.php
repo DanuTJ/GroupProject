@@ -5,24 +5,24 @@
     <title>iHealth Registration Form</title>
 	<link rel="stylesheet" href="css.css">
 	 <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-	 <meta name="viewport" content="width=device-width, initial-scale=1">
-     <link rel="stylesheet" href="../HeaderAdmin/style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="style.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 
 	 
 	 
 </head>	
 <body>	
-<?php include('../HeaderAdmin/header.php') ?> 
-
-    <img class="back" src="img/wave.png">
+<?php include('headerAdd.php') ?> 
+    <img class="back" src="../Registration/img/wave.png">
     <div class="container">
         <div class="img">
 		    
 			
-            <img src="img/ihealth.png" width="10" height="500">
+            <img src="../Registration/img/ihealth.png" width="10" height="500">
         </div>
     <form method="post" action="register.php" name="signup-form">
-	<img src="img/user.png" style="width:80px;height:50px;" class="center">
+	<img src="../Registration/img/user.png" style="width:80px;height:50px;" class="center">
 	<h1 class="h1">REGISTER</h1>
 	<div class="form-element">
 	
@@ -68,9 +68,9 @@ confirm_password.onkeyup = validatePassword;
 
 <label for="type">User Type:</label>
 	<select id="userType" name="userType">
-    <option value="a">Admin</option>
-    <option value="s">Stock Manager</option>
-     <option value="c">Accountant</option>
+    
+    <option value="c">Accountant</option>
+     
      </select>
 
 <div class="form-element">
