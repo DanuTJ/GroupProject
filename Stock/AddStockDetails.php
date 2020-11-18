@@ -27,6 +27,7 @@
 	<div class="row form1">
   		<br>
   		<form action="inserted.php" method="POST">
+		  <h3 class="error-msg"><?php include('../messege.php'); ?></h3>
           	<label for="Sid">Stock ID:</label>
 		    <input type="text" id="Sid" name="id" placeholder="Enter stock id.." style="width:505px" required>
 			<br>

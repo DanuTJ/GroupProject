@@ -2,9 +2,9 @@
 <div class="navigation">
         <div class="row-100 bg-grey">
                 <ul class="left-nav">
-                      <li><a class="home-active" href="../Dashboard/dashboard.php">Dashboard</a></li>
-                      <li><a class="products-active" href="../Registration/registration.php">Add Users</a></li>
-                      <li><a class="facilities-active" href="ViewAdminUsers.php">View Users</a></li>                      
+                      <li><a class="home-active" href="dashboard.php">Dashboard</a></li>
+                      <li><a class="products-active" href=".registration.php">Add Users</a></li>
+                      <li><a class="facilities-active" href="ViewStockManagerUsers.php">View Users</a></li>                      
                       <li><a class="help-active" href="EditUsers.php">Edit Users</a></li>
                 </ul>
                 

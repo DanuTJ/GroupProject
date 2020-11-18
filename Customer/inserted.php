@@ -18,7 +18,8 @@ if(isset($_POST['submit']))
 	
 	 $sql = "INSERT INTO details (customername,type,phoneno,email,adminid)
 	 VALUES ('$customername','$type','$phoneno','$email','$adminid')";
-	 if (mysqli_query($conn, $sql)) {
+	 if (mysqli_query($conn, $sql) ) {
+		$message = base64_encode(urlencode("Record Added  Successfully"));
 		header('Location:AddCusDetails.php?msg=' . $message);
 	 } else {
 		echo "Error: " . $sql . "

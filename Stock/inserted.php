@@ -20,6 +20,7 @@ if(isset($_POST['submit']))
 	 $sql = "INSERT INTO stock (id,quantity,manufdate,expdate,receivedate,price,supplier,adminid) 
 	 VALUES ('$id','$quantity','$manufdate','$expdate','$receivedate','$price','$supplier','$adminid')";
 	 if (mysqli_query($conn, $sql)) {
+		$message = base64_encode(urlencode("Record Added  Successfully"));
 		header('Location:AddStockDetails.php?msg=' . $message);
 	 } else {
 		echo "Error: " . $sql . "
