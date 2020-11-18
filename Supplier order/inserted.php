@@ -8,9 +8,8 @@ if(isset($_POST['submit']))
 	 $numofunits = $_POST['numofunits'];
 	 $arrivingdate = $_POST['arrivingdate'];
 	 $totalprice = $_POST['totalprice'];
-	 $adminid = $_POST['adminid'];
-	 $sql = "INSERT INTO sorders (orderid,orderdate,suppliername,numofunits,arrivingdate,totalprice,adminid)
-	 VALUES ('$orderid','$orderdate','$suppliername','$numofunits','$arrivingdate','$totalprice','$adminid')";
+	 $sql = "INSERT INTO sorders (orderid,orderdate,suppliername,numofunits,arrivingdate,totalprice)
+	 VALUES ('$orderid','$orderdate','$suppliername','$numofunits','$arrivingdate','$totalprice')";
 	 if (mysqli_query($conn, $sql)) {
 		echo "New record created successfully !";
 	 } else {

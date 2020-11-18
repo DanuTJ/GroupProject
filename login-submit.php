@@ -6,7 +6,7 @@ include('session.php');
 if(isset($_POST)){
     //Assign data from login form to variables
 	$email = $_POST['email'];
-	$password = $_POST['password'];
+	$password = sha1($_POST['password']);
     
     //Select User from database
     $userQuery = "SELECT * FROM users WHERE email ='$email' and password='$password'";
@@ -30,14 +30,14 @@ if(isset($_POST)){
             //echo $usertype;
 
             if($usertype == 'a' ){
-                header( "Location:CustomerOrder/AddCusOrder.php" );
+                header( "Location:Dashboard/dashboard.php" );
             }
-           // elseif ($usertype == 'c'){
-               // header( "Location:CustomerOrder/AddCusOrder.php" );
-           // }
-           // elseif ($usertype='v'){
-            //    header( "Location:CustomerOrder/AddCusOrder.php" );
-            //}
+            elseif ($usertype == 's'){
+               header( "Location:StockManager/dashboard.php" );
+            }
+            elseif ($usertype='acc'){
+              header( "Location:Accountant/dashboard.php" );
+            }
     }
     else{    
         echo mysqli_error($conn);    
