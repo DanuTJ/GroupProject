@@ -43,7 +43,7 @@
 			<br>
 
 		    <label for="Pno">Company Telephone:</label>
-		    <input type="text" id="pno" name="phoneno" pattern="[0-9]10}" placeholder="Ex: 0000000000" required>
+		    <input type="text" id="pno" name="phoneno" pattern="[0-9]{10}" placeholder="Ex: 0000000000" required>
 			<br>
 
 		    <label for="Email">Company Email:</label>

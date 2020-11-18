@@ -20,7 +20,7 @@
   								</div>
 					<div class="row">
   					<center><a href="../Customer/AddCusDetails.php">Customer</a><hr>
-					<a href="#">Stock</a><hr>
+					<a href="../Stock/AddStockDetails.php">Stock</a><hr>
 					<a href="../Item/AddItemDetails.php">Item</a><hr>
 					<a href="../Supplier/AddSupDetails.php">Supplier</a><hr>
 					<a href="../Supplier order/AddSupOrder.php">Supplier Order</a><hr>
@@ -38,7 +38,7 @@
 							 <hr></center>
 							  </div>
 							  <div class="row">
-							  <center> <a href="#">Stock</a><hr>
+							  <center> <a href="../Stock/AddStockDetails.php">Stock</a><hr>
 							  <a href="../Supplier order/AddSupOrder.php">Supplier Order</a><hr>
 							  <a href="../Item/AddItemDetails.php">Item</a><hr></center>
 							 

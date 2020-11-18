@@ -3,13 +3,11 @@ include_once '../connection.php';
 include_once '../session.php';
 if(count($_POST)>0) {
 	checkSession();
-					if(isset($_SESSION['name'])){
-						$_POST['ID'] = $_SESSION['userID'];
-	
-						
-mysqli_query($conn,"UPDATE details set id='" . $_POST['id'] . "', customername='" . $_POST['customername'] . "', type='" . $_POST['type'] . "', phoneno='" . $_POST['phoneno'] . "', email='" . $_POST['email'] . "' ,adminid='" . $_POST['ID'] . "' WHERE id='" . $_POST['id']  . "'");
+	if(isset($_SESSION['name'])){
+		$_POST['ID'] = $_SESSION['userID'];
+mysqli_query($conn,"UPDATE details set id='" . $_POST['id'] . "', customername='" . $_POST['customername'] . "', type='" . $_POST['type'] . "', phoneno='" . $_POST['phoneno'] . "', email='" . $_POST['email'] . "', adminid='" .$_POST['ID'] ."' WHERE id='" . $_POST['id'] . "'");
 $message = "Record Modified Successfully";
-					}
+}
 }
 $result = mysqli_query($conn,"SELECT * FROM details WHERE id='" . $_GET['id'] . "'");
 $row= mysqli_fetch_array($result);
@@ -44,7 +42,7 @@ $row= mysqli_fetch_array($result);
 		<div style="padding-bottom:5px;">
 		</div>
 		ID: <br>
-		<input type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>" disabled>
+		<input type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>" >
 		<input type="text" name="id" disabled value="<?php echo $row['id']; ?>">
 		<br>
 		Customer Name: <br>
@@ -61,8 +59,7 @@ $row= mysqli_fetch_array($result);
 		<input type="text" name="phoneno" class="txtField" pattern="[0-9]{10}"  value="<?php echo $row['phoneno']; ?>">
 		<br>
 		Email:<br>
-		<input type="email" name="email" class="txtField" style="width:515px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
-  margin: 8px 0;" value="<?php echo $row['email']; ?>">
+		<input type="email" name="email" class="txtField" value="<?php echo $row['email']; ?>">
 		<br>
 		<br>
 		<input type="submit" name="submit" value="Submit" class="buttom">
