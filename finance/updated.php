@@ -90,7 +90,7 @@ $row= mysqli_fetch_array($result);
   margin: 8px 0;" value="<?php echo $row['date']; ?>">
 		<br>
 		Amount:<br>
-		<input type="text" name="amount" pattern="[0-9]+" class="txtField" value="<?php echo $row['amount']; ?>">
+		<input type="text" name="amount" pattern="[0-9]*[.]?[0-9]+" class="txtField" value="<?php echo $row['amount']; ?>">
 		<br>
 		<br>
 		<input type="submit" name="submit" value="Submit" class="buttom">
