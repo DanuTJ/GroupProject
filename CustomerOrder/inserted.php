@@ -1,21 +1,30 @@
 <?php
-include_once 'connection.php';
+include_once '../connection.php';
+include_once '../session.php';
 if(isset($_POST['submit']))
 {	 
-	 $date = $_POST['date'];
+	checkSession();
+					if(isset($_SESSION['name'])){
+                        	
+	 
 	 $customername = $_POST['customername'];
 	 $phoneno = $_POST['phoneno'];
 	 $orderdes = $_POST['orderdes'];
 	 $price = $_POST['price'];
+	 $date = $_POST['date'];
+	 $adminid = $_SESSION['userID'];
 	
-	 $sql = "INSERT INTO cusorder (date,customername,phoneno,orderdes,price)
-	 VALUES ('$date','$customername','$phoneno','$orderdes','$price')";
+	 $sql = "INSERT INTO cusorder (customername,phoneno,orderdes,price,date,adminid)
+	 VALUES ('$customername','$phoneno','$orderdes','$price','$date','$adminid')";
 	 if (mysqli_query($conn, $sql)) {
-		echo "New record created successfully !";
+		$message = "Record Added Successfully";
+		header('Location:AddCusOrder.php?msg=' . $message);
+		
 	 } else {
 		echo "Error: " . $sql . "
 " . mysqli_error($conn);
 	 }
 	 mysqli_close($conn);
+	}
 }
 ?>
