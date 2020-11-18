@@ -7,7 +7,7 @@ if(isset($_POST['submit']))
 	 $companyaddress = $_POST['companyaddress'];
 	 $phoneno = $_POST['phoneno'];
 	 $email = $_POST['email'];
-	 $sql = "INSERT INTO details (suppliername,companyname,companyaddress,phoneno,email)
+	 $sql = "INSERT INTO suppliers (suppliername,companyname,companyaddress,phoneno,email)
 	 VALUES ('$suppliername','$companyname','$companyaddress','$phoneno','$email')";
 	 if (mysqli_query($conn, $sql)) {
 		echo "New record created successfully !";

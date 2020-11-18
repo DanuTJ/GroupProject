@@ -42,12 +42,12 @@
 			<br>
 
 			<label for="Price">Price:</label>
-		    <input type="text" id="Price" name="price" pattern="[0-9]+" placeholder="Ex: xxx.xx" required>
+		    <input type="text" id="Price" name="price" pattern="[0-9]*[.]?[0-9]+" placeholder="Ex: xxx.xx" required>
 			<br>
 
 			
 			<label for="date">Date:</label>
-		    <input type="date" id="date" name="date" max="<?php echo date("Y-m-d"); ?>" placeholder="Date of the Order.." style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="date" id="date" name="date" max="<?php echo date("Y-m-d"); ?>" placeholder="Date of the Order.." style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required>
 			<br> 
 		  	

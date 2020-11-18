@@ -44,7 +44,7 @@
 		    <input type="text" id="Eaddress" name="address" placeholder="Enter permanent address.." required>
 			<br><br>
 
-            <label for="Egender" style="width:180px">Gender:</label> 
+            <label for="Egender" style="width:255px">Gender:</label> 
 			
 			<input type="radio" id="male" name="status" value="male"  >
 			  <label for="male">Male</label>
@@ -57,7 +57,7 @@
 			<br>
 
 		    <label for="Email">Email:</label>
-		    <input type="email" id="Email" name="Email" placeholder="Ex:abc@gmail.com" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="email" id="Email" name="Email" placeholder="Ex:abc@gmail.com" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required>
 			<br>
             
