@@ -68,7 +68,7 @@
 								<?php
                                 echo "<br><p class=\"logged-in-msg\">You are Logged in as " . $_SESSION['name']. " (Stock Manager)</p>";
 				            }
-							elseif("{$_SESSION['usertype']}" == 'acc'){ ?>
+							elseif("{$_SESSION['usertype']}" == 'c'){ ?>
 							 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="../EditProfile/EditProfile.php"><i class="fa fa-address-book" style="font-size:35px;color:blue"></i></a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 	  							<a href="../logout.php"><i class="fa fa-sign-out" style="font-size:35px;color:red"></i></a> 
@@ -82,8 +82,9 @@
                             
                         }
 					else{
-						echo "<li><a class=\"active\" href=\"login.php\">Login</a></li>";
-						echo "<li><a href=\"register.php\">Register</a></li>";
+            $message = base64_encode(urlencode("Please Login"));
+						header('Location:../login.php?msg=' . $message);
+						
 						}
                 ?>
       </div>

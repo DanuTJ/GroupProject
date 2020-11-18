@@ -90,7 +90,7 @@
 					else{
 						$message = base64_encode(urlencode("Please Login"));
 						header('Location:../login.php?msg=' . $message);
-						echo "<li><a href=\"register.php\">Register</a></li>";
+						
 						}
                 ?>
 	  		
