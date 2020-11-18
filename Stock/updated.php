@@ -1,16 +1,20 @@
 <?php
 include_once 'connection.php';
 if(count($_POST)>0) {
-mysqli_query($conn,"UPDATE stock set id='" . $_POST['id'] . "', scode='" . $_POST['Stock_Code'] . "', quantity='" . $_POST['Quantity'] . "', mdate='" . $_POST['Manufacturer_Date'] . "',edate='" . $_POST['Expiry_Date'] . "', rdate='" . $_POST['Received_Date'] .  "', sprice='" . $_POST['Stock_Price'] . "', iprice='" . $_POST['Item_Price'] . "', iid='" . $_POST['Item_ID'] . "', supplier='" . $_POST['Supplier'] . "',sorderid='" . $_POST['Supplier_Order_ID'] . "', Adminid='" . $_POST['Adminid'] . "' WHERE id='" . $_POST['id'] . "'");
+mysqli_query($conn,"UPDATE stock set id='" . $_POST['id'] . "', quantity='" . $_POST['quantity'] . "', manufdate='" . $_POST['manufdate'] . "',expdate='" . $_POST['expdate'] . "', receivedate='" . $_POST['receivedate'] .  "', price='" . $_POST['price'] . "', supplier='" . $_POST['supplier'] . "' WHERE id='" . $_POST['id'] . "'");
 $message = "Record Modified Successfully";
 }
+
 $result = mysqli_query($conn,"SELECT * FROM stock WHERE id='" . $_GET['id'] . "'");
 $row= mysqli_fetch_array($result);
 ?>
+
 <html>
 <head>
 <title>Update Stock Details</title>
-<link rel="stylesheet" href="Css/Viewcss.css">
+<link rel="stylesheet" href="css/View.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	<div class="sidenav">
@@ -63,40 +67,47 @@ $row= mysqli_fetch_array($result);
 		</div>
 		<div style="padding-bottom:5px;">
 		</div>
-		Stock Code: <br>
-		<input type="hidden" name="scode" class="txtField" value="<?php echo $row['scode']; ?>">
-		<input type="text" name="scode"  value="<?php echo $row['scode']; ?>">
+
+		Stock ID: <br>
+		<input type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>">
+		<input type="text" name="id"  value="<?php echo $row['id']; ?>">
 		<br>
+
 		Quantity: <br>
-		<input type="text" name="quantity" class="txtField" value="<?php echo $row['quantity']; ?>">
+		<input type="number" name="quantity" min="1" class="txtField" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  			margin: 8px 0;" value="<?php echo $row['quantity']; ?>">
 		<br>
-		Manufacturer Date: <br>
-		<input type="text" name="mdate" class="txtField" value="<?php echo $row['mdate']; ?>">
+
+		Price:<br>
+		<input type="float" name="price" pattern="[0-9]*[.]?[0-9]+" class="txtField" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  			margin: 8px 0;" value="<?php echo $row['price']; ?>">
 		<br>
-		Expiry Date: <br>
-		<input type="text" name="edate" class="txtField" value="<?php echo $row['edate']; ?>">
-		<br>
-		Received Date:<br>
-		<input type="text" name="rdate" class="txtField" value="<?php echo $row['rdate']; ?>">
-		<br>
-		Stock Price:<br>
-		<input type="text" name="sprice" class="txtField" value="<?php echo $row['sprice']; ?>">
-		<br>
-		Item Price: <br>
-		<input type="text" name="iprice" class="txtField" value="<?php echo $row['iprice']; ?>">
-		<br>
-		Item ID: <br>
-		<input type="text" name="iid" class="txtField" value="<?php echo $row['iid']; ?>">
-		<br>
+
 		Supplier: <br>
 		<input type="text" name="supplier" class="txtField" value="<?php echo $row['supplier']; ?>">
 		<br>
-		Supplier Order ID: <br>
-		<input type="text" name="sorderid" class="txtField" value="<?php echo $row['sorderid']; ?>">
+
+		Manufacture Date: <br>
+		<input type="date" name="manufdate" max="<?php echo date("Y-m-d"); ?>" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+ 			 margin: 8px 0;" class="txtField" value="<?php echo $row['manufdate']; ?>">
 		<br>
+
+		Expiry Date: <br>
+		<input type="date" name="expdate" max="<?php echo date("Y-m-d"); ?>" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+ 			 margin: 8px 0;" class="txtField" value="<?php echo $row['expdate']; ?>">
+		<br>
+
+		Received Date:<br>
+		<input type="date" name="receivedate" max="<?php echo date("Y-m-d"); ?>" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+ 			 margin: 8px 0;" class="txtField" value="<?php echo $row['receivedate']; ?>">
+		<br>
+
+
+		<br>
+		
 		<input type="submit" name="submit" value="Submit" class="buttom">
 
-	</form>
+		</form>
   	</div>
 </div>
 	

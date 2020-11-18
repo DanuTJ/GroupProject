@@ -42,7 +42,7 @@
 			<br>
 
 			<label for="Price">Price:</label>
-		    <input type="text" id="Price" name="price" pattern="[0-9]+" placeholder="Ex: xxx.xx" required>
+		    <input type="text" id="Price" name="price" pattern="[0-9]*[.]?[0-9]+" placeholder="Ex: xxx.xx" required>
 			<br>
 
 			

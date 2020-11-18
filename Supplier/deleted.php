@@ -1,6 +1,6 @@
 <?php
 include_once 'connection.php';
-$sql = "DELETE FROM details WHERE id='" . $_GET["id"] . "'";
+$sql = "DELETE FROM suppliers WHERE id='" . $_GET["id"] . "'";
 if (mysqli_query($conn, $sql)) {
     echo "Record deleted successfully";
 } else {
