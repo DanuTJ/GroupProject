@@ -1,5 +1,6 @@
 <?php
-include_once 'connection.php';
+include_once '../connection.php';
+include_once '../session.php';
 $result = mysqli_query($conn,"SELECT * FROM stock");
 ?>
 
@@ -10,7 +11,8 @@ $result = mysqli_query($conn,"SELECT * FROM stock");
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="Css/View.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/View.css">
 
 </head>
 <body>

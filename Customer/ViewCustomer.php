@@ -1,5 +1,6 @@
 <?php
-include_once 'connection.php';
+include_once '../connection.php';
+include_once '../session.php';
 $result = mysqli_query($conn,"SELECT * FROM details");
 ?>
 
@@ -21,39 +22,7 @@ $result = mysqli_query($conn,"SELECT * FROM details");
 if (mysqli_num_rows($result) > 0) {
 ?>
 
-<div class="sidenav">
-	<div class="row">
-  		<center><p style="font-size: 35px;"><b>IHealth</b></p>
-		<hr></center>
-  	</div>
-  	<div class="row">
-  		<center><p style="font-size: 20px;"><b>Dashboard</b></p>
-		<hr></center>
-  	</div>
-	<div class="row">
-  		<center><a href="#">Customer</a><hr>
-		<a href="#">Stock</a><hr>
-		<a href="#">Item</a><hr>
-		<a href="#">Supplier</a><hr>
-		<a href="#">Supplier Order</a><hr>
-		<a href="#">Customer Order</a><hr>
-		<a href="#">Employee</a><hr>
-		<a href="#">Finance</a></center>
-  	</div>
-	
-</div>
-
-<div class="content">
-  	<div class="row end">
-  		<div class="row">
-	  		<br>
-	  		<a href=""><i class="fa fa-address-book" style="font-size:35px;color:blue"></i></a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  		<a href=""><i class="fa fa-sign-out" style="font-size:35px;color:red"></i></a> 
-	  		<br>Edit Profile &nbsp;&nbsp;&nbsp;&nbsp; Sign Out
-  		</div>
-  		<br>
-  		<hr>
-  	</div>
+<?php include('../header.php') ?>
   	<br>
   	<div class="row" style="margin-top: -18px;">
 	<div class="navbar">
@@ -86,6 +55,8 @@ if (mysqli_num_rows($result) > 0) {
 					$i=0;
 					while($row = mysqli_fetch_array($result)) {
 				?>
+				
+				
 			  <tr>
 			    <td><?php echo $row["id"]; ?></td>
 			    <td><?php echo $row["customername"]; ?></td>
@@ -98,6 +69,7 @@ if (mysqli_num_rows($result) > 0) {
 			  	<?php
 					$i++;
 					}
+				
 				?>
 			</table>
 			<?php

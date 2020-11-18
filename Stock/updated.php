@@ -1,8 +1,13 @@
 <?php
-include_once 'connection.php';
+include_once '../connection.php';
+include_once '../session.php';
 if(count($_POST)>0) {
-mysqli_query($conn,"UPDATE stock set id='" . $_POST['id'] . "', quantity='" . $_POST['quantity'] . "', manufdate='" . $_POST['manufdate'] . "',expdate='" . $_POST['expdate'] . "', receivedate='" . $_POST['receivedate'] .  "', price='" . $_POST['price'] . "', supplier='" . $_POST['supplier'] . "' WHERE id='" . $_POST['id'] . "'");
+	checkSession();
+	if(isset($_SESSION['name'])){
+		$_POST['ID'] = $_SESSION['userID'];
+mysqli_query($conn,"UPDATE stock set id='" . $_POST['id'] . "', quantity='" . $_POST['quantity'] . "', manufdate='" . $_POST['manufdate'] . "',expdate='" . $_POST['expdate'] . "', receivedate='" . $_POST['receivedate'] .  "', price='" . $_POST['price'] . "', supplier='" . $_POST['supplier'] . "' , adminid='" . $_POST['ID'] . "' WHERE id='" . $_POST['id'] . "'");
 $message = "Record Modified Successfully";
+}
 }
 
 $result = mysqli_query($conn,"SELECT * FROM stock WHERE id='" . $_GET['id'] . "'");
@@ -12,7 +17,9 @@ $row= mysqli_fetch_array($result);
 <html>
 <head>
 <title>Update Stock Details</title>
-<link rel="stylesheet" href="Css/View.css">
+<link rel="stylesheet" href="css/View.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 	<div class="sidenav">
@@ -68,16 +75,16 @@ $row= mysqli_fetch_array($result);
 
 		Stock ID: <br>
 		<input type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>">
-		<input type="text" name="id"  value="<?php echo $row['id']; ?>">
+		<input type="text" name="id" disabled value="<?php echo $row['id']; ?>">
 		<br>
 
 		Quantity: <br>
-		<input type="number" name="quantity" min="1" class="txtField" style="width:515px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="number" name="quantity" min="1" class="txtField" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   			margin: 8px 0;" value="<?php echo $row['quantity']; ?>">
 		<br>
 
 		Price:<br>
-		<input type="float" name="price" pattern="[0-9]*[.]?[0-9]+" class="txtField" style="width:515px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="float" name="price" pattern="[0-9]*[.]?[0-9]+" class="txtField" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   			margin: 8px 0;" value="<?php echo $row['price']; ?>">
 		<br>
 
@@ -86,17 +93,17 @@ $row= mysqli_fetch_array($result);
 		<br>
 
 		Manufacture Date: <br>
-		<input type="date" name="manufdate" max="<?php echo date("Y-m-d"); ?>" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="date" name="manufdate" max="<?php echo date("Y-m-d"); ?>" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
  			 margin: 8px 0;" class="txtField" value="<?php echo $row['manufdate']; ?>">
 		<br>
 
 		Expiry Date: <br>
-		<input type="date" name="expdate" max="<?php echo date("Y-m-d"); ?>" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="date" name="expdate" max="<?php echo date("Y-m-d"); ?>" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
  			 margin: 8px 0;" class="txtField" value="<?php echo $row['expdate']; ?>">
 		<br>
 
 		Received Date:<br>
-		<input type="date" name="receivedate" max="<?php echo date("Y-m-d"); ?>" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="date" name="receivedate" max="<?php echo date("Y-m-d"); ?>" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
  			 margin: 8px 0;" class="txtField" value="<?php echo $row['receivedate']; ?>">
 		<br>
 

@@ -1,7 +1,10 @@
 <?php
-include_once 'connection.php';
+include_once '../connection.php';
+include_once '../session.php';
 if(isset($_POST['submit']))
 {	 
+	checkSession();
+					if(isset($_SESSION['name'])){
      $id = $_POST['id'];
 	 $itemname = $_POST['itemname'];
 	 $category = $_POST['category'];
@@ -11,17 +14,19 @@ if(isset($_POST['submit']))
      $iquantity = $_POST['iquantity'];
 	 $total = $_POST['total'];
 	 $invoice = $_POST['invoice'];
+	 $adminid = $_SESSION['userID']; 
 	
 
 	 
-	 $sql = "INSERT INTO items (id,itemname,category,manufacturer,ides,price,iquantity,total,invoice)
-	 VALUES ('$id','$itemname','$category','$manufacturer','$ides','$price','$iquantity','$total','$invoice')";
+	 $sql = "INSERT INTO items (id,itemname,category,manufacturer,ides,price,iquantity,total,invoice,adminid)
+	 VALUES ('$id','$itemname','$category','$manufacturer','$ides','$price','$iquantity','$total','$invoice','$adminid')";
 	 if (mysqli_query($conn, $sql)) {
-		echo "New record created successfully !";
+		header('Location:AddItemDetails.php?msg=' . $message);
 	 } else {
 		echo "Error: " . $sql . "
 " . mysqli_error($conn);
 	 }
 	 mysqli_close($conn);
+}
 }
 ?>

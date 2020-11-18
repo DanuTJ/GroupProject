@@ -34,7 +34,7 @@
 		 
 
 		    <label for="Pno">Telephone Number:</label>
-		    <input type="text" id="pno" name="phoneno" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Ex: 000-000-0000" required>
+		    <input type="text" id="pno" name="phoneno" pattern="[0-9]{10}" placeholder="Ex: 0000000000" required>
 			<br>
 
 		    <label for="Order">Order:</label>
@@ -47,7 +47,8 @@
 
 			
 			<label for="date">Date:</label>
-		    <input type="date" id="date" name="date" max="<?php echo date("Y-m-d"); ?>" placeholder="Date of the Order.." style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="date" id="date" name="date" max="<?php echo date("Y-m-d"); ?>" placeholder="Date of the Order.."     value="2020-11-18"
+       min="2020-11-18" max="2021-11-19" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required>
 			<br> 
 		  	

@@ -1,5 +1,7 @@
 <?php
-include_once 'connection.php';
+include_once '../connection.php';
+include_once '../session.php';
+
 $result = mysqli_query($conn,"SELECT * FROM finance");
 ?>
 

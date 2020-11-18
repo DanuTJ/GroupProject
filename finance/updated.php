@@ -1,8 +1,13 @@
 <?php
-include_once 'connection.php';
+include_once '../connection.php';
+include_once '../session.php';
 if(count($_POST)>0) {
-mysqli_query($conn,"UPDATE finance set id='" . $_POST['id'] . "', type='" . $_POST['type'] . "', utilitydes='" . $_POST['utilitydes'] . "', date='" . $_POST['date'] . "', amount='" . $_POST['amount'] . "', adminid='" . $_POST['adminid'] . "' WHERE id='" . $_POST['id'] . "'");
+	checkSession();
+	if(isset($_SESSION['name'])){
+		$_POST['ID'] = $_SESSION['userID'];
+mysqli_query($conn,"UPDATE finance set id='" . $_POST['id'] . "', type='" . $_POST['type'] . "', utilitydes='" . $_POST['utilitydes'] . "', date='" . $_POST['date'] . "', amount='" . $_POST['amount'] . "', adminid='" . $_POST['ID'] . "' WHERE id='" . $_POST['id'] . "'");
 $message = "Record Modified Successfully";
+}
 }
 
 $result = mysqli_query($conn,"SELECT * FROM finance WHERE id='" . $_GET['id'] . "'");
@@ -13,6 +18,7 @@ $row= mysqli_fetch_array($result);
 <head>
 <title>Update Utility Details</title>
 <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/View.css">
 </head>
 <body>
@@ -71,7 +77,7 @@ $row= mysqli_fetch_array($result);
 		</div>
 		Utility no: <br>
 		<input type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>">
-		<input type="text" name="id"  value="<?php echo $row['id']; ?>">
+		<input type="text" name="id" disabled  value="<?php echo $row['id']; ?>">
 		<br>
 		
 		Utility type:<br>
@@ -86,7 +92,7 @@ $row= mysqli_fetch_array($result);
 		<input type="text" name="utilitydes" class="txtField" value="<?php echo $row['utilitydes']; ?>">
 		<br>
 		Date:<br>
-		<input type="date" name="date" class="txtField" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="date" name="date" class="txtField" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" value="<?php echo $row['date']; ?>">
 		<br>
 		Amount:<br>

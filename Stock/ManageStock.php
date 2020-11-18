@@ -1,5 +1,5 @@
 <?php
-include_once 'connection.php';
+include_once '../connection.php';
 $result = mysqli_query($conn,"SELECT * FROM stock");
 ?>
 
@@ -10,7 +10,8 @@ $result = mysqli_query($conn,"SELECT * FROM stock");
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="Css/Manage.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/manage.css">
 
 </head>
 <body>
@@ -47,6 +48,7 @@ if (mysqli_num_rows($result) > 0) {
 			    <th>Received Date</th>
 			    <th>Price</th>
 				<th>Supplier</th>
+				<th>Admin ID</th>
 				<th>Edit</th>
 				<th>Delete</th>
 			  </tr>
@@ -62,6 +64,7 @@ if (mysqli_num_rows($result) > 0) {
 			    <td><?php echo $row["receivedate"]; ?></td>
 				<td><?php echo $row["price"]; ?></td>
 				<td><?php echo $row["supplier"]; ?></td>
+				<td><?php echo $row["adminid"]; ?></td>
 				
 			    
 				<td><a href="updated.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
