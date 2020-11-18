@@ -1,25 +1,16 @@
-<?php
-include_once 'connection.php';
-$result = mysqli_query($conn,"SELECT * FROM details");
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Customer Details</title>
+<title>Employee Details</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/View.css">
+<link rel="stylesheet" href="Css/Managecss.css">
 
 </head>
 <body>
 
-<?php
-if (mysqli_num_rows($result) > 0) {
-?>
+
 
 <div class="sidenav">
 	<div class="row">
@@ -56,44 +47,60 @@ if (mysqli_num_rows($result) > 0) {
   	</div>
   	<br>
   	<div class="row" style="margin-top: -18px;">
-	<div class="navbar">
-  		<ul>
-		  <li><a href="AddCusDetails.php">Add Customer</a></li>
-		  <li><a class="active" href="ViewCustomer.php">View Customer</a></li>
-		  <li><a href="ManageCustomer.php">Manage Customer</a></li>
+	  <ul>
+		  <li><a href="AddStockDetails.php">Add Stock</a></li>
+		   <li><a href="ViewStock.php">View Stock</a></li>
+		   <li><a class="active" href="ManageStock.php">Manage Stock</a></li>
 		  <li><a href="PrintDetails.php">Print Details</a></li>
 		</ul>
-		</div>
   	</div>
   	<br>
   	<div class="row form1">
   		<br>
-  		<form action="#">
+  		<form action="ManageStock.php">
 		    <center><input type="text" name="search" placeholder="Search..">
 		  	<input type="submit" value="Search"></center>
 		  	<br>
 		  	<table>
 			  <tr>
-			    <th>ID</th>
-			    <th>Name</th>
-			    <th>Type</th>
-			    <th>Telephone Number</th>
-			    <th>Email</th>
+			    <th>Stock Code</th>
+			    <th>Quantity</th>
+			    <th>Manufacturer Date</th>
+				<th>Expiry Date</th>
+			    <th>Received Date</th>
+			    <th>Stock Price</th>
+			    <th>Item Price</th>
+			    <th>Item ID</th>
+				<th>Supplier</th>
+				<th>Supplier Order ID</th>
 				<th>Admin ID</th>
-
+				<th>Edit</th>
+				<th>Delete</th>
 			  </tr>
-			  	<?php
+		 	  	<?php
+				   include_once('connection.php');
+				   $sql="SELECT * from stock";
+				   $result=mysqli_query($conn,$sql);
 					$i=0;
 					while($row = mysqli_fetch_array($result)) {
 				?>
 			  <tr>
-			    <td><?php echo $row["id"]; ?></td>
-			    <td><?php echo $row["customername"]; ?></td>
-			    <td><?php echo $row["type"]; ?></td>
-			    <td><?php echo $row["phoneno"]; ?></td>
-			    <td><?php echo $row["email"]; ?></td>
-				<td><?php echo $row["adminid"]; ?></td>
-			  
+			    <td><?php echo $row["Stock_Code"]; ?></td>
+			    <td><?php echo $row["Quantity"]; ?></td>
+			    <td><?php echo $row["Manufacturer_Date"]; ?></td>
+				<td><?php echo $row["Expiry_Date"]; ?></td>
+			    <td><?php echo $row["Received_Date"]; ?></td>
+				<td><?php echo $row["Stock_Price"]; ?></td>
+			    <td><?php echo $row["Item_Price"]; ?></td>
+				<td><?php echo $row["Item_ID"]; ?></td>
+				<td><?php echo $row["Supplier"]; ?></td>
+				<td><?php echo $row["Supplier_Order_ID"]; ?></td>
+				<td><?php echo $row["Admin_ID"]; ?></td>
+				
+			    
+				<td><a href="updated.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
+				<td><a href="deleted.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red"></i></a></td>
+
 			  </tr>
 			  	<?php
 					$i++;
@@ -101,10 +108,7 @@ if (mysqli_num_rows($result) > 0) {
 				?>
 			</table>
 			<?php
-				}
-				else{
-				    echo "No result found";
-				}
+				
 			?>
 		</form>
   	</div>

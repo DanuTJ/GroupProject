@@ -50,7 +50,6 @@ if (mysqli_num_rows($result) > 0) {
 			    <th>Item Quantity</th>
 				<th>Total</th>
 				<th>Order Invoice No</th>
-				<th>Admin ID</th>
 			    <th>Edit</th>
 			    <th>Delete</th>
 			  </tr>
@@ -68,7 +67,6 @@ if (mysqli_num_rows($result) > 0) {
                 <td><?php echo $row["iquantity"]; ?></td>
 				<td><?php echo $row["total"]; ?></td>
 				<td><?php echo $row["invoice"]; ?></td>
-				<td><?php echo $row["adminid"]; ?></td>
 				<td><a href="updated.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
 				<td><a href="deleted.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red"></i></a></td>
 

@@ -48,17 +48,15 @@
 		  
 			
 			<label for="amount">Amount:</label>
-		    <input type="text" id="amount" name="amount" placeholder="Ex: xxx.xx" required>
+		    <input type="text" id="amount" name="amount" pattern="[0-9]+" placeholder="Ex: xxx.xx" required>
 			<br>
 			
-		    <label for="AID">Admin ID:</label>
-		    <input type="text" id="AId" name="adminid" placeholder="Enter admin id.." required>
-			<br>
+		  
 			  <label for="date">Date:</label>
-		    <input type="date" id="date" name="date" placeholder="Date.." style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="date" id="date" name="date" max="<?php echo date("Y-m-d"); ?>" placeholder="Date.." style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required>
 			<br>
-		  	
+		  	<br>
 		  	<input type="submit" name="submit" value="Submit">
 		    <input type="reset" value="Reset">
 

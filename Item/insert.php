@@ -11,11 +11,11 @@ if(isset($_POST['submit']))
      $iquantity = $_POST['iquantity'];
 	 $total = $_POST['total'];
 	 $invoice = $_POST['invoice'];
-	 $adminid = $_POST['adminid'];
+	
 
 	 
-	 $sql = "INSERT INTO details (id,itemname,category,manufacturer,ides,price,iquantity,total,invoice,adminid)
-	 VALUES ('$id','$itemname','$category','$manufacturer','$ides','$price','$iquantity','$total','$invoice','$adminid')";
+	 $sql = "INSERT INTO details (id,itemname,category,manufacturer,ides,price,iquantity,total,invoice)
+	 VALUES ('$id','$itemname','$category','$manufacturer','$ides','$price','$iquantity','$total','$invoice')";
 	 if (mysqli_query($conn, $sql)) {
 		echo "New record created successfully !";
 	 } else {

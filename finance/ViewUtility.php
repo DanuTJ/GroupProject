@@ -48,6 +48,7 @@ if (mysqli_num_rows($result) > 0) {
 			    <th>Date</th>
 			    <th>Amount</th>
 				<th>Admin ID</th>
+				
 			  </tr>
 			  	<?php
 					$i=0;

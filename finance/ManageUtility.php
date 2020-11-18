@@ -46,7 +46,7 @@ if (mysqli_num_rows($result) > 0) {
 			    <th>Description</th>
 			    <th>Date</th>
 			    <th>Amount</th>
-			    <th>Admin ID</th>
+			   
 			    <th>Edit</th>
 			    <th>Delete</th>
 			  </tr>
@@ -60,7 +60,7 @@ if (mysqli_num_rows($result) > 0) {
 			    <td><?php echo $row["utilitydes"]; ?></td>
 			    <td><?php echo $row["date"]; ?></td>
 			    <td><?php echo $row["amount"]; ?></td>
-			    <td><?php echo $row["adminid"]; ?></td>
+			   
 				<td><a href="updated.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
 				<td><a href="deleted.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red"></i></a></td>
 

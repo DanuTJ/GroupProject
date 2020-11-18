@@ -5,7 +5,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="Css/Managecss.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/Manage.css">
 
 </head>
 <body>
@@ -14,6 +15,7 @@
 
   	<br>
   	<div class="row" style="margin-top: -18px;">
+	<div class="navbar">
   		<ul>
 		  <li><a href="AddEmpDetails.php">Add Employee</a></li>
 		  <li><a class="active" href="ManageEmployee.php">Manage Employee</a></li>
@@ -21,6 +23,7 @@
 		    <li><a href="MarkLeave.php">Mark Leave</a></li>
 		  <li><a href="PrintDetails.php">Print Details</a></li>
 		</ul>
+		</div>
   	</div>
   	<br>
   	<div class="row form1">
@@ -38,7 +41,7 @@
 			    <th>Gender</th>
 			    <th>Telephone No</th>
 			    <th>Email</th>
-			    <th>Admin ID</th>
+			  
 				<th>Edit</th>
 				<th>Delete</th>
 			  </tr>
@@ -57,8 +60,7 @@
 			    <td><?php echo $row["Gender"]; ?></td>
 				<td><?php echo $row["Telephone_No"]; ?></td>
 			    <td><?php echo $row["Email"]; ?></td>
-				<td><?php echo $row["Admin_ID"]; ?></td>
-	
+			
 			    
 				<td><a href="updated.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
 				<td><a href="deleted.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red"></i></a></td>
