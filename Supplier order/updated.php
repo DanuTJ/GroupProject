@@ -12,6 +12,8 @@ $row= mysqli_fetch_array($result);
 <title>Update Supplier Order Details</title>
 <link rel="stylesheet" href="css/View.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 <body>
 	<div class="sidenav">
@@ -72,7 +74,7 @@ $row= mysqli_fetch_array($result);
 		<input type="text" name="id"  value="<?php echo $row['id']; ?>">
 		<br>
 		Order Date: <br>
-		<input type="date" name="orderdate" max="<?php echo date("Y-m-d"); ?>" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="date" name="orderdate" max="<?php echo date("Y-m-d"); ?>" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
  			 margin: 8px 0;" class="txtField" value="<?php echo $row['orderdate']; ?>">
 
 		<br>
@@ -80,11 +82,11 @@ $row= mysqli_fetch_array($result);
 		<input type="text" name="suppliername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['suppliername']; ?>">
 		<br>
 		No. of Units: <br>
-		<input type="number" name="numofunits" min="1" style="width:515px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="number" name="numofunits" min="1" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" class="txtField" value="<?php echo $row['numofunits']; ?>">
 		<br>
 		Arriving Date:<br>
-		<input type="date" name="arrivingdate" class="txtField" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="date" name="arrivingdate" class="txtField" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" value="<?php echo $row['arrivingdate']; ?>">
 		<br>
 		Total Price:<br>
