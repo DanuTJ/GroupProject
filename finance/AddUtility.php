@@ -48,7 +48,7 @@
 		  
 			
 			<label for="amount">Amount:</label>
-		    <input type="text" id="amount" name="amount" pattern="[0-9]+" placeholder="Ex: xxx.xx" required>
+		    <input type="text" id="amount" name="amount" pattern="[0-9]*[.]?[0-9]+" placeholder="Ex: xxx.xx" required>
 			<br>
 			
 		  

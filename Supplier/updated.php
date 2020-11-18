@@ -1,10 +1,10 @@
 <?php
 include_once 'connection.php';
 if(count($_POST)>0) {
-mysqli_query($conn,"UPDATE details set id='" . $_POST['id'] . "', suppliername='" . $_POST['suppliername'] . "', companyname='" . $_POST['companyname'] . "',companyaddress='" . $_POST['companyaddress'] . "', phoneno='" . $_POST['phoneno'] . "', email='" . $_POST['email'] . "' WHERE id='" . $_POST['id'] . "'");
+mysqli_query($conn,"UPDATE suppliers set id='" . $_POST['id'] . "', suppliername='" . $_POST['suppliername'] . "', companyname='" . $_POST['companyname'] . "',companyaddress='" . $_POST['companyaddress'] . "', phoneno='" . $_POST['phoneno'] . "', email='" . $_POST['email'] . "' WHERE id='" . $_POST['id'] . "'");
 $message = "Record Modified Successfully";
 }
-$result = mysqli_query($conn,"SELECT * FROM details WHERE id='" . $_GET['id'] . "'");
+$result = mysqli_query($conn,"SELECT * FROM suppliers WHERE id='" . $_GET['id'] . "'");
 $row= mysqli_fetch_array($result);
 ?>
 <html>

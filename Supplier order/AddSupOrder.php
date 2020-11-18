@@ -30,26 +30,26 @@
 		
 
 		  	<label for="OrId">Order ID:</label>
-		    <input type="text" id="OrId" name="orderid" placeholder="Enter order id.." required> <br>
+		    <input type="text" id="OrId" name="id" placeholder="Enter order id.." required> <br>
 
 		    <label for="Sname">Supplier Name:</label>
 		    <input type="text" id="Sname" name="suppliername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" placeholder="Enter supplier name.." required> <br>
 
 		    <label for="Units">No. of Units:</label>
 		    <input type="number" id="Units" name="numofunits" min="1" style="width:515px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
-  margin: 8px 0;" placeholder="Enter quantity.." required> <br>
+  				margin: 8px 0;" placeholder="Enter quantity.." required> <br>
 
-		    <label for="Tprice">Total Price:</label>
-		    <input type="text" id="Tprice" name="totalprice" pattern="[0-9]+" placeholder="Ex: xxx.xx" required> <br>
+		    <label for="Tprice">Price:</label>
+		    <input type="text" id="Tprice" name="totalprice" pattern="[0-9]*[.]?[0-9]+" placeholder="Ex: xxx.xx" required> <br>
 
 			
 			 <label for="Ordate">Order Date:</label>
 		    <input type="date" id="Ordate" name="orderdate" max="<?php echo date("Y-m-d"); ?>" placeholder="Enter order date.." style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
-  margin: 8px 0;" required> <br> 
+  				margin: 8px 0;" required> <br> 
 			
 			<label for="Arridate">Arriving Date:</label>
 		    <input type="date"  id="Arridate" name="arrivingdate" placeholder="Enter arriving date.." style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px;  padding: 12px 20px;
-  margin: 8px 0;" required><br>
+  				margin: 8px 0;" required><br>
 			<br> 
 			
 		  	

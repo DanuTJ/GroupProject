@@ -46,7 +46,7 @@ if (mysqli_num_rows($result) > 0) {
 			    <th>Supplier Name</th>
 				<th>No.of Units</th>
 			    <th>Arriving Date</th>
-			    <th>Total Price</th>
+			    <th>Price</th>
 				
 			    <th>Edit</th>
 			    <th>Delete</th>
@@ -56,7 +56,7 @@ if (mysqli_num_rows($result) > 0) {
 					while($row = mysqli_fetch_array($result)) {
 				?>
 			  <tr>
-			    <td><?php echo $row["orderid"]; ?></td>
+			    <td><?php echo $row["id"]; ?></td>
 				<td><?php echo $row["orderdate"]; ?></td>
 			    <td><?php echo $row["suppliername"]; ?></td>
 				<td><?php echo $row["numofunits"]; ?></td>
@@ -64,8 +64,8 @@ if (mysqli_num_rows($result) > 0) {
 			    <td><?php echo $row["totalprice"]; ?></td>
 				
 			    
-				<td><a href="updated.php?id=<?php echo $row["orderid"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
-				<td><a href="deleted.php?id=<?php echo $row["orderid"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red"></i></a></td>
+				<td><a href="updated.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
+				<td><a href="deleted.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red"></i></a></td>
 
 			  </tr>
 			  	<?php

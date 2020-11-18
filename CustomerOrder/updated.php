@@ -83,7 +83,7 @@ $row= mysqli_fetch_array($result);
 		<input type="text" name="orderdes" class="txtField" value="<?php echo $row['orderdes']; ?>">
 		<br>
 		Price:<br>
-		<input type="text" name="price" class="txtField" pattern="[0-9]+" value="<?php echo $row['price']; ?>">
+		<input type="text" name="price" class="txtField" pattern="[0-9]*[.]?[0-9]+" value="<?php echo $row['price']; ?>">
 		<br>
 		Date: <br>
 		<input type="date" name="date" class="txtField" max="<?php echo date("Y-m-d"); ?>" value="<?php echo $row['date']; ?>">
