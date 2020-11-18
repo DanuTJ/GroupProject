@@ -1,4 +1,6 @@
 <?php
+require_once 'connection.php' ?>
+<?php
 //start the session
 session_start();
 
