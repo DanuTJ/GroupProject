@@ -52,6 +52,7 @@ if (mysqli_num_rows($result) > 0) {
 				<th>Total</th>
 				<th>Order Invoice No</th>
 				<th>Admin ID</th>
+				
 			  </tr>
 			  	<?php
 					$i=0;
@@ -68,6 +69,7 @@ if (mysqli_num_rows($result) > 0) {
 				<td><?php echo $row["total"]; ?></td>
 				<td><?php echo $row["invoice"]; ?></td>
 				<td><?php echo $row["adminid"]; ?></td>
+				
 				
 			  </tr>
 			  	<?php

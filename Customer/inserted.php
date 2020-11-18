@@ -6,9 +6,9 @@ if(isset($_POST['submit']))
 	 $type = $_POST['type'];
 	 $phoneno = $_POST['phoneno'];
 	 $email = $_POST['email'];
-	 $adminid = $_POST['adminid'];
-	 $sql = "INSERT INTO details (customername,type,phoneno,email,adminid)
-	 VALUES ('$customername','$type','$phoneno','$email','$adminid')";
+	
+	 $sql = "INSERT INTO details (customername,type,phoneno,email)
+	 VALUES ('$customername','$type','$phoneno','$email')";
 	 if (mysqli_query($conn, $sql)) {
 		echo "New record created successfully !";
 	 } else {

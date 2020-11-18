@@ -9,9 +9,9 @@ if(isset($_POST['submit']))
 	 $gender = $_POST['status'];
 	 $telephoneno= $_POST['Telephone_No'];
 	 $email = $_POST['Email'];
-	 $adminid = $_POST['Admin_ID'];
+	
 	 
-	 $sql = "INSERT INTO details (Employee_ID,Employee_Name,NIC,Address,Gender,Telephone_No,Email,Admin_ID) VALUES ('$employeeid','$name','$nic','$address','$gender','$telephoneno','$email','$adminid')";
+	 $sql = "INSERT INTO details (Employee_ID,Employee_Name,NIC,Address,Gender,Telephone_No,Email,Admin_ID) VALUES ('$employeeid','$name','$nic','$address','$gender','$telephoneno','$email')";
 	 if (mysqli_query($conn, $sql)) {
 		echo "New record created successfully !";
 	 } else {

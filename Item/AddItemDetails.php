@@ -56,23 +56,24 @@
 			<br>
 			
 			<label for="Price">Unit Price:</label>
-		    <input type="text" id="Price" name="price" placeholder="Ex: xxx.xx" required>
+		    <input type="float" id="Price" name="price" pattern="[0-9]+" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  margin: 8px 0;" placeholder="Ex: xxx.xx" required>
             <br>
 			
 		    <label for="Iquantity">Item Quantity:</label>
-		    <input type="text" id="Iquantity" name="iquantity" placeholder="Ex: xxx" required>
+		    <input type="number" id="Iquantity" name="iquantity" min="1" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  margin: 8px 0;" placeholder="Ex: xxx" required>
 			<br>
 			
 			<label for="Total">Total:</label>
-		    <input type="text" id="Total" name="total" placeholder="Ex: xxx.xx" required>
+		    <input type="float" id="Total" name="total" pattern="[0-9]+" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+  margin: 8px 0;" placeholder="Ex: xxx.xx" required>
 			<br>
 			
 			<label for="Invoiceno">Order Invoice No:</label>
 		    <input type="text" id="Invoiceno" name="invoice" placeholder="Enter invoice no.." required>
 			<br>
 			
-			<label for="AdminId">Admin ID</label>
-		    <input type="text" id="AdminId" name="adminid" placeholder="Enter admin id.." required>
 			<br>
 			
 		  	
