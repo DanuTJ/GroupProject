@@ -44,7 +44,7 @@
 		    <input type="text" id="Eaddress" name="address" placeholder="Enter permanent address.." required>
 			<br><br>
 
-            <label for="Egender" style="width:180px">Gender:</label> 
+            <label for="Egender" style="width:255px">Gender:</label> 
 			
 			<input type="radio" id="male" name="status" value="male"  >
 			  <label for="male">Male</label>
