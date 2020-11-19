@@ -21,6 +21,7 @@ if(isset($_POST['submit']))
 	 $sql = "INSERT INTO items (id,itemname,category,manufacturer,ides,price,iquantity,total,invoice,adminid)
 	 VALUES ('$id','$itemname','$category','$manufacturer','$ides','$price','$iquantity','$total','$invoice','$adminid')";
 	 if (mysqli_query($conn, $sql)) {
+		$message = base64_encode(urlencode("Record Added  Successfully"));
 		header('Location:AddItemDetails.php?msg=' . $message);
 	 } else {
 		echo "Error: " . $sql . "

@@ -30,6 +30,9 @@ if(isset($_POST)){
             //echo $usertype;
 
             if($usertype == 'a' ){
+                echo "<script type='text/javascript'>";
+                echo "alert('Successful login');";
+                echo "</script>";
                 header( "Location:Dashboard/dashboard.php" );
             }
             elseif ($usertype == 's'){

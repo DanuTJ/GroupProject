@@ -23,7 +23,8 @@
         </div>
     <form method="post" action="register.php" name="signup-form">
 	<img src="../Registration/img/user.png" style="width:80px;height:50px;" class="center">
-	<h1 class="h1">REGISTER</h1>
+	<h3 class="error-msg"><?php include('../messege.php'); ?></h3>
+    <h1 class="h1">REGISTER</h1>
 	<div class="form-element">
 	
 	

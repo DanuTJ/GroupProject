@@ -1,11 +1,19 @@
 <?php
+require_once 'connection.php' ?>
+<?php
 //start the session
 session_start();
 
-//destroy the session
-if(session_destroy()) {
-    //redirect to login
-    header("Location:login.php");
-    exit;
-}
+if (isset($_SESSION['name'])){
+		session_unset($_SESSION['name']);
+        session_unset($_SESSION['usertype']);
+        session_unset($_SESSION['userID']);
+		$message = base64_encode(urlencode(("Logged Out Successfully")));
+
+		
+		session_destroy();
+		header('Location:login.php?msg=', $message );
+		
+		exit();
+	}
 ?>

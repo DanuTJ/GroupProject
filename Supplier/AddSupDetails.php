@@ -30,6 +30,7 @@
   	<div class="row form1">
   		<br>
   		<form action="inserted.php" method="POST">
+		  <h3 class="error-msg"><?php include('../messege.php'); ?></h3>
 		    <label for="Sname">Supplier Name:</label>
 		    <input type="text" id="Sname" name="suppliername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" placeholder="Enter name.." required>
 			<br>

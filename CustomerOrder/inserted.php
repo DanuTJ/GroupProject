@@ -17,7 +17,7 @@ if(isset($_POST['submit']))
 	 $sql = "INSERT INTO cusorder (customername,phoneno,orderdes,price,date,adminid)
 	 VALUES ('$customername','$phoneno','$orderdes','$price','$date','$adminid')";
 	 if (mysqli_query($conn, $sql)) {
-		$message = "Record Added Successfully";
+		$message = base64_encode(urlencode("Record Added Successful"));
 		header('Location:AddCusOrder.php?msg=' . $message);
 		
 	 } else {
