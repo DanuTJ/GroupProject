@@ -64,8 +64,9 @@
             
 		   <br>
 
-		  	<input type="submit" name="submit" value="Submit">
-		    <input type="reset" value="Reset">
+		   <input type="submit" name="submit" value="Submit">
+			<input type="reset" value="Reset">
+
 
 		 </form>
   	</div>
