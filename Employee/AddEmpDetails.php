@@ -30,22 +30,22 @@
   		<form action="inserted.php" method="POST">
 		  <h3 class="error-msg"><?php include('../messege.php'); ?></h3>
           	<label for="Eid">Employee ID:</label>
-		    <input type="text" id="Eid" name="Employee_ID" placeholder="Enter employee id.." required>
+		    <input type="text" id="Eid" style="width:635px" name="Employee_ID" placeholder="Enter employee id.." required>
 			<br>
 
 		    <label for="Ename">Employee Name:</label>
-		    <input type="text" id="Ename" name="name" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" placeholder="Enter employee name.." required>
+		    <input type="text" id="Ename" style="width:635px" name="name" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" placeholder="Enter employee name.." required>
 			<br>
 
             <label for="Enic">NIC:</label>
-		    <input type="text" id="Eid" name="nic" pattern="[A-Z0-9]+"  placeholder="Enter nic.." required>
+		    <input type="text" id="Eid" name="nic" style="width:635px" pattern="[A-Z0-9]+"  placeholder="Enter nic.." required>
 			<br>
 
 			<label for="Eaddress">Address:</label>
-		    <input type="text" id="Eaddress" name="address" placeholder="Enter permanent address.." required>
+		    <input type="text" id="Eaddress" name="address" style="width:635px" placeholder="Enter permanent address.." required>
 			<br><br>
 
-            <label for="Egender" style="width:255px">Gender:</label> 
+            <label for="Egender" style="width:380px">Gender:</label> 
 			
 			<input type="radio" id="male" name="status" value="male"  >
 			  <label for="male">Male</label>
@@ -54,11 +54,11 @@
 			  </br>
 			  </br>
 		    <label for="Tphone">Telephone No:</label>
-		    <input type="text" id="Tpno" name="Telephone_No"  pattern="[0-9]{10}" placeholder="Ex: 000-000-0000" required>
+		    <input type="text" id="Tpno" name="Telephone_No" style="width:635px" pattern="[0-9]{10}" placeholder="Ex: 000-000-0000" required>
 			<br>
 
 		    <label for="Email">Email:</label>
-		    <input type="email" id="Email" name="Email" placeholder="Ex:abc@gmail.com" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="email" id="Email" name="Email" placeholder="Ex:abc@gmail.com" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required>
 			<br>
             

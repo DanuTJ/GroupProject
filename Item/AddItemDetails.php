@@ -31,15 +31,15 @@
 		  <h3 class="error-msg"><?php include('../messege.php'); ?></h3>
 		
 		    <label for="Iid">Item ID:</label>
-		    <input type="text" id="Iid" name="id" placeholder="Enter item id.." required>
+		    <input type="text" id="Iid" name="id" style="width:635px" placeholder="Enter item id.." required>
 			<br>
 			
 		    <label for="Iname">Item Name:</label>
-		    <input type="text" id="Iname" name="itemname" placeholder="Enter item name.." required>
+		    <input type="text" id="Iname" name="itemname" style="width:635px" placeholder="Enter item name.." required>
             <br>
 			
 		    <label for="Icategory">Item Category:</label>
-		    <select id="category" name="category">
+		    <select id="category" style="width:635px" name="category">
 		      <option value="Medicine">Medicine</option>
 		      <option value="Personal hygiene">Personal hygiene</option>
 		      <option value="Skincare">Skincare</option>
@@ -49,26 +49,26 @@
 			<br>
 
 		    <label for="manu">Manufacturer:</label>
-		    <input type="text" id="manu" name="manufacturer" placeholder="Enter manufacturer name.." required>
+		    <input type="text" id="manu" style="width:635px" name="manufacturer" placeholder="Enter manufacturer name.." required>
 			<br>
 			
 			<label for="Description">Item Description:</label>
-		    <input type="text" id="Ides" name="ides" placeholder="Enter item description.." required>
+		    <input type="text" id="Ides" style="width:635px" name="ides" placeholder="Enter item description.." required>
 			<br>
 			
 			<label for="Price">Unit Price:</label>
 
-		    <input type="float" id="Price" name="price" pattern="[0-9]*[.]?[0-9]+" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="float" id="Price" name="price" pattern="[0-9]*[.]?[0-9]+" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   				margin: 8px 0;" placeholder="Ex: xxx.xx" required>
             <br>
 			
 		    <label for="Iquantity">Item Quantity:</label>
-		    <input type="number" id="Iquantity" name="iquantity" min="1" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="number" id="Iquantity" name="iquantity" min="1" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   				margin: 8px 0;" placeholder="Ex: xxx" required>
 			<br>
 			
 			<label for="Total">Total:</label>
-		    <input type="float" id="Total" name="total" pattern="[0-9]*[.]?[0-9]+" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="float" id="Total" name="total" pattern="[0-9]*[.]?[0-9]+" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   				margin: 8px 0;" placeholder="Ex: xxx.xx" required>
 
 		     <br>
@@ -77,7 +77,7 @@
 			
 			
 			<label for="Invoiceno">Order Invoice No:</label>
-		    <input type="text" id="Invoiceno" name="invoice" placeholder="Enter invoice no.." required>
+		    <input type="text" id="Invoiceno" name="invoice" style="width:635px" placeholder="Enter invoice no.." required>
 			<br>
 			
 			<br>
