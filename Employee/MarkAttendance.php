@@ -29,21 +29,21 @@
   		<br>
   		<form action="inserted.php" method="POST">
           	<label for="Eid">Employee Name:</label>
-		    <input type="text" id="Eid" name="Employee ID" placeholder="Employee Name.." required>
+		    <input type="text" id="Eid" name="Employee ID" style="width:640px" placeholder="Employee Name.." required>
 			<br>
 			
 		    <label for="Date">Date:</label>
-		    <input type="date" id="Date" name="Date" max="<?php echo date("Y-m-d"); ?>" style="width:515px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="date" id="Date"  name="Date" max="<?php echo date("Y-m-d"); ?>" style="width:640px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required>
 			<br>
 
             <label for="Time">Time:</label>
-		    <input type="time" id="Time" name="Time" style="width:515px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="time" id="Time" name="Time" style="width:640px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required> 
 			<br> 
 			
 			<form action="/action_page.php">
-				<p style="width:370px"> Status: </p>
+				<p style="width:600px"> Status: </p>
 			  <input type="radio" id="present" name="status" value="present">
 			  <label for="present">Present</label>
 			  <br>

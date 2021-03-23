@@ -32,23 +32,23 @@
   		<form action="inserted.php" method="POST">
 		  <h3 class="error-msg"><?php include('../messege.php'); ?></h3>
 		    <label for="Sname">Supplier Name:</label>
-		    <input type="text" id="Sname" name="suppliername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" placeholder="Enter name.." required>
+		    <input type="text" id="Sname" style="width:645px" name="suppliername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" placeholder="Enter name.." required>
 			<br>
 
 			<label for="Cname">Company Name:</label>
-		    <input type="text" id="Cname" name="companyname" placeholder="Enter company name.." required>
+		    <input type="text" id="Cname" style="width:645px" name="companyname" placeholder="Enter company name.." required>
 			<br>
 
 			<label for="Caddress">Company Address:</label>
-		    <input type="text" id="Caddress" name="companyaddress" placeholder="Enter company address.." required>
+		    <input type="text" id="Caddress" style="width:645px" name="companyaddress" placeholder="Enter company address.." required>
 			<br>
 
 		    <label for="Pno">Company Telephone:</label>
-		    <input type="text" id="pno" name="phoneno" pattern="[0-9]{10}" placeholder="Ex: 0000000000" required>
+		    <input type="text" id="pno" name="phoneno" style="width:645px" pattern="[0-9]{10}" placeholder="Ex: 0000000000" required>
 			<br>
 
 		    <label for="Email">Company Email:</label>
-		    <input type="email" id="email" name="email" placeholder="abc@gmail.com" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="email" id="email" name="email" placeholder="abc@gmail.com" style="width:645px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required>
 			<br>
 			<br>

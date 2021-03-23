@@ -22,39 +22,7 @@ $row= mysqli_fetch_array($result);
 <link rel="stylesheet" href="css/View.css">
 </head>
 <body>
-	<div class="sidenav">
-	<div class="row">
-  		<center><p style="font-size: 35px;"><b>IHealth</b></p>
-		<hr></center>
-  	</div>
-  	<div class="row">
-  		<center><p style="font-size: 20px;"><b>Dashboard</b></p>
-		<hr></center>
-  	</div>
-	<div class="row">
-  		<center><a href="#">Customer</a><hr>
-		<a href="#">Stock</a><hr>
-		<a href="#">Item</a><hr>
-		<a href="#">Supplier</a><hr>
-		<a href="#">Supplier Order</a><hr>
-		<a href="#">Customer Order</a><hr>
-		<a href="#">Employee</a><hr>
-		<a href="#">Finance</a></center>
-  	</div>
-	
-	</div>
-
-	<div class="content">
-  	<div class="row end">
-  		<div class="row">
-	  		<br>
-	  		<a href=""><i class="fa fa-address-book" style="font-size:35px;color:blue"></i></a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  		<a href=""><i class="fa fa-sign-out" style="font-size:35px;color:red"></i></a> 
-	  		<br>Edit Profile &nbsp;&nbsp;&nbsp;&nbsp; Sign Out
-  		</div>
-  		<br>
-  		<hr>
-  	</div>
+<?php include('../header.php') ?>
   	<br>
   	<div class="row" style="margin-top: -18px;">
 	<div class="navbar">
@@ -77,11 +45,11 @@ $row= mysqli_fetch_array($result);
 		</div>
 		Utility no: <br>
 		<input type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>">
-		<input type="text" name="id" disabled  value="<?php echo $row['id']; ?>">
+		<input type="text" style="width:635px" name="id" disabled  value="<?php echo $row['id']; ?>">
 		<br>
 		
 		Utility type:<br>
-		<select id="type" name="type">
+		<select id="type" style="width:635px" name="type">
 			<option value="<?php echo $row['type']; ?>">Water</option>
 			<option value="<?php echo $row['type']; ?>">Electricity</option>
 			<option value="<?php echo $row['type']; ?>">Telecommunication</option>
@@ -89,14 +57,14 @@ $row= mysqli_fetch_array($result);
 		</select>
 		<br>
 		Description:<br>
-		<input type="text" name="utilitydes" class="txtField" value="<?php echo $row['utilitydes']; ?>">
+		<input type="text" name="utilitydes" style="width:635px" class="txtField" value="<?php echo $row['utilitydes']; ?>">
 		<br>
 		Date:<br>
-		<input type="date" name="date" class="txtField" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="date" name="date" class="txtField" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" value="<?php echo $row['date']; ?>">
 		<br>
 		Amount:<br>
-		<input type="text" name="amount" pattern="[0-9]*[.]?[0-9]+" class="txtField" value="<?php echo $row['amount']; ?>">
+		<input type="text" name="amount" style="width:635px" pattern="[0-9]*[.]?[0-9]+" class="txtField" value="<?php echo $row['amount']; ?>">
 		<br>
 		<br>
 		<input type="submit" name="submit" value="Submit" class="buttom">

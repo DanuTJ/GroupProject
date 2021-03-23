@@ -42,7 +42,7 @@
                 </div>
 
                 <input type="submit" class="btn" value="Sign in">
-                <a href="#"><center>Don't have an account?</center></a>
+                <a href="#"><center>Don't have an account? Contact an Admin</center></a>
                 
             </form>
         </div>

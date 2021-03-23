@@ -44,22 +44,22 @@ $row= mysqli_fetch_array($result);
 		</div>
 		ID: <br>
 		<input type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>">
-		<input type="text" name="id" disabled value="<?php echo $row['id']; ?>">
+		<input type="text" name="id"style="width:635px"  disabled value="<?php echo $row['id']; ?>">
 		<br>
 		Supplier Name: <br>
-		<input type="text" name="suppliername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['suppliername']; ?>">
+		<input type="text" name="suppliername" style="width:635px" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['suppliername']; ?>">
 		<br>
 		Company Name: <br>
-		<input type="text" name="companyname" class="txtField" value="<?php echo $row['companyname']; ?>">
+		<input type="text" name="companyname" style="width:635px" class="txtField" value="<?php echo $row['companyname']; ?>">
 		<br>
 		Company Address: <br>
-		<input type="text" name="companyaddress" class="txtField" value="<?php echo $row['companyaddress']; ?>">
+		<input type="text" name="companyaddress" style="width:635px" class="txtField" value="<?php echo $row['companyaddress']; ?>">
 		<br>
 		Telephone Number:<br>
-		<input type="text" name="phoneno" pattern="[0-9]{10}" class="txtField" value="<?php echo $row['phoneno']; ?>">
+		<input type="text" name="phoneno" style="width:635px" pattern="[0-9]{10}" class="txtField" value="<?php echo $row['phoneno']; ?>">
 		<br>
 		Email:<br>
-		<input type="email" name="email" class="txtField" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="email" name="email" class="txtField" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" value="<?php echo $row['email']; ?>">
 		<br>
 		<input type="submit" name="submit" value="Submit" class="buttom">

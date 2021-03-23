@@ -75,13 +75,13 @@ $row= mysqli_fetch_array($result);
 		</div>
 		Employee ID: <br>
 		<input type="hidden" name="id" class="txtField" value="<?php echo $row['Employee_ID']; ?>">
-		<input type="text" name="id" disabled value="<?php echo $row['id']; ?>">
+		<input type="text" name="id" style="width:505px" disabled value="<?php echo $row['id']; ?>">
 		<br>
 		Employee Name: <br>
-		<input type="text" name="employeename" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['employeename']; ?>">
+		<input type="text" name="employeename" style="width:505px" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['employeename']; ?>">
 		<br>
 		NIC: <br>
-		<input type="text" name="employeenic" pattern="[A-Z0-9]+" class="txtField" value="<?php echo $row['employeenic']; ?>">
+		<input type="text" name="employeenic" style="width:505px" pattern="[A-Z0-9]+" class="txtField" value="<?php echo $row['employeenic']; ?>">
 		<br>
 		Gender: <br>
 		<input type="radio" name="male" value="Male" class="radio" value="<?php echo $row['gender']; ?>">

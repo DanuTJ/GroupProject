@@ -75,35 +75,35 @@ $row= mysqli_fetch_array($result);
 
 		Stock ID: <br>
 		<input type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>">
-		<input type="text" name="id" disabled value="<?php echo $row['id']; ?>">
+		<input type="text" name="id" style="width:635px" disabled value="<?php echo $row['id']; ?>">
 		<br>
 
 		Quantity: <br>
-		<input type="number" name="quantity" min="1" class="txtField" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="number" name="quantity" min="1" class="txtField" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   			margin: 8px 0;" value="<?php echo $row['quantity']; ?>">
 		<br>
 
 		Price:<br>
-		<input type="float" name="price" pattern="[0-9]*[.]?[0-9]+" class="txtField" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="float" name="price" pattern="[0-9]*[.]?[0-9]+" class="txtField" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   			margin: 8px 0;" value="<?php echo $row['price']; ?>">
 		<br>
 
 		Supplier: <br>
-		<input type="text" name="supplier" class="txtField" value="<?php echo $row['supplier']; ?>">
+		<input type="text" name="supplier" class="txtField" style="width:635px" value="<?php echo $row['supplier']; ?>">
 		<br>
 
 		Manufacture Date: <br>
-		<input type="date" name="manufdate" max="<?php echo date("Y-m-d"); ?>" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="date" name="manufdate" max="<?php echo date("Y-m-d"); ?>" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
  			 margin: 8px 0;" class="txtField" value="<?php echo $row['manufdate']; ?>">
 		<br>
 
 		Expiry Date: <br>
-		<input type="date" name="expdate" max="<?php echo date("Y-m-d"); ?>" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="date" name="expdate" max="<?php echo date("Y-m-d"); ?>" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
  			 margin: 8px 0;" class="txtField" value="<?php echo $row['expdate']; ?>">
 		<br>
 
 		Received Date:<br>
-		<input type="date" name="receivedate" max="<?php echo date("Y-m-d"); ?>" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="date" name="receivedate" max="<?php echo date("Y-m-d"); ?>" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
  			 margin: 8px 0;" class="txtField" value="<?php echo $row['receivedate']; ?>">
 		<br>
 

@@ -44,13 +44,13 @@ $row= mysqli_fetch_array($result);
 		</div>
 		Item ID: <br>
 		<input type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>">
-		<input type="text" name="id" disabled value="<?php echo $row['id']; ?>"> 
+		<input type="text" name="id" style="width:635px" disabled value="<?php echo $row['id']; ?>"> 
 		<br>
 		Item Name: <br>
-		<input type="text" name="itemname" class="txtField" value="<?php echo $row['itemname']; ?>">
+		<input type="text" name="itemname" style="width:635px" class="txtField" value="<?php echo $row['itemname']; ?>">
 		<br>
 		Item Category:<br>
-		<select id="category" name="category">
+		<select id="category" style="width:635px" name="category">
 			<option value="<?php echo $row['category']; ?>">Medicine</option>
 			<option value="<?php echo $row['category']; ?>">Personal hygiene</option>
 			<option value="<?php echo $row['category']; ?>">Skincare</option>
@@ -59,25 +59,25 @@ $row= mysqli_fetch_array($result);
 		</select>
 		<br>
 		Manufacturer:<br>
-		<input type="text" name="manufacturer" class="txtField" value="<?php echo $row['manufacturer']; ?>">
+		<input type="text" name="manufacturer" style="width:635px" class="txtField" value="<?php echo $row['manufacturer']; ?>">
 		<br>
 		Item description:<br>
-		<input type="text" name="ides" class="txtField" value="<?php echo $row['ides']; ?>">
+		<input type="text" name="ides" style="width:635px" class="txtField" value="<?php echo $row['ides']; ?>">
 		<br>
 		Unit Price:<br>
-		<input type="float" name="price" pattern="[0-9]+" class="txtField" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="float" name="price" pattern="[0-9]+" class="txtField" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" value="<?php echo $row['price']; ?>">
 		<br>
 		Item quantity:<br>
-		<input type="number" name="iquantity" min="1" class="txtField" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="number" name="iquantity" min="1" class="txtField" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" value="<?php echo $row['iquantity']; ?>">
 		<br>
 		Total:<br>
-		<input type="float" name="total" class="txtField" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="float" name="total" class="txtField" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" value="<?php echo $row['total']; ?>">
 		<br>
 		Order Invoice no:<br>
-		<input type="text" name="invoice" class="txtField" value="<?php echo $row['invoice']; ?>">
+		<input type="text" name="invoice"style="width:635px"  class="txtField" value="<?php echo $row['invoice']; ?>">
 		<br>
 		<br>
 		<input type="submit" name="submit" value="Submit" class="buttom">

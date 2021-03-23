@@ -29,11 +29,11 @@
   		<br>
   		<form action="inserted.php" method="POST">
           	<label for="Eid">Employee Name:</label>
-		    <input type="text" id="Eid" name="Employee ID" placeholder="Employee Name.." required>
+		    <input type="text" id="Eid" name="Employee ID" style="width:645px" placeholder="Employee Name.." required>
 			<br>
 			
 			<label for="LeaveType">Leave Type:</label>
-		    <select id="type" name="type">
+		    <select id="type" style="width:645px" name="type">
 		      <option value="Short Leave">Short Leave</option>
 		      <option value="Full Day">Full Day</option>
 		      
@@ -42,7 +42,7 @@
 			
 			
 		    <label for="Date">Date:</label>
-		    <input type="date" id="Date" name="Date" style="width:515px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="date" id="Date" name="Date" style="width:645px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required>
            <br>
 
