@@ -91,7 +91,7 @@ input[type=submit]{
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
-  float:left;
+  float:right;
 }
 input[type=reset] {
   background-color:  #18b1f8;
@@ -103,7 +103,7 @@ input[type=reset] {
   cursor: pointer;
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
-  float: right;
+  float: left;
 }
 
 input[type=submit]:hover {
