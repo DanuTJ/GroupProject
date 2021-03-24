@@ -43,23 +43,23 @@ $row= mysqli_fetch_array($result);
 		</div>
 		ID: <br>
 		<input type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>" >
-		<input type="text" name="id" disabled value="<?php echo $row['id']; ?>">
+		<input type="text" style="width:635px" name="id" disabled value="<?php echo $row['id']; ?>">
 		<br>
 		Customer Name: <br>
-		<input type="text" name="customername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['customername']; ?>">
+		<input type="text" style="width:635px" name="customername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['customername']; ?>">
 		<br>
 		Customer Type:<br>
-		<select id="type" name="type">
+		<select id="type" style="width:635px" name="type">
 			<option value="<?php echo $row['type']; ?>">Regular</option>
 			<option value="<?php echo $row['type']; ?>">Luxury</option>
 			<option value="<?php echo $row['type']; ?>">Medium</option>
 		</select>
 		<br>
 		Telephone Number:<br>
-		<input type="text" name="phoneno" class="txtField" pattern="[0-9]{10}"  value="<?php echo $row['phoneno']; ?>">
+		<input type="text" name="phoneno" class="txtField" pattern="[0-9]{10}" style="width:635px" value="<?php echo $row['phoneno']; ?>">
 		<br>
 		Email:<br>
-		<input type="email" name="email" class="txtField" style="width:515px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="email" name="email" class="txtField" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;"value="<?php echo $row['email']; ?>">
 		<br>
 		<br>

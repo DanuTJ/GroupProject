@@ -43,7 +43,7 @@
 			<br>
             
 			<label for="Supname">Supplier:</label>
-		    <input type="text" id="Supname" name="supplier" placeholder="Enter Supplier Name.." required>
+		    <input type="text" id="Supname" name="supplier" placeholder="Enter Supplier Name.."  style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;margin: 8px 0;"  required>
 			<br>
 
 			<label for="Mdate">Manufacture Date:</label>

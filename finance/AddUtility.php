@@ -31,11 +31,11 @@
 		  <h3 class="error-msg"><?php include('../messege.php'); ?></h3>
 		
 		    <label for="Uno">Utility no:</label>
-		    <input type="text" id="Uno" name="id" placeholder="Enter utility number.." required>
+		    <input type="text" id="Uno" name="id" style="width:645px" placeholder="Enter utility number.." required>
 			<br>
 			
 		    <label for="Utype">Utility type:</label>
-		    <select id="type" name="type">
+		    <select id="type" style="width:645px" name="type">
 		      <option value="Water">Water</option>
 		      <option value="Electricity">Electricity</option>
 		      <option value="Telecommunication">Telecommunication</option>
@@ -43,19 +43,19 @@
 			<br>
 
             <label for="Udes">Description:</label>
-		    <input type="text" id="Udes" name="utilitydes" placeholder="Enter utility description.." required>
+		    <input type="text" id="Udes" style="width:645px" name="utilitydes" placeholder="Enter utility description.." required>
 			<br>
 			
             
 		  
 			
 			<label for="amount">Amount:</label>
-		    <input type="text" id="amount" name="amount" pattern="[0-9]*[.]?[0-9]+" placeholder="Ex: xxx.xx" required>
+		    <input type="text" id="amount" style="width:645px" name="amount" pattern="[0-9]*[.]?[0-9]+" placeholder="Ex: xxx.xx" required>
 			<br>
 			
 		  
 			  <label for="date">Date:</label>
-		    <input type="date" id="date" name="date" max="<?php echo date("Y-m-d"); ?>" placeholder="Date.." style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="date" id="date" name="date" max="<?php echo date("Y-m-d"); ?>" placeholder="Date.." style="width:645px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required>
 			<br>
 		  	<br>

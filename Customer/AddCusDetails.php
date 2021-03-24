@@ -29,11 +29,11 @@
   		<form action="inserted.php" method="POST">
 		  <h3 class="error-msg"><?php include('../messege.php'); ?></h3>
 		    <label for="Cname">Customer Name:</label>
-		    <input type="text" id="Cname" name="customername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" placeholder="Enter name.. " required>
+		    <input type="text" id="Cname" name="customername" style="width:645px" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" placeholder="Enter name.. " required>
 			<br>
 
 		    <label for="type">Customer Type:</label>
-		    <select id="type" name="type">
+		    <select id="type" name="type" style="width:645px">
 		      <option value="Regular">Regular</option>
 		      <option value="Luxury">Luxury</option>
 		      <option value="Medium">Medium</option>
@@ -41,11 +41,11 @@
 			<br>
 
 		    <label for="Pno">Telephone Number:</label>
-		    <input type="text" id="pno" name="phoneno" pattern="[0-9]{10}" placeholder="Ex: 0000000000" required>
+		    <input type="text" id="pno" name="phoneno" style="width:645px" pattern="[0-9]{10}" placeholder="Ex: 0000000000" required>
 			<br>
 
 		    <label for="Email">Email:</label>
-		    <input type="email" id="email" name="email" placeholder="Ex:abc@gmail.com" style="width:515px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="email" id="email" name="email" placeholder="Ex:abc@gmail.com" style="width:645px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required>
 			<br>
 

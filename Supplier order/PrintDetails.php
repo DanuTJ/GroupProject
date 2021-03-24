@@ -16,9 +16,9 @@
   	<div class="row" style="margin-top: -18px;">
 	<div class="navbar">
   		<ul>
-		  <li><a href="AddSupOrder.php">Add Orders</a></li>
-		  <li><a href="ViewViewSupOrderSupplier.php">View Orders</a></li>
-		  <li><a href="ManageSupOrder.php">Manage Orders</a></li>
+		  <li><a href="AddSupOrder.php">Add Supplier Order</a></li>
+		  <li><a href="ViewViewSupOrderSupplier.php">View Supplier Order</a></li>
+		  <li><a href="ManageSupOrder.php">Manage Supplier Order</a></li>
 		  <li><a class="active" href="PrintDetails.php">Print Details</a></li>
 		</ul>
 		</div>

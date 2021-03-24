@@ -26,9 +26,9 @@ $row= mysqli_fetch_array($result);
   	<div class="row" style="margin-top: -18px;">
 	<div class="navbar">
   		<ul>
-		  <li><a href="AddSupOrder.php">Add Orders</a></li>
-		  <li><a href="ViewSupOrder.php">View Orders</a></li>
-		  <li><a class="active" href="ManageSupOrder.php">Manage Orders</a></li>
+		  <li><a href="AddSupOrder.php">Add Supplier Order</a></li>
+		  <li><a href="ViewSupOrder.php">View Supplier Order</a></li>
+		  <li><a class="active" href="ManageSupOrder.php">Manage Supplier Order</a></li>
 		  <li><a href="PrintDetails.php">Print Details</a></li>
 		</ul>
 		</div>
@@ -44,26 +44,26 @@ $row= mysqli_fetch_array($result);
 
 		Order ID: <br>
 		<input type="hidden" name="id" class="txtField" value="<?php echo $row['id']; ?>">
-		<input type="text" name="id" disabled value="<?php echo $row['id']; ?>">
+		<input type="text" name="id" style="width:635px" disabled value="<?php echo $row['id']; ?>">
 		<br>
 		Order Date: <br>
-		<input type="date" name="orderdate" max="<?php echo date("Y-m-d"); ?>" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="date" name="orderdate" max="<?php echo date("Y-m-d"); ?>" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
  			 margin: 8px 0;" class="txtField" value="<?php echo $row['orderdate']; ?>">
 
 		<br>
 		Supplier Name: <br>
-		<input type="text" name="suppliername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['suppliername']; ?>">
+		<input type="text" name="suppliername" style="width:635px" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['suppliername']; ?>">
 		<br>
 		No. of Units: <br>
-		<input type="number" name="numofunits" min="1" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="number" name="numofunits" min="1" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" class="txtField" value="<?php echo $row['numofunits']; ?>">
 		<br>
 		Arriving Date:<br>
-		<input type="date" name="arrivingdate" class="txtField" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		<input type="date" name="arrivingdate" class="txtField" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" value="<?php echo $row['arrivingdate']; ?>">
 		<br>
 		Total Price:<br>
-		<input type="text" name="totalprice"  pattern="[0-9]*[.]?[0-9]+" class="txtField" value="<?php echo $row['totalprice']; ?>">
+		<input type="text" name="totalprice" style="width:635px" pattern="[0-9]*[.]?[0-9]+" class="txtField" value="<?php echo $row['totalprice']; ?>">
 		<br>
 		<br>
 		<input type="submit" name="submit" value="Submit" class="buttom">

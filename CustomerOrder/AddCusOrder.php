@@ -30,26 +30,26 @@
 		  <h3 class="error-msg"><?php include('../messege.php'); ?></h3>
 		    
 		    <label for="Cname">Customer Name:</label>
-			<input type="text" id="Cname" name="customername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" placeholder="Enter customer name.." required>
+			<input type="text"  style="width:645px" id="Cname" name="customername" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" placeholder="Enter customer name.." required>
 			<br>
 		 
 
 		    <label for="Pno">Telephone Number:</label>
-		    <input type="text" id="pno" name="phoneno" pattern="[0-9]{10}" placeholder="Ex: 0000000000" required>
+		    <input type="text" style="width:645px" id="pno" name="phoneno" pattern="[0-9]{10}" placeholder="Ex: 0000000000" required>
 			<br>
 
 		    <label for="Order">Order:</label>
-		    <input type="text" id="orderdes" name="orderdes" placeholder="Order.." required>
+		    <input type="text" id="orderdes" style="width:645px" name="orderdes" placeholder="Order.." required>
 			<br>
 
 			<label for="Price">Price:</label>
-		    <input type="text" id="Price" name="price" pattern="[0-9]*[.]?[0-9]+" placeholder="Ex: xxx.xx" required>
+		    <input type="text" id="Price"  style="width:645px" name="price" pattern="[0-9]*[.]?[0-9]+" placeholder="Ex: xxx.xx" required>
 			<br>
 
 			
 			<label for="date">Date:</label>
 		    <input type="date" id="date" name="date" max="<?php echo date("Y-m-d"); ?>" placeholder="Date of the Order.."     value="2020-11-18"
-       min="2020-11-18" max="2021-11-19" style="width:430px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+       min="2020-11-18" max="2021-11-19" style="width:645px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required>
 			<br> 
 		  	
