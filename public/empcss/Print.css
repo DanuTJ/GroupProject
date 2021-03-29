@@ -5,7 +5,6 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
- 
 }
 
 /* Style the side navigation */
@@ -20,10 +19,7 @@ body {
   left: 0;
   background-color: #87CEFA;
   overflow: hidden;
-  
-  
 }
-
 
 
 /* Side navigation links */
@@ -32,7 +28,6 @@ body {
   padding: 10px;
   text-decoration: none;
   display: block;
-  
 }
 
 /* Change color on hover */
@@ -46,18 +41,16 @@ body {
   margin-left: 350px;
   margin-right: 15px;
   padding-left: 20px;
-  text-align:center;
-  
+  text-align:left;
 }
 
 .end {
   text-align: end;
-  
 }
 
 /* Form Css*/
 input[type=text], select {
-  width: 50%;
+  width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
@@ -67,15 +60,7 @@ input[type=text], select {
   
 }
 
-label{
-	width:200px;
-	display:inline-block;
-	text-align:left;
-}
-
-
 input[type=submit]{
-  
   background-color: #18b1f8;
   border: none;
   color: white;
@@ -87,32 +72,15 @@ input[type=submit]{
   text-transform: uppercase;
   float:right;
 }
-input[type=reset] {
-  background-color:  #18b1f8;
-  border: none;
-  color: white;
-  padding: 10px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-  cursor: pointer;
-  font-family: 'Poppins', sans-serif;
-  text-transform: uppercase;
-  float: left;
-}
 
 input[type=submit]:hover {
-  background-color: #000000;
-}
-
-input[type=reset]:hover {
   background-color: #000000;
 }
 
 .form1 {
   border-radius: 5px;
   background-color: #fefee2;
-  padding: 50px;
-  
+  padding: 10px;
   
 }
 
@@ -122,26 +90,17 @@ input[type=reset]:hover {
   width: 100%;
   overflow: auto;
 }
-
-
-
-
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #000000;
- 
-  
-  
- 
 }
 
 li {
   float: left;
-  width:25%;
- 
+   width:20%;
 }
 
 li a {
@@ -150,7 +109,6 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  
 }
 
 li a:hover:not(.active) {
