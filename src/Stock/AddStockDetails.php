@@ -41,7 +41,11 @@
   				margin: 8px 0;" placeholder="Ex: xxx" required>
 			<br>	  
 
+<<<<<<< HEAD:Stock/AddStockDetails.php
+		    <label for="Price">Price:</label>
+=======
 		    <label for="Price">Unit Price:</label>
+>>>>>>> d518cef17a2282c9c2b95d8c45173feee8c054a8:src/Stock/AddStockDetails.php
 		    <input type="float" id="Price" name="unit_price" pattern="[0-9]*[.]?[0-9]+" placeholder="Ex: xxx.xx" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   			margin: 8px 0;" required>
 			<br>

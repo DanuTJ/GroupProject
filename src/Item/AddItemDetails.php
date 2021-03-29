@@ -27,8 +27,13 @@
   	<br>
   	<div class="row form1">
   		<br>
+<<<<<<< HEAD:Item/AddItemDetails.php
+  		<form name="insertForm" action="insert.php" method="POST">
+		  <h3 class="error-msg"><?php include('../messege.php'); ?></h3>
+=======
   		<form action="insert.php" method="POST">
 		  <h3 class="error-msg"><?php include('../../public/includes/messege.php'); ?></h3>
+>>>>>>> d518cef17a2282c9c2b95d8c45173feee8c054a8:src/Item/AddItemDetails.php
 		
 		    <label for="Iid">Item ID:</label>
 		    <input type="text" id="Iid" name="id" style="width:635px" placeholder="Enter item id.." required>
@@ -58,12 +63,12 @@
 			
 			<label for="Price">Unit Price:</label>
 
-		    <input type="float" id="Price" name="price" pattern="[0-9]*[.]?[0-9]+" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="float" id="Price" name="price" onkeyup="calc()" pattern="[0-9]*[.]?[0-9]+" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   				margin: 8px 0;" placeholder="Ex: xxx.xx" required>
             <br>
 			
 		    <label for="Iquantity">Item Quantity:</label>
-		    <input type="number" id="Iquantity" name="iquantity" min="1" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="number" id="Iquantity" name="iquantity" onkeyup="calc()" min="1" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   				margin: 8px 0;" placeholder="Ex: xxx" required>
 			<br>
 			
@@ -87,6 +92,16 @@
 		    <input type="reset" value="Reset">
 
 		 </form>
+		 <script>
+function calc()
+  {
+    var elm = document.forms["insertForm"];
+
+    if (elm["price"].value != "" && elm["iquantity"].value != "")
+      {elm["total"].value = parseInt(elm["price"].value) * parseInt(elm["iquantity"].value);}
+  }
+</script>
+		 
   	</div>
 </div>
 

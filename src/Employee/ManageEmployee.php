@@ -29,10 +29,10 @@
   	<div class="row form1">
   		<br>
   		<form action="ManageEmployee.php">
-		    <center><input type="text" name="search" placeholder="Search..">
-		  	<input type="submit" value="Search"></center>
+		<center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by ID or Name" title="Type in a ID or Name">
+		  	<!--<input type="submit" value="Search"></center>-->
 		  	<br>
-		  	<table>
+		  	<table id="myTable">
 			  <tr>
 			    <th>Employee ID</th>
 			    <th>Name</th>
@@ -80,6 +80,10 @@
 		</form>
   	</div>
 </div>
+<<<<<<< HEAD:Employee/ManageEmployee.php
+<script src="search.js">
+</script>
+=======
 <script>
 function myfunction(){
 	var x = confirm("Are you sure you want to delete?");
@@ -90,5 +94,6 @@ function myfunction(){
 }
 </script>
 
+>>>>>>> d518cef17a2282c9c2b95d8c45173feee8c054a8:src/Employee/ManageEmployee.php
 </body>
 </html>
