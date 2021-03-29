@@ -12,13 +12,13 @@ if(isset($_POST['submit']))
 	 $manufdate = $_POST['manufdate'];
 	 $expdate = $_POST['expdate'];
 	 $receivedate = $_POST['receivedate'];
-	 $price= $_POST['price'];
+	 $price= $_POST['unit_price'];
 	 $supplier = $_POST['supplier'];
 	 $adminid = $_SESSION['userID'];
 	 
 	 
-	 $sql = "INSERT INTO stock (id,quantity,manufdate,expdate,receivedate,price,supplier,adminid) 
-	 VALUES ('$id','$quantity','$manufdate','$expdate','$receivedate','$price','$supplier','$adminid')";
+	 $sql = "INSERT INTO stock (id,quantity,manufdate,expdate,receivedate,unit_price,supplier,adminid) 
+	 VALUES ('$id','$quantity','$manufdate','$expdate','$receivedate','$unit_price','$supplier','$adminid')";
 	 if (mysqli_query($conn, $sql)) {
 		$message = base64_encode(urlencode("Record Added  Successfully"));
 		header('Location:AddStockDetails.php?msg=' . $message);

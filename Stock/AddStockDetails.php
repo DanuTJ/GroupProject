@@ -38,7 +38,7 @@
 			<br>	  
 
 		    <label for="Price">Price:</label>
-		    <input type="float" id="Price" name="price" pattern="[0-9]*[.]?[0-9]+" placeholder="Ex: xxx.xx" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="float" id="Price" name="unit_price" pattern="[0-9]*[.]?[0-9]+" placeholder="Ex: xxx.xx" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   			margin: 8px 0;" required>
 			<br>
             

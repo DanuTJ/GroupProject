@@ -36,17 +36,17 @@ if (mysqli_num_rows($result) > 0) {
 	  <div class="row form1">
   		<br>
   		<form action="#">
-		    <center><input type="text" name="search" placeholder="Search..">
-		  	<input type="submit" value="Search"></center>
+		   <center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by ID or Supplier" title="Type in a ID or Name">
+		  	<!--<input type="submit" value="Search"></center>-->
 		  	<br>
-		  	<table>
+		  	<table id="myTable">
 			  <tr>
 			    <th>Stock ID</th>
 			    <th>Quantity</th>
 			    <th>Manufacture Date</th>
 				<th>Expiry Date</th>
 			    <th>Received Date</th>
-			    <th>Price</th>
+			    <th>Unit Price</th>
 				<th>Supplier</th>
 				<th>Admin ID</th>
 				<th>Edit</th>
@@ -62,7 +62,7 @@ if (mysqli_num_rows($result) > 0) {
 			    <td><?php echo $row["manufdate"]; ?></td>
 				<td><?php echo $row["expdate"]; ?></td>
 			    <td><?php echo $row["receivedate"]; ?></td>
-				<td><?php echo $row["price"]; ?></td>
+				<td><?php echo $row["unit_price"]; ?></td>
 				<td><?php echo $row["supplier"]; ?></td>
 				<td><?php echo $row["adminid"]; ?></td>
 				
@@ -85,6 +85,7 @@ if (mysqli_num_rows($result) > 0) {
 		</form>
 	</div>
 </div>
-
+<script src="search.js">
+</script>
 </body>
 </html>
