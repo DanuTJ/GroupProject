@@ -6,10 +6,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../public/css/Print.css">
+<link rel="stylesheet" href="../../public/empcss/Print.css">
+
 </head>
 <body>
-<?php include('../../public/includes/header.php')  ?>
+<?php include('../../public/includes/header.php') ?>
 
   	<br>
   	<div class="row" style="margin-top: -18px;">
@@ -18,7 +19,7 @@
 		  <li><a  href="AddEmpDetails.php">Add Employee</a></li>
 		  <li><a href="ManageEmployee.php">Manage Employee</a></li>
 		   <li><a  href="MarkAttendance.php">Mark Attendance</a></li>
-		    <li><a href="MarkLeave.php">Mark Leave</a></li>
+		   <li><a href="ManageAttendance.php">Manage Attendance</a></li>
 		  <li><a class="active" href="PrintDetails.php">Print Details</a></li>
 		</ul>
 		</div>

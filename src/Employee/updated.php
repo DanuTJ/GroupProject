@@ -1,59 +1,32 @@
 <?php
-include_once '../../config/connection.php';
-include_once '../../public/includes/session.php';
+include_once '../connection.php';
+include_once '../session.php';
 if(count($_POST)>0) {
 	checkSession();
 	if(isset($_SESSION['name'])){
-		$_POST['ID'] = $_SESSION['userID'];
-mysqli_query($conn,"UPDATE emp set id='" . $_POST['id'] . "', Eid='" . $_POST['employeeid'] . "', Ename='" . $_POST['employeename'] . "', Enic='" . $_POST['mployeenic'] . "',Eaddress='" . $_POST['employeeaddress'] . "', Egender='" . $_POST['gender'] .  "', Tphone='" . $_POST['phoneno'] . "', Email='" . $_POST['email'] . "', adminid='" . $_POST['ID'] . "' WHERE id='" . $_POST['id'] . "'");
+		$_POST['admid'] = $_SESSION['userID'];
+mysqli_query($conn,"UPDATE emp set  Employee_Name='" . $_POST['Employee_Name'] . "', NIC='" . $_POST['NIC'] . "', Address='" . $_POST['Address'] . "', Gender='" . $_POST['status'] .  "', Telephone_No='" . $_POST['Telephone_No'] . "', Email='" . $_POST['Email'] . "', adminid='" . $_POST['admid'] . "' WHERE Employee_ID='" . $_POST['id'] . "'");
 $message = "Record Modified Successfully";
+header('Location:ManageEmployee.php');
 }
 }
-$result = mysqli_query($conn,"SELECT * FROM emp WHERE id='" . $_GET['id'] . "'");
+
+// $result = mysqli_query($conn,"SELECT * FROM emp WHERE id='" . $_GET['id'] . "'");
+// $row= mysqli_fetch_assoc($result);
+
+$result = mysqli_query($conn,"SELECT * FROM emp WHERE Employee_ID='" . $_GET['id'] . "'");
 $row= mysqli_fetch_array($result);
+
 ?>
 <html>
 <head>
 <title>Update Employee Details</title>
 <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link rel="stylesheet" href="css/View.css">
+<link rel="stylesheet" href="empcss/View.css">
 </head>
 <body>
-	<div class="sidenav">
-	<div class="row">
-  		<center><p style="font-size: 35px;"><b>IHealth</b></p>
-		<hr></center>
-  	</div>
-  	<div class="row">
-  		<center><p style="font-size: 20px;"><b>Dashboard</b></p>
-		<hr></center>
-  	</div>
-	<div class="row">
-  		<center><a href="#">Customer</a><hr>
-		<a href="#">Stock</a><hr>
-		<a href="#">Item</a><hr>
-		<a href="#">Supplier</a><hr>
-		<a href="#">Supplier Order</a><hr>
-		<a href="#">Customer Order</a><hr>
-		<a href="#">Employee</a><hr>
-		<a href="#">Finance</a></center>
-  	</div>
-	
-	</div>
-
-	<div class="content">
-  	<div class="row end">
-  		<div class="row">
-	  		<br>
-	  		<a href=""><i class="fa fa-address-book" style="font-size:35px;color:blue"></i></a>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	  		<a href=""><i class="fa fa-sign-out" style="font-size:35px;color:red"></i></a> 
-	  		<br>Edit Profile &nbsp;&nbsp;&nbsp;&nbsp; Sign Out
-  		</div>
-  		<br>
-  		<hr>
-  	</div>
+<?php include('../header.php') ?>
   	<br>
   	<div class="row" style="margin-top: -18px;">
 	<div class = "navbar">
@@ -61,6 +34,7 @@ $row= mysqli_fetch_array($result);
 		  <li><a href="AddEmpDetails.php">Add Employee</a></li>
 		  <li><a class="active" href="ManageEmployee.php">Manage Employee</a></li>
 		  <li><a href="MarkAttendence.php">Mark Attendence</a></li>
+		  <li><a href="ManageAttendance.php">Manage Attendance</a></li>
 		  <li><a href="PrintDetails.php">Print Details</a></li>
 		</ul>
 		</div>
@@ -75,29 +49,44 @@ $row= mysqli_fetch_array($result);
 		</div>
 		Employee ID: <br>
 		<input type="hidden" name="id" class="txtField" value="<?php echo $row['Employee_ID']; ?>">
-		<input type="text" name="id" style="width:505px" disabled value="<?php echo $row['id']; ?>">
+		<input type="text" name="id" disabled value="<?php echo $row['Employee_ID']; ?>">
 		<br>
 		Employee Name: <br>
-		<input type="text" name="employeename" style="width:505px" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['employeename']; ?>">
+		<input type="text" name="Employee_Name" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['Employee_Name']; ?>">
 		<br>
 		NIC: <br>
-		<input type="text" name="employeenic" style="width:505px" pattern="[A-Z0-9]+" class="txtField" value="<?php echo $row['employeenic']; ?>">
+		<input type="text" name="NIC" pattern="[A-Z0-9]+" class="txtField" value="<?php echo $row['NIC']; ?>">
 		<br>
 		Gender: <br>
-		<input type="radio" name="male" value="Male" class="radio" value="<?php echo $row['gender']; ?>">
-		<input type="radio" name="female" value="Female" class="radio" value="<?php echo $row['gender']; ?>">
+		<?php
+		if($row['Gender']=='male'){
+		echo 	"<input type=\"radio\" id=\"male\" name=\"status\" value=\"male\"  checked=\"checked\">
+			<label for=\"male\">Male</label>
+	  		<input type=\"radio\" id=\"female\" name=\"status\" value=\"female\">
+			<label for=\"female\">Female</label>" ;
+
+		}	else {
+			echo 	"<input type=\"radio\" id=\"male\" name=\"status\" value=\"male\"  >
+			<label for=\"male\">Male</label>
+	  		<input type=\"radio\" id=\"female\" name=\"status\" value=\"female\" checked=\"checked\">
+			<label for=\"female\">Female</label>" ;
+
+		}
+		?>
+
 		<br>
 		Address: <br>
-		<input type="text" name="employeeaddress" class="txtField" value="<?php echo $row['employeeaddress']; ?>">
+		<input type="text" name="Address" class="txtField" value="<?php echo $row['Address']; ?>">
 		<br>
 		Telephone No:<br>
-		<input type="text" name="phoneno" pattern="[0-9]{10}" class="txtField" value="<?php echo $row['phoneno']; ?>">
+		<input type="text" name="Telephone_No" pattern="[0-9]{10}" class="txtField" value="<?php echo $row['Telephone_No']; ?>">
 		<br>
 		Email:<br>
-		<input type="email" name="email" class="txtField" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
-  margin: 8px 0;" value="<?php echo $row['email']; ?>">
+		<input type="Email" name="Email" class="txtField" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+ 		 margin: 8px 0;" value="<?php echo $row['Email']; ?>">
 		<br><br>
 		<input type="submit" name="submit" value="Submit" class="buttom">
+		
 
 	</form>
   	</div>

@@ -1,7 +1,6 @@
-
-<?php require_once('../../config/connection.php'); ?>
-<?php require_once('../../public/includes/session.php'); ?>
 <?php
+require_once('../../config/connection.php'); 
+require_once('../../public/includes/session.php');
 $result = mysqli_query($conn,"SELECT * FROM stock");
 ?>
 
@@ -44,11 +43,12 @@ if (mysqli_num_rows($result) > 0) {
 		  	<table>
 			  <tr>
 			    <th>Stock ID</th>
+				<th>Stock Name</th>
 			    <th>Quantity</th>
 			    <th>Manufacture Date</th>
 			    <th>Expiry Date</th>
                 <th>Received Date</th>
-			    <th>Price</th>
+			    <th>Unit Price</th>
 				<th>Supplier</th>
 				<th>Admin ID</th>
 				
@@ -59,11 +59,12 @@ if (mysqli_num_rows($result) > 0) {
 				?>
 			  <tr>
 			    <td><?php echo $row["id"]; ?></td>
+				<td><?php echo $row["name"]; ?></td>
 			    <td><?php echo $row["quantity"]; ?></td>
 			    <td><?php echo $row["manufdate"]; ?></td>
 			    <td><?php echo $row["expdate"]; ?></td>
 			    <td><?php echo $row["receivedate"]; ?></td>
-				<td><?php echo $row["price"]; ?></td>
+				<td><?php echo $row["unit_price"]; ?></td>
 			    <td><?php echo $row["supplier"]; ?></td>
 				<td><?php echo $row["adminid"]; ?></td>
 				

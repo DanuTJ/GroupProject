@@ -2,11 +2,11 @@
 include_once '../../config/connection.php';
 
 $empid= $_GET["id"];
-$sql = "DELETE FROM emp WHERE Employee_ID='$empid'";
+$sql = "DELETE FROM attendance WHERE Emp_ID='$empid'";
 if (mysqli_query($conn, $sql)) {
     echo '<script type="text/javascript">';
     echo 'alert("Record deleted successfully");';
-    echo 'window.location.href="ManageEmployee.php";';
+    echo 'window.location.href="ManageAttendance.php";';
     echo '</script>';
     
 } else {
@@ -15,4 +15,3 @@ if (mysqli_query($conn, $sql)) {
 mysqli_close($conn);
 
 ?>
-

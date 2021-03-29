@@ -18,9 +18,9 @@
 	<div class="navbar">
   		<ul>
 		  <li><a href="AddEmpDetails.php">Add Employee</a></li>
-		  <li><a class="active" href="ManageEmployee.php">Manage Employee</a></li>
+		  <li><a href="ManageEmployee.php">Manage Employee</a></li>
 		   <li><a href="MarkAttendance.php">Mark Attendance</a></li>
-		   <li><a href="ManageAttendance.php">Manage Attendance</a></li>
+           <li><a class="active" href="ManageAttendance.php">Manage Attendance</a></li>
 		  <li><a href="PrintDetails.php">Print Details</a></li>
 		</ul>
 		</div>
@@ -28,47 +28,40 @@
   	<br>
   	<div class="row form1">
   		<br>
-  		<form action="ManageEmployee.php">
+  		<form action="ManageAttendance.php">
 		    <center><input type="text" name="search" placeholder="Search..">
 		  	<input type="submit" value="Search"></center>
 		  	<br>
 		  	<table>
 			  <tr>
+                <th>Date</th>
 			    <th>Employee ID</th>
-			    <th>Name</th>
-			    <th>NIC</th>
-				<th>Address</th>
-			    <th>Gender</th>
-			    <th>Telephone No</th>
-			    <th>Email</th>
-				<th>Admin ID</th>
-			  
+                <th>Employee Name</th>
+			    <th>Status</th>
+				<th>Work Type</th>
+			    
 				<th>Edit</th>
 				<th>Delete</th>
 			  </tr>
 		 	  	<?php
 				   include_once('../../config/connection.php');
-				   $sql="SELECT * from emp";
+				   $sql="SELECT * from attendance";
 				   $result=mysqli_query($conn,$sql);
 					$i=0;
 					while($row = mysqli_fetch_array($result)) {
 				?>
 			  <tr>
-			    <td><?php echo $row["Employee_ID"]; ?></td>
-			    <td><?php echo $row["Employee_Name"]; ?></td>
-			    <td><?php echo $row["NIC"]; ?></td>
-				<td><?php echo $row["Address"]; ?></td>
-			    <td><?php echo $row["Gender"]; ?></td>
-				<td><?php echo $row["Telephone_No"]; ?></td>
-			    <td><?php echo $row["Email"]; ?></td>
-				<td><?php echo $row["adminid"]; ?></td>
-			
+                <td><?php echo $row["Date"]; ?></td>
+			    <td><?php echo $row["Emp_ID"]; ?></td>
+                <td><?php echo $row["Name"]; ?></td>
+			    <td><?php echo $row["Status"]; ?></td>
+				<td><?php echo $row["Work_type"]; ?></td>
+
 			    
-				<td><a href="updated.php?id=<?php echo $row["Employee_ID"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
-				<td><a href="deleted.php?id=<?php echo $row["Employee_ID"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red" onclick="myfunction()"></i></a></td>
+				<td><a href="update.php?id=<?php echo $row["Emp_ID"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
+				<td><a href="delete.php?id=<?php echo $row["Emp_ID"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red" onclick="myfunction()"></i></a></td>
 
 			  </tr>
-
 			  	<?php
 					$i++;
 					}
@@ -80,13 +73,10 @@
 		</form>
   	</div>
 </div>
+
 <script>
 function myfunction(){
-	var x = confirm("Are you sure you want to delete?");
-  if (x)
-      return true;
-  else
-    return false;
+	confirm("Are you sure want to delete...!");
 }
 </script>
 
