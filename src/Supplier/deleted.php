@@ -1,10 +1,15 @@
 <?php
 include_once '../../config/connection.php';
-$sql = "DELETE FROM suppliers WHERE id='" . $_GET["id"] . "'";
-if (mysqli_query($conn, $sql)) {
-    echo "Record deleted successfully";
-} else {
-    echo "Error deleting record: " . mysqli_error($conn);
+include_once '../../public/includes/session.php';
+
+
+for($i=0; $i < 6; $i++) {
+    
+    $sql =mysqli_query($conn, "INSERT INTO  del_suppliers SELECT * FROM suppliers WHERE id='" . $_GET["id"] . "'"); 
+    $sql = mysqli_query($conn,"DELETE FROM suppliers WHERE id='" . $_GET["id"] . "'");
+
+    if(!$sql) { die(mysqli_error()); }
 }
+
 mysqli_close($conn);
 ?>
