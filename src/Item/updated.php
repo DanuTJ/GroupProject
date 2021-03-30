@@ -2,7 +2,7 @@
 include_once '../../config/connection.php';
 
 if(count($_POST)>0) {
-	checkSession();
+	//checkSession();
 	if(isset($_SESSION['name'])){
 		$_POST['ID'] = $_SESSION['userID'];
 mysqli_query($conn,"UPDATE items set id='" . $_POST['id'] . "', itemname='" . $_POST['itemname'] . "', category='" . $_POST['category'] . "', manufacturer='" . $_POST['manufacturer'] . "', ides='" . $_POST['ides'] . "', price='" . $_POST['price'] ."' ,iquantity='" . $_POST['iquantity'] . "', total='" .$_POST['total'] ."' ,invoice='" . $_POST['invoice'] .  "',adminid='" . $_POST['ID'] . "' WHERE id='" . $_POST['id'] . "'"); 
@@ -19,7 +19,7 @@ $row= mysqli_fetch_array($result);
 <title>Update Item Details</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/View.css">
+<link rel="stylesheet" href="../../public/css/Manage.css">
 </head>
 <body>
 <?php include('../../public/includes/header.php')?>

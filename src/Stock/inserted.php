@@ -1,6 +1,6 @@
 <?php
-include_once '../connection.php';
-include_once '../session.php';
+include_once '../../config/connection.php';
+include_once '../../public/includes/session.php';
 if(isset($_POST['submit']))
 {	 
 

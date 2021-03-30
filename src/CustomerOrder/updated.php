@@ -5,7 +5,7 @@ if(count($_POST)>0) {
 	checkSession();
 	if(isset($_SESSION['name'])){
 		$_POST['ID'] = $_SESSION['userID'];
-mysqli_query($conn,"UPDATE cusorder  set id='" . $_POST['id'] . "', date='" . $_POST['date'] . "', customername='" . $_POST['customername'] . "', orderdes='" . $_POST['orderdes'] . "', phoneno='" . $_POST['phoneno'] . "', price='" . $_POST['price'] . "' , customerid='" . $_POST['customerid'] . "' , adminid='" . $_POST['ID']. "' WHERE id='" . $_POST['id'] . "'");
+mysqli_query($conn,"UPDATE cusorder  set id='" . $_POST['id'] . "', date='" . $_POST['date'] . "', customername='" . $_POST['customername'] . "', orderdes='" . $_POST['orderdes'] . "', phoneno='" . $_POST['phoneno'] . "', price='" . $_POST['price'] . "', adminid='" . $_POST['ID']. "' WHERE id='" . $_POST['id'] . "'");
 $message = "Record Modified Successfully";
 }
 }
@@ -17,7 +17,7 @@ $row= mysqli_fetch_array($result);
 <title>Update Customer Order Details</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/View.css">
+<link rel="stylesheet" href="../../public/css/Add.css">
 </head>
 <body>
 <?php include('../../public/includes/header.php')  ?>
@@ -51,7 +51,7 @@ $row= mysqli_fetch_array($result);
 		<br>
 	
 		Telephone Number:<br>
-		<input type="text" name="phoneno" style="width:635px" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="txtField" value="<?php echo $row['phoneno']; ?>">
+		<input type="text" name="phoneno" style="width:635px" pattern="[0-9]{10}"  class="txtField" value="<?php echo $row['phoneno']; ?>">
 		<br>
 		Order Description:<br>
 		<input type="text" name="orderdes" style="width:635px" class="txtField" value="<?php echo $row['orderdes']; ?>">

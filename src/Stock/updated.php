@@ -16,7 +16,7 @@ if(isset($_POST['submit'])){
 
 	if(mysqli_query($conn,$sql_update)){
 		$message = "Record Modified Successfully";
-		header('location:ManageStock.php');
+		// header('location:ManageStock.php');
 
 	} else {
 		echo "SQL Syntex error";

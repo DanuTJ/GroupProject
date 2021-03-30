@@ -18,10 +18,11 @@ $row= mysqli_fetch_array($result);
 <link rel="stylesheet" href="css/View.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../../public/css/Manage.css">
 </head>
 <body>
 
-<?php include('../header.php') ?>
+<?php include('../../public/includes/header.php') ?>
 
   	<br>
   	<div class="row" style="margin-top: -18px;">
