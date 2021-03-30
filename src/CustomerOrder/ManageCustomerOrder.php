@@ -47,6 +47,7 @@ if (mysqli_num_rows($result) > 0) {
 				<th>Customer Name</th>
 			    <th>Telephone Number</th>
 			    <th>Order</th>
+				<th>Quantity</th>
 				<th>Price</th>
 				<th>Date</th>
 				
