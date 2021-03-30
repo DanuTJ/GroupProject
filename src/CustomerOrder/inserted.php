@@ -10,12 +10,13 @@ if(isset($_POST['submit']))
 	 $customername = $_POST['customername'];
 	 $phoneno = $_POST['phoneno'];
 	 $orderdes = $_POST['orderdes'];
+	 $quantity = $_POST['quantity'];
 	 $price = $_POST['price'];
 	 $date = $_POST['date'];
 	 $adminid = $_SESSION['userID'];
 	
-	 $sql = "INSERT INTO cusorder (customername,phoneno,orderdes,price,date,adminid)
-	 VALUES ('$customername','$phoneno','$orderdes','$price','$date','$adminid')";
+	 $sql = "INSERT INTO cusorder (customername,phoneno,orderdes,quantity,price,date,adminid)
+	 VALUES ('$customername','$phoneno','$orderdes','$quantity','$price','$date','$adminid')";
 	 if (mysqli_query($conn, $sql)) {
 		$message = base64_encode(urlencode("Record Added Successful"));
 		header('Location:AddCusOrder.php?msg=' . $message);
