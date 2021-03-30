@@ -22,7 +22,7 @@ $row= mysqli_fetch_array($result);
 <link rel="stylesheet" href="../../public/css/View.css">
 </head>
 <body>
-<?php include('../header.php') ?>
+<?php include('../../public/includes/header.php') ?>
   	<br>
   	<div class="row" style="margin-top: -18px;">
 	<div class="navbar">

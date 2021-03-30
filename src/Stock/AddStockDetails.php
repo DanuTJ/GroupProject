@@ -32,18 +32,22 @@
 		    <input type="text" id="Sid" name="id" placeholder="Enter stock id.." style="width:505px" required>
 			<br>
 
+			<label for="name">Stock Name:</label>
+		    <input type="text" id="name" name="name" placeholder="Enter stock name.." style="width:505px" required>
+			<br>
+
 		    <label for="Qty">Quantity:</label>
 		    <input type="number" id="Qty" name="quantity" min="1" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   				margin: 8px 0;" placeholder="Ex: xxx" required>
 			<br>	  
 
-		    <label for="Price">Price:</label>
-		    <input type="float" id="Price" name="price" pattern="[0-9]*[.]?[0-9]+" placeholder="Ex: xxx.xx" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <label for="Price">Unit Price:</label>
+		    <input type="float" id="Price" name="unit_price" pattern="[0-9]*[.]?[0-9]+" placeholder="Ex: xxx.xx" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   			margin: 8px 0;" required>
 			<br>
             
 			<label for="Supname">Supplier:</label>
-		    <input type="text" id="Supname" name="supplier" placeholder="Enter Supplier Name.."  style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;margin: 8px 0;"  required>
+		    <input type="text" id="Supname" name="supplier" placeholder="Enter Supplier Name.." style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;margin: 8px 0;" required>
 			<br>
 
 			<label for="Mdate">Manufacture Date:</label>

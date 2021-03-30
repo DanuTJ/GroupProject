@@ -19,7 +19,11 @@
     
 <head>
     <title>Admin </title>
+<<<<<<< HEAD
     <link rel="stylesheet" type="text/css" href="../../editAdminstyle.css">
+=======
+    <link rel="stylesheet" type="text/css" href="../../public/css/editAdminstyle.css">
+>>>>>>> a8f6915d170ef6d4bbef0fc66fdf0a7b50277bd1
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     

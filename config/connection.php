@@ -2,8 +2,8 @@
 $servername='localhost';
 $username='root';
 $password='';
-$dbname = "testdb";
-$conn=mysqli_connect($servername,$username,$password,"cusdetails");
+$dbname = "cusdetails";
+$conn=mysqli_connect($servername,$username,$password,$dbname);
 if(!$conn){
    die('Could not Connect My Sql:' .mysql_error());
 }
