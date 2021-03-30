@@ -10,7 +10,8 @@
       $output .= '<tr>  
                           <td>'.$row["customername"].'</td>  
                           <td>'.$row["phoneno"].'</td>  
-						  <td>'.$row["orderdes"].'</td>  
+					 <td>'.$row["orderdes"].'</td> 
+                          <td>'.$row["quantity"].'</td> 
                           <td>'.$row["price"].'</td> 
                           <td>'.$row["date"].'</td>						  
                      </tr>  
@@ -42,7 +43,8 @@
            <tr>  
                 <th width="30%">Customer Name</th> 
                 <th width="15%">Phone</th> 				
-                <th width="20%">Order</th>  
+                <th width="20%">Order</th> 
+                <th width="20%">Quantity</th> 
                 <th width="10%">Price</th>
                 <th width="20%">Date</th>  
            </tr>  

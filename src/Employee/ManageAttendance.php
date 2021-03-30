@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../public/empcss/Manage.css">
+<link rel="stylesheet" href="../../public/css/Manage1.css">
 
 </head>
 <body>
@@ -59,7 +59,7 @@
 
 			    
 				<td><a href="update.php?id=<?php echo $row["Emp_ID"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
-				<td><a href="delete.php?id=<?php echo $row["Emp_ID"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red" onclick="myfunction()"></i></a></td>
+				<td><a href="delete.php?id=<?php echo $row["Emp_ID"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red" onclick=" return myfunction()"></i></a></td>
 
 			  </tr>
 			  	<?php
@@ -77,8 +77,13 @@
 </script>
 <script>
 function myfunction(){
-	confirm("Are you sure want to delete...!");
+	var x = confirm("Are you sure you want to delete?");
+  if (x)
+      return true;
+  else
+    return false;
 }
+
 </script>
 
 </body>

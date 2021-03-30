@@ -47,6 +47,7 @@ if (mysqli_num_rows($result) > 0) {
 				<th>Customer Name</th>
 			    <th>Telephone Number</th>
 			    <th>Order</th>
+				<th>Quantity</th>
 				<th>Price</th>
 				<th>Date</th>
 				<th>Admin ID</th>
@@ -61,6 +62,7 @@ if (mysqli_num_rows($result) > 0) {
 			    <td><?php echo $row["customername"]; ?></td>
 				<td><?php echo $row["phoneno"]; ?></td>
 			    <td><?php echo $row["orderdes"]; ?></td>
+				<td><?php echo $row["quantity"]; ?></td>
 			    <td><?php echo $row["price"]; ?></td>
 				<td><?php echo $row["date"]; ?></td>
 				<td><?php echo $row["adminid"]; ?></td>
