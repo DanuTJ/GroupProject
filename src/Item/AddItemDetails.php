@@ -58,12 +58,12 @@
 			
 			<label for="Price">Unit Price:</label>
 
-		    <input type="float" id="Price" name="price" pattern="[0-9]*[.]?[0-9]+" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="float" id="Price" name="price" onkeyup="calc()" pattern="[0-9]*[.]?[0-9]+" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   				margin: 8px 0;" placeholder="Ex: xxx.xx" required>
             <br>
 			
 		    <label for="Iquantity">Item Quantity:</label>
-		    <input type="number" id="Iquantity" name="iquantity" min="1" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="number" id="Iquantity" name="iquantity" onkeyup="calc()" min="1" style="width:635px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   				margin: 8px 0;" placeholder="Ex: xxx" required>
 			<br>
 			
@@ -87,6 +87,16 @@
 		    <input type="reset" value="Reset">
 
 		 </form>
+		 <script>
+function calc()
+  {
+    var elm = document.forms["insertForm"];
+
+    if (elm["price"].value != "" && elm["iquantity"].value != "")
+      {elm["total"].value = parseInt(elm["price"].value) * parseInt(elm["iquantity"].value);}
+  }
+</script>
+		 
   	</div>
 </div>
 

@@ -1,10 +1,18 @@
 <?php
-include_once 'connection.php';include_once '../../config/connection.php';
-include_once '../../public/includes/session.php';$sql = "DELETE FROM details WHERE id='" . $_GET["id"] . "'";
+include_once '../../config/connection.php';
+
+$empid= $_GET["id"];
+$sql = "DELETE FROM emp WHERE Employee_ID='$empid'";
 if (mysqli_query($conn, $sql)) {
-    echo "Record deleted successfully";
+    echo '<script type="text/javascript">';
+    echo 'alert("Record deleted successfully");';
+    echo 'window.location.href="ManageEmployee.php";';
+    echo '</script>';
+    
 } else {
     echo "Error deleting record: " . mysqli_error($conn);
 }
 mysqli_close($conn);
+
 ?>
+
