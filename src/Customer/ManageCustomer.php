@@ -36,11 +36,11 @@ if (mysqli_num_rows($result) > 0) {
   	<br>
   	<div class="row form1">
   		<br>
-  		<form action="#">
-		    <center><input type="text" name="search" placeholder="Search..">
-		  	<input type="submit" value="Search"></center>
+  		
+		    <center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by name" title="Type a name">
+		  	<!--<input type="submit"  value="Search"></center> -->
 		  	<br>
-		  	<table>
+		  	<table id="myTable">
 			  <tr>
 			    <th>ID</th>
 			    <th>Name</th>
@@ -71,6 +71,8 @@ if (mysqli_num_rows($result) > 0) {
 					}
 				?>
 			</table>
+
+
 			<?php
 				}
 				else{
@@ -89,6 +91,7 @@ function myfunction(){
     return false;
 }
 
+<script src="../../public/js/search.js">
 </script>
 </body>
 </html>
