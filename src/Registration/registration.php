@@ -12,6 +12,7 @@
 	 
 </head>	
 <body>	
+<<<<<<< HEAD
     <?php include('../HeaderAdmin/header.php') ?> 
 
         <img class="back" src="../../public/img/wave.png">
@@ -81,6 +82,16 @@
                 <button type="submit" name="submit" value="submit">Submit</button>
     	        <button type="reset" name="reset" value="reset">Reset</button>
             </form>
+=======
+<?php include('../HeaderAdmin/header.php') ?> 
+
+    <img class="back" src="../../public/img/wave.png">
+    <div class="container">
+        <div class="img">
+		    
+			
+            <img src="../../public/img/ihealth.png" width="10" height="500">
+>>>>>>> 9dd6e0e858655573812a8ac3632f29226b48378f
         </div>
     </div>
 
