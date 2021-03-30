@@ -23,7 +23,16 @@
     <link rel="stylesheet" type="text/css" href="../../public/css/editAdminstyle.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+ 
+<script>
+function myfunction(){
+	var x = confirm("Are you sure you want to delete?");
+  if (x)
+      return true;
+  else
+    return false;
+}
+</script>
 </head>
     
 <body>
@@ -49,6 +58,7 @@
                 </tr>";
         $allus = "SELECT * FROM users";
         $userquery = mysqli_query($conn,$allus);
+        $i=0;
         while($row = mysqli_fetch_assoc($userquery)){
 
             if($row['usertype']=='a'){
@@ -60,6 +70,7 @@
                 else{
                     $type="Accountant";
                 }
+                
             echo "<tr>
                 <td>".$row['userID']."</td>
                 <td>".$type."</td>
@@ -67,16 +78,19 @@
                 <td>".$row['email']."</td>
                 <td>".$row['contact']."</td> "?> 
 
-                <td><a href="#?id=<?php echo $row["id"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
-				<td><a href="3?id=<?php echo $row["id"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red"></i></a></td>
+                <td><a href="updated.php?userID=<?php echo $row["userID"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
+				<td><a href="deleted.php?userID=<?php echo $row["userID"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red" onclick=" return myfunction()"></i></a></td>
                 <?php "
                 </tr>";
-
+                
+                $i++;
         } 
-
+        
+    
          echo "</table>";
 
          ?>
+
 
 
     
