@@ -19,7 +19,7 @@
         <div class="img">
 		    
 			
-            <img src="img/ihealth.png" width="10" height="500">
+            <img src="../../public/img/ihealth.png" width="10" height="500">
         </div>
     <form method="post" action="register.php" name="signup-form">
 	<img src="../../public/img/user.png" style="width:80px;height:50px;" class="center">

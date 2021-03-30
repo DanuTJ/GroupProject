@@ -83,12 +83,7 @@ transform: translate(-50%, -50%);}
 
 </head>
 <body>
-<<<<<<< HEAD:Supplier/PrintDetails.php
-
-<?php include('../header.php') ?>
-=======
 <?php include('../../public/includes/header.php') ?>
->>>>>>> d518cef17a2282c9c2b95d8c45173feee8c054a8:src/Supplier/PrintDetails.php
   	<br>
   	<div class="row" style="margin-top: -18px;">
 	<div class="navbar">

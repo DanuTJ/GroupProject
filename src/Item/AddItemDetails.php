@@ -27,13 +27,8 @@
   	<br>
   	<div class="row form1">
   		<br>
-<<<<<<< HEAD:Item/AddItemDetails.php
-  		<form name="insertForm" action="insert.php" method="POST">
-		  <h3 class="error-msg"><?php include('../messege.php'); ?></h3>
-=======
   		<form action="insert.php" method="POST">
 		  <h3 class="error-msg"><?php include('../../public/includes/messege.php'); ?></h3>
->>>>>>> d518cef17a2282c9c2b95d8c45173feee8c054a8:src/Item/AddItemDetails.php
 		
 		    <label for="Iid">Item ID:</label>
 		    <input type="text" id="Iid" name="id" style="width:635px" placeholder="Enter item id.." required>
