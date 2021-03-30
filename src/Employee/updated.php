@@ -1,6 +1,6 @@
 <?php
-include_once '../connection.php';
-include_once '../session.php';
+include_once '../../config/connection.php';
+include_once '../../public/includes/session.php';
 if(count($_POST)>0) {
 	checkSession();
 	if(isset($_SESSION['name'])){
@@ -26,7 +26,7 @@ $row= mysqli_fetch_array($result);
 <link rel="stylesheet" href="empcss/View.css">
 </head>
 <body>
-<?php include('../header.php') ?>
+<?php include('../../public/includes/header.php') ?>
   	<br>
   	<div class="row" style="margin-top: -18px;">
 	<div class = "navbar">

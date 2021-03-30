@@ -80,10 +80,8 @@
 		</form>
   	</div>
 </div>
-<<<<<<< HEAD:Employee/ManageEmployee.php
-<script src="search.js">
+<script src="../../public/js/employeesearch.js">
 </script>
-=======
 <script>
 function myfunction(){
 	var x = confirm("Are you sure you want to delete?");
@@ -94,6 +92,5 @@ function myfunction(){
 }
 </script>
 
->>>>>>> d518cef17a2282c9c2b95d8c45173feee8c054a8:src/Employee/ManageEmployee.php
 </body>
 </html>

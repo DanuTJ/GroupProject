@@ -81,7 +81,7 @@ if (mysqli_num_rows($result) > 0) {
 		</form>
   	</div>
 </div>
-<script src="search.js">
+<script src="../../public/js/supordersearch.js">
 </script>
 </body>
 </html>

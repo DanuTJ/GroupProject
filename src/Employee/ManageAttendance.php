@@ -29,10 +29,10 @@
   	<div class="row form1">
   		<br>
   		<form action="ManageAttendance.php">
-		    <center><input type="text" name="search" placeholder="Search..">
-		  	<input type="submit" value="Search"></center>
+		  <center><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search by Date/ID/Name/Status" title="Type in a ID or Name">
+		  	<!--<input type="submit" value="Search"></center>-->
 		  	<br>
-		  	<table>
+		  	<table id="myTable">
 			  <tr>
                 <th>Date</th>
 			    <th>Employee ID</th>
@@ -73,7 +73,8 @@
 		</form>
   	</div>
 </div>
-
+<script src="../../public/js/employeeattendance.js">
+</script>
 <script>
 function myfunction(){
 	confirm("Are you sure want to delete...!");
