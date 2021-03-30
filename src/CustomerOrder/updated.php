@@ -5,7 +5,7 @@ if(count($_POST)>0) {
 	checkSession();
 	if(isset($_SESSION['name'])){
 		$_POST['ID'] = $_SESSION['userID'];
-mysqli_query($conn,"UPDATE cusorder  set id='" . $_POST['id'] . "', date='" . $_POST['date'] . "', customername='" . $_POST['customername'] . "', orderdes='" . $_POST['orderdes'] . "', phoneno='" . $_POST['phoneno'] . "', price='" . $_POST['price'] . "', adminid='" . $_POST['ID']. "' WHERE id='" . $_POST['id'] . "'");
+mysqli_query($conn,"UPDATE cusorder  set id='" . $_POST['id'] . "', date='" . $_POST['date'] . "', customername='" . $_POST['customername'] . "', orderdes='" . $_POST['orderdes'] . "', phoneno='" . $_POST['phoneno'] . "',quantity='" . $_POST['quantity'] . "', price='" . $_POST['price'] . "', adminid='" . $_POST['ID']. "' WHERE id='" . $_POST['id'] . "'");
 $message = "Record Modified Successfully";
 }
 }
@@ -56,6 +56,9 @@ $row= mysqli_fetch_array($result);
 		<br>
 		Order Description:<br>
 		<input type="text" name="orderdes" style="width:635px" class="txtField" value="<?php echo $row['orderdes']; ?>">
+		<br>
+		Quantity:<br>
+		<input type="text" name="quantity" style="width:635px" class="txtField" value="<?php echo $row['quantity']; ?>">
 		<br>
 		Price:<br>
 		<input type="text" name="price" style="width:635px" class="txtField" pattern="[0-9]+" value="<?php echo $row['price']; ?>">

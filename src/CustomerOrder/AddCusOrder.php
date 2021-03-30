@@ -42,6 +42,10 @@
 		    <input type="text" id="orderdes" style="width:645px" name="orderdes" placeholder="Order.." required>
 			<br>
 
+			<label for="quantity">Quantity:</label>
+		    <input type="text" id="quantity" style="width:645px" name="quantity" placeholder="quantity....." required>
+			<br>
+
 			<label for="Price">Price:</label>
 		    <input type="text" id="Price"  style="width:645px" name="price" pattern="[0-9]*[.]?[0-9]+" placeholder="Ex: xxx.xx" required>
 			<br>
