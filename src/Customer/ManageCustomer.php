@@ -82,6 +82,8 @@ if (mysqli_num_rows($result) > 0) {
 		</form>
   	</div>
 </div>
+<script src="../../public/js/search.js">
+</script>
 <script>
 function myfunction(){
 	var x = confirm("Are you sure you want to delete?");
@@ -91,7 +93,6 @@ function myfunction(){
     return false;
 }
 
-<script src="../../public/js/search.js">
 </script>
 </body>
 </html>

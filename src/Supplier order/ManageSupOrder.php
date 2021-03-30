@@ -91,7 +91,7 @@ function myfunction(){
   else
     return false;
 }
-
+</script>
 <script src="../../public/js/supordersearch.js">
 </script>
 </body>

@@ -88,7 +88,7 @@ function myfunction(){
   else
     return false;
 }
-
+</script>
 <script src="../../public/js/financesearch.js">
 </script>
 </body>
