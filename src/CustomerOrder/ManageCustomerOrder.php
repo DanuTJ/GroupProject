@@ -47,7 +47,6 @@ if (mysqli_num_rows($result) > 0) {
 				<th>Customer Name</th>
 			    <th>Telephone Number</th>
 			    <th>Order</th>
-				<th>Quantity</th>
 				<th>Price</th>
 				<th>Date</th>
 				
@@ -70,7 +69,7 @@ if (mysqli_num_rows($result) > 0) {
 				
 			   
 				<td><a href="updated.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
-				<td><a href="deleted.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red" onclick=" return myfunction()"></i></a></td>
+				<td><a href="deleted.php?id=<?php echo $row["id"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red"></i></a></td>
 
 			  </tr>
 			  	<?php
