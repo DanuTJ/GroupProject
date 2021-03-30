@@ -1,19 +1,16 @@
 <?php
-require_once '../config/connection.php' ?>
-<?php
 //start the session
 session_start();
 
-if (isset($_SESSION['name'])){
-		session_unset($_SESSION['name']);
-        session_unset($_SESSION['usertype']);
-        session_unset($_SESSION['userID']);
-		$message = base64_encode(urlencode(("Logged Out Successfully")));
+// if (isset($_SESSION['name'])){
 
-		
+		$message = base64_encode(urlencode(("Logged Out Successfully")));		
 		session_destroy();
-		header('Location:login.php?msg=', $message );
+		unset($_SESSION['name']);
+        unset($_SESSION['usertype']);
+        unset($_SESSION['userID']);
+		header('Location:login.php?msg='.$message );
 		
-		exit();
-	}
+		// exit();
+	// }
 ?>

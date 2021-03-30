@@ -7,7 +7,7 @@ if(count($_POST)>0) {
 		$_POST['admid'] = $_SESSION['userID'];
 mysqli_query($conn,"UPDATE emp set  Employee_Name='" . $_POST['Employee_Name'] . "', NIC='" . $_POST['NIC'] . "', Address='" . $_POST['Address'] . "', Gender='" . $_POST['status'] .  "', Telephone_No='" . $_POST['Telephone_No'] . "', Email='" . $_POST['Email'] . "', adminid='" . $_POST['admid'] . "' WHERE Employee_ID='" . $_POST['id'] . "'");
 $message = "Record Modified Successfully";
-header('Location:ManageEmployee.php');
+// header('Location:ManageEmployee.php');
 }
 }
 
@@ -23,7 +23,7 @@ $row= mysqli_fetch_array($result);
 <title>Update Employee Details</title>
 <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="empcss/View.css">
+<link rel="stylesheet" href="../../public/css/Manage1.css">
 </head>
 <body>
 <?php include('../../public/includes/header.php') ?>

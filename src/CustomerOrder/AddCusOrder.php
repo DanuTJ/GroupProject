@@ -42,14 +42,18 @@
 		    <input type="text" id="orderdes" style="width:645px" name="orderdes" placeholder="Order.." required>
 			<br>
 
+			<label for="quantity">Quantity:</label>
+		    <input type="text" id="quantity" style="width:645px" name="quantity" placeholder="quantity....." required>
+			<br>
+
 			<label for="Price">Price:</label>
 		    <input type="text" id="Price"  style="width:645px" name="price" pattern="[0-9]*[.]?[0-9]+" placeholder="Ex: xxx.xx" required>
 			<br>
 
 			
 			<label for="date">Date:</label>
-		    <input type="date" id="date" name="date" max="<?php echo date("Y-m-d"); ?>" placeholder="Date of the Order.."     value="2020-11-18"
-       min="2020-11-18" max="2021-11-19" style="width:645px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="date" id="date" name="date" max="<?php echo date("Y-m-d"); ?>" placeholder="Date of the Order.." value="2021-03-15"
+       min="2021-03-15" max="2021-07-14" style="width:645px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required>
 			<br> 
 		  	

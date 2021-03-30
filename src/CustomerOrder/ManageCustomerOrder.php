@@ -47,6 +47,7 @@ if (mysqli_num_rows($result) > 0) {
 				<th>Customer Name</th>
 			    <th>Telephone Number</th>
 			    <th>Order</th>
+				<th>Quantity</th>
 				<th>Price</th>
 				<th>Date</th>
 				
@@ -63,6 +64,7 @@ if (mysqli_num_rows($result) > 0) {
 			    <td><?php echo $row["customername"]; ?></td>
 				<td><?php echo $row["phoneno"]; ?></td>
 			    <td><?php echo $row["orderdes"]; ?></td>
+				<td><?php echo $row["quantity"]; ?></td>
 			    <td><?php echo $row["price"]; ?></td>
 				<td><?php echo $row["date"]; ?></td>
 				
@@ -85,7 +87,17 @@ if (mysqli_num_rows($result) > 0) {
 		</form>
   	</div>
 </div>
-<script src="search.js">
+<script src="../../public/js/search.js">
+</script>
+<script>
+function myfunction(){
+	var x = confirm("Are you sure you want to delete?");
+  if (x)
+      return true;
+  else
+    return false;
+}
+
 </script>
 </body>
 </html>

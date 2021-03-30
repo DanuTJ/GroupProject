@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../../public/empcss/Add.css">
+<link rel="stylesheet" href="../../public/css/Add1.css">
 
 </head>
 <body>
@@ -61,16 +61,20 @@
 			<label for="Status" style="width:420px">Status:</label>
 			  <input type="radio" id="present" name="Status" value="Present">
 			  <label for="present">Present</label>
-			  <input type="radio" id="absent" name="Status" value="Absent">
+			  <input type="radio" id="absent" name="Status" value="Absent" onclick="myFunction()">
 			  <label for="Absent">Absent</label>
 			  <br>
 			  <br>
-
+			  
+			  <script>
+				function myFunction() {
+				document.getElementById("mySelect").disabled = true;				
+				}
+				</script>
 		
 
 			<label for="Work_type">Work Type:</label>
-		      <select id="Work_type" name="Work_type">
-			  <option value="-">-</option>
+		      <select id="mySelect" name="Work_type">
 		      <option value="Full day work (8.00 a.m - 8.00 p.m work)</">Full day work (8.00 a.m - 8.00 p.m work)</option>
 		      <option value="Short leave before coming to work (11.00 a.m - 8.00 p.m work)">Short leave before coming to work (11.00 a.m - 8.00 p.m work)</option>
 		      <option value="Short leave after coming to work (8.00 a.m - 5.00 p.m work)">Short leave after coming to work (8.00 a.m - 5.00 p.m work)</option>
@@ -95,14 +99,14 @@
   	</div>
 </div>
 
-
+<!-- 
 <script>
 	function Showemployee(){
 		var x = document.getElementById("Name").innerHTML = "";
 		x.value='Sal';
 	}
 
-</script>
+</script> -->
 
 <!-- <script>
 	function changefunction(str) {

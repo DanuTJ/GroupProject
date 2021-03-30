@@ -7,6 +7,7 @@ if(count($_POST)>0) {
 		$_POST['ID'] = $_SESSION['userID'];
 mysqli_query($conn,"UPDATE details set id='" . $_POST['id'] . "', customername='" . $_POST['customername'] . "', type='" . $_POST['type'] . "', phoneno='" . $_POST['phoneno'] . "', email='" . $_POST['email'] . "', adminid='" .$_POST['ID'] ."' WHERE id='" . $_POST['id'] . "'");
 $message = "Record Modified Successfully";
+// header('location:ManageCustomer.php');
 }
 }
 $result = mysqli_query($conn,"SELECT * FROM details WHERE id='" . $_GET['id'] . "'");

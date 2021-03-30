@@ -55,7 +55,7 @@ $row= mysqli_fetch_array($result);
 <title>Update Employee Attendance Details</title>
 <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../../public/empcss/view.css">
+<link rel="stylesheet" href="../../public/css/View1.css">
 </head>
 <body>
 <?php include('../../public/includes/header.php') ?>
@@ -104,17 +104,20 @@ $row= mysqli_fetch_array($result);
 		if($row['Status']=='Present'){
 		echo 	"<input type=\"radio\" id=\"Present\" name=\"Status\" value=\"Present\"  checked=\"checked\">
 			<label for=\"Present\">Present</label>
-	  		<input type=\"radio\" id=\"Absent\" name=\"Status\" value=\"Absent\">
+	  		<input type=\"radio\" id=\"Absent\" name=\"Status\" value=\"Absent\" onclick=\"myFunction()\" >
 			<label for=\"Absent\">Absent</label>" ;
 
 		}	else {
-			echo 	"<input type=\"radio\" id=\"Present\" name=\"Status\" value=\"Present\"  >
+			echo 	"<input type=\"radio\" id=\"Present\" name=\"Status\" value=\"Present\">
 			<label for=\"Present\">Present</label>
-	  		<input type=\"radio\" id=\"Absent\" name=\"Status\" value=\"Absent\" checked=\"checked\">
+	  		<input type=\"radio\" id=\"Absent\" name=\"Status\" value=\"Absent\" checked=\"checked\" >
 			<label for=\"Absent\">Absent</label>" ;
+		
+			// 
 
 		}
 		?>
+
         <br> <br> <br>
         <!-- <form action="/action_page.php">
         Status:   <br>
@@ -143,6 +146,10 @@ $row= mysqli_fetch_array($result);
 	</form>
   	</div>
 </div>
-	
+<script>
+	function myFunction() {
+	document.getElementById("Work_type").disabled = true;				
+	}
+	</script>	
 </body>
 </html>
