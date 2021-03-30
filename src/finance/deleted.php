@@ -1,10 +1,16 @@
 <?php
 include_once '../../config/connection.php';
-$sql = "DELETE FROM finance WHERE id ='" . $_GET["id"] . "'";
+
+$uid= $_GET["id"];
+$sql = "DELETE FROM finance WHERE id='$uid'";
 if (mysqli_query($conn, $sql)) {
-    echo "Record deleted successfully";
+    echo '<script type="text/javascript">';
+    echo 'alert("Record deleted successfully");';
+    echo 'window.location.href="ManageUtility.php";';
+    echo '</script>';
 } else {
     echo "Error deleting record: " . mysqli_error($conn);
 }
 mysqli_close($conn);
 ?>
+
