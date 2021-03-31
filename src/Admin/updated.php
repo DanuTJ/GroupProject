@@ -7,7 +7,7 @@
 	    checkSession();
 	    if(isset($_SESSION['name'])){
 		$_POST['userID'] = $_SESSION['userID'];
-mysqli_query($conn,"UPDATE users set userId='" . $_POST['userId'] . "',name='" . $_POST['name'] . "', email='" . $_POST['email'] . "', password='" . $_POST['password'] . "',usertype='" . $_POST['usertype'] . "', contact='" . $_POST['contact'] . "' WHERE userId='" . $_POST['userId'] . "'");
+mysqli_query($conn,"UPDATE users set userID='" . $_POST['userID'] . "',name='" . $_POST['name'] . "', email='" . $_POST['email'] . "',usertype='" . $_POST['usertype'] . "', contact='" . $_POST['contact'] . "' WHERE userID='" . $_POST['userID'] . "'");
 $message = "Record Modified Successfully";
 // header('location:EditUsers.php');
 }
@@ -22,7 +22,7 @@ $row= mysqli_fetch_array($result);
     
 <head>
     <title>Admin </title>
-    <link rel="stylesheet" type="text/css" href="../../public/css/editAdminstyle.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/update.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -33,19 +33,19 @@ $row= mysqli_fetch_array($result);
     
 <?php include('header.php') ?> 
     <hr>
-    <div class="row-50"> 
-        <h1 class="div-c">View Users</h1>
+    <div class="row-100"> 
+        <h1 class="div-c">Edit Users</h1>
     </div>
    
-    <div class="row form1">
+    <div class="row form1 div-c">
   		<br>
   		<form name="frmUser" method="post" action="">
 		<div><?php if(isset($message)) { echo $message; } ?>
 		</div>
-		<div style="padding-bottom:5px;">
-		</div>
+		<!-- <div style="padding-bottom:5px;">
+		</div> -->
 		ID: <br>
-		<input type="hidden" name="id" class="txtField" value="<?php echo $row['userID']; ?>" >
+		<!-- <input type="hidden" name="id" class="txtField" value="<?php echo $row['userID']; ?>"> -->
 		<input type="text" style="width:635px" name="id" disabled value="<?php echo $row['userID']; ?>">
 		<br>
 		Name : <br>
@@ -56,7 +56,7 @@ $row= mysqli_fetch_array($result);
   margin: 8px 0;"value="<?php echo $row['email']; ?>">
         <br>
 		User Type:<br>
-		<select id="type" style="width:635px" name="type">
+		<select id="usertype" style="width:635px" name="usertype">
 			<option value="<?php echo $row['usertype']; ?>">Admin</option>
 			<option value="<?php echo $row['usertype']; ?>">Accountant</option>
 			<option value="<?php echo $row['usertype']; ?>">Stock Manager</option>
