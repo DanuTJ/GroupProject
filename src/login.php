@@ -28,7 +28,7 @@
                     </div>
                     <div class="div">
                         <h5>Email</h5>
-                        <input type="text" class="input" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <input type="text" class="input" name="email" >
                     </div>
                 </div>
                 <div class="input-div pass">
@@ -42,9 +42,17 @@
                 </div>
 
                 <input type="submit" class="btn" value="Sign in">
+                <a href="Forgot Password/forgotpassword.php"><center>Forgot Password</center></a>
                 <a href="#"><center>Don't have an account? Contact an Admin</center></a>
                 
             </form>
+            <?php
+            if(isset($_GET["newpwd"])){
+                if($_GET["newpwd"] == "passwordupdated"){
+                    echo '<p>Your Password has been Reset!</p>';
+                }
+            }
+            ?>
         </div>
     </div>
     <script type="text/javascript" src="../js/main.js"></script>

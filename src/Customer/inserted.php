@@ -1,6 +1,7 @@
 <?php
 include_once '../../config/connection.php';
 include_once '../../public/includes/session.php';
+
 if(isset($_POST['submit']))
 {	 
 	
@@ -20,6 +21,7 @@ if(isset($_POST['submit']))
 	 VALUES ('$customername','$type','$phoneno','$email','$adminid')";
 	 if (mysqli_query($conn, $sql) ) {
 		$message = base64_encode(urlencode("Record Added  Successfully"));
+		logger("Customer added successfully!| Customer Name - ".$_POST['customername']. " | Type - ".$_POST['type']. " | Phone - ".$_POST['phoneno']. " | Email - ".$POST['email']. " | admin ID - ".$_POST['userID']); 
 		header('Location:AddCusDetails.php?msg=' . $message);
 	 } else {
 		echo "Error: " . $sql . "
