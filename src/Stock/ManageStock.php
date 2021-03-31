@@ -87,6 +87,7 @@ if (mysqli_num_rows($result) > 0) {
 		</form>
 	</div>
 </div>
+
 <script src="../../public/js/stocksearch.js">
 </script>
 <script>
