@@ -27,7 +27,7 @@ if(isset($_POST)){
             $_SESSION["usertype"] = $userRow['usertype'];
         
             $usertype= $userRow['usertype'];
-            //echo $usertype;
+            
 
             if($usertype == 'a' ){
                 echo "<script type='text/javascript'>";
@@ -41,7 +41,6 @@ if(isset($_POST)){
             elseif ($usertype == 's'){
                header( "Location:StockManager/dashboard.php" );
             }
-            
     }
     else{    
         echo mysqli_error($conn);    
