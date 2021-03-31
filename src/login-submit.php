@@ -35,11 +35,11 @@ if(isset($_POST)){
                 echo "</script>";
                 header( "Location:Dashboard/dashboard.php" );
             }
+            elseif ($usertype == 'c'){
+                header( "Location:Accountant/dashboard.php" );
+              }
             elseif ($usertype == 's'){
                header( "Location:StockManager/dashboard.php" );
-            }
-            elseif ($usertype='c'){
-              header( "Location:Accountant/dashboard.php" );
             }
     }
     else{    
