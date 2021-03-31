@@ -116,11 +116,8 @@
         </div>
           </a>
          
-          <a href="#">
-          <?php
-          $message = base64_encode(urlencode("You have no access to this feature"));
-						header('Location:../dashboard.php?msg=' . $message);
-            ?>
+          <a href="EditUsers.php">
+         
           
         <div class="row">
           <div class="counter-card add">
