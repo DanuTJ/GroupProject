@@ -104,17 +104,20 @@ $row= mysqli_fetch_array($result);
 		if($row['Status']=='Present'){
 		echo 	"<input type=\"radio\" id=\"Present\" name=\"Status\" value=\"Present\"  checked=\"checked\">
 			<label for=\"Present\">Present</label>
-	  		<input type=\"radio\" id=\"Absent\" name=\"Status\" value=\"Absent\">
+	  		<input type=\"radio\" id=\"Absent\" name=\"Status\" value=\"Absent\" onclick=\"myFunction()\" >
 			<label for=\"Absent\">Absent</label>" ;
 
 		}	else {
-			echo 	"<input type=\"radio\" id=\"Present\" name=\"Status\" value=\"Present\"  >
+			echo 	"<input type=\"radio\" id=\"Present\" name=\"Status\" value=\"Present\">
 			<label for=\"Present\">Present</label>
-	  		<input type=\"radio\" id=\"Absent\" name=\"Status\" value=\"Absent\" checked=\"checked\">
+	  		<input type=\"radio\" id=\"Absent\" name=\"Status\" value=\"Absent\" checked=\"checked\" >
 			<label for=\"Absent\">Absent</label>" ;
+		
+			// 
 
 		}
 		?>
+
         <br> <br> <br>
         <!-- <form action="/action_page.php">
         Status:   <br>
@@ -143,6 +146,10 @@ $row= mysqli_fetch_array($result);
 	</form>
   	</div>
 </div>
-	
+<script>
+	function myFunction() {
+	document.getElementById("Work_type").disabled = true;				
+	}
+	</script>	
 </body>
 </html>

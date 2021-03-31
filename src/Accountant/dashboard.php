@@ -108,7 +108,7 @@
         <div class="row">
           <div class="counter-card add">
           
-            <div class="arrow-div"><img src="../Dashboard/images/add.png" alt="add-icon">
+            <div class="arrow-div"><img src="../../public/img/add.png" alt="add-icon">
               <p class="tags">iHealth</p>
             </div>
             <h2>Add Users</h2>
@@ -117,9 +117,11 @@
           </a>
          
           <a href="EditUsers.php">
+         
+          
         <div class="row">
           <div class="counter-card add">
-            <div class="arrow-div"><img src="../Dashboard/images/edit.png" alt="edit-icon">
+            <div class="arrow-div"><img src="../../public/img/edit.png" alt="edit-icon">
               <p class="tags">iHealth</p>
             </div>
             <h2>Edit Users</h2>
@@ -134,7 +136,7 @@
         <div class="row">
            
             <div class="counter-card add">
-              <div class="arrow-div"><img src="../Dashboard/images/view.png" alt="view-icon">
+              <div class="arrow-div"><img src="../../public/img/view.png" alt="view-icon">
                 <p class="tags">iHealth</p>
               </div>
               <h2>View Users</h2>
@@ -148,7 +150,7 @@
         <a href="../finance/AddUtility.php">
         <div class="row">
             <div class="counter-card add">
-              <div class="arrow-div"><img src="../Dashboard/images/func.png" alt="func-icon">
+              <div class="arrow-div"><img src="../../public/img/func.png" alt="func-icon">
                 <p class="tags">iHealth</p>
               </div>
               <h2>Functions</h2>

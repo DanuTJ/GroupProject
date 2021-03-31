@@ -53,7 +53,7 @@
 			
 			<label for="date">Date:</label>
 		    <input type="date" id="date" name="date" max="<?php echo date("Y-m-d"); ?>" placeholder="Date of the Order.." value="2021-03-15"
-       min="2021-03-15" max="2021-07-14" style="width:645px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+       min="2021-03-31" max="2021-07-14" style="width:645px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   margin: 8px 0;" required>
 			<br> 
 		  	

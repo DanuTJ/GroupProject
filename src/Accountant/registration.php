@@ -14,15 +14,15 @@
 </head>	
 <body>	
 <?php include('headerAdd.php') ?> 
-    <img class="back" src="../Registration/img/wave.png">
+    <img class="back" src="../../public/img/wave.png">
     <div class="container">
         <div class="img">
 		    
 			
-            <img src="../Registration/img/ihealth.png" width="10" height="500">
+            <img src="../../public/img/ihealth.png" width="10" height="500">
         </div>
     <form method="post" action="register.php" name="signup-form">
-	<img src="../Registration/img/user.png" style="width:80px;height:50px;" class="center">
+	<img src="../../public/img/user.png" style="width:80px;height:50px;" class="center">
 	<h3 class="error-msg"><?php include('../../public/includes/messege.php'); ?></h3>
     
     <h1 class="h1">REGISTER</h1>
