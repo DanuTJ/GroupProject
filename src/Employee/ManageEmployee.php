@@ -65,7 +65,7 @@
 			
 			    
 				<td><a href="updated.php?id=<?php echo $row["Employee_ID"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
-				<td><a href="deleted.php?id=<?php echo $row["Employee_ID"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red" onclick=" return myfunction()"></i></a></td>
+				<td><a href="deleted.php?Employee_ID=<?php echo $row["Employee_ID"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red" onclick=" return myfunction()"></i></a></td>
 				
 			  </tr>
 
