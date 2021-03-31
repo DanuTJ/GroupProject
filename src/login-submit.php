@@ -38,7 +38,7 @@ if(isset($_POST)){
             elseif ($usertype == 's'){
                header( "Location:StockManager/dashboard.php" );
             }
-            elseif ($usertype == 'acc'){
+            elseif ($usertype == 'c'){
               header( "Location:Accountant/dashboard.php" );
             }
     }
