@@ -2,8 +2,8 @@
 include_once '../../config/connection.php';
 
 
-$sql =mysqli_query($conn, "INSERT INTO  del_emp SELECT * FROM emp WHERE id='" . $_GET["id"] . "'"); 
-$sql = mysqli_query($conn,"DELETE FROM emp WHERE id='" . $_GET["id"] . "'");
+$sql =mysqli_query($conn, "INSERT INTO  del_emp SELECT * FROM emp WHERE Employee_ID='" . $_GET["Employee_ID"] . "'"); 
+$sql = mysqli_query($conn,"DELETE FROM emp WHERE Employee_ID='" . $_GET["Employee_ID"] . "'");
 if (mysqli_query($conn, $sql)) {
     echo '<script type="text/javascript">';
     echo 'alert("Record deleted successfully");';
