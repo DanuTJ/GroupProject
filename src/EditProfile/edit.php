@@ -20,7 +20,7 @@ if(isset($_POST['submit'])){
     }   
     //Update to Database
     else {
-        $updateQuery = "UPDATE users set name='" . $_POST['name'] . "',password='" . $_POST['password'] . "',contact='" . $_POST['contact'] . "' WHERE userID='" . $_POST['userID'] . "')";
+        $updateQuery = "UPDATE users set name='" . $_POST['name'] . "',password='" . "123" . "',contact='" . $_POST['contact'] . "' WHERE userID='" . $_POST['userID'] . "')";
             
         if (mysqli_query($conn,$updateQuery) === TRUE) {
             $message = base64_encode(urlencode("Update Successful"));
