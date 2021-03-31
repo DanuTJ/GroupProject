@@ -9,6 +9,7 @@
       {       
       $output .= '<tr>  
                           <td>'.$row["id"].'</td>  
+                          <td>'.$row["name"].'</td> 
                           <td>'.$row["quantity"].'</td>  
                           <td>'.$row["manufdate"].'</td>  
                           <td>'.$row["expdate"].'</td> 
@@ -42,7 +43,8 @@
       <h4 align="center">Stock Details</h4><br /> 
       <table border="1" cellspacing="0" cellpadding="3">  
            <tr>  
-                <th width="5%">ID</th>  
+                <th width="5%">ID</th>
+                <th width="20%">Name</th>  
                 <th width="10%">Quantity</th>  
                 <th width="20%">Manufactured Date</th>  
                 <th width="20%">Expiry Date</th>  
