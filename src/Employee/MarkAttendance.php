@@ -50,12 +50,7 @@
 						}
 					}			
 				?>
-			
-			
 			</select>
-			<br>
-			<label for="Name">Employee Name:</label>
-		    <input type="text" id="Name" name="Name" placeholder="Employee Name.." required>
 			<br><br>
 			
 			<label for="Status" style="width:420px">Status:</label>
