@@ -35,18 +35,18 @@
   				margin: 8px 0;" required>
 			<br>
 
-          	<label for="Eid">Employee ID:</label>
-		    <!-- <input type="text" id="Eid" name="Emp_ID" placeholder="Employee ID.." required> -->
-			<select name="Emp_ID" id="Eid" onchange="Showemployee()">
-				<option value=""></option>
+			<br>
+			<label for="Name">Employee Name:</label>
+		    <select name="Name" id="Name">
+			<option value=""></option>
 				<?php 
 					$sql="SELECT * FROM emp";
 					$result = ($conn->query($sql));
 						echo "$sql";
 					if($result){
 						while($row=$result->fetch_assoc()){
-							$Employee_ID=$row['Employee_ID'];
-							echo "<option value=\"$Employee_ID\">$Employee_ID</option>";
+							$Employee_Name=$row['Employee_Name'];
+							echo "<option value=\"$Employee_Name\">$Employee_Name</option>";
 						}
 					}			
 				?>

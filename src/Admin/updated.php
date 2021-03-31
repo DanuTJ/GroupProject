@@ -1,15 +1,16 @@
-<?php include('../../config/connection.php') ?>
-<?php include('../../public/includes/session.php') ?>
+<?php 
+include_once '../../config/connection.php';
+include_once '../../public/includes/session.php';
 
-<?php
 
         if(count($_POST)>0) {
-	    checkSession();
-	    if(isset($_SESSION['name'])){
-		$_POST['userID'] = $_SESSION['userID'];
+	checkSession();
+	if(isset($_SESSION['name'])){
+		
 mysqli_query($conn,"UPDATE users set userID='" . $_POST['userID'] . "',name='" . $_POST['name'] . "', email='" . $_POST['email'] . "',usertype='" . $_POST['usertype'] . "', contact='" . $_POST['contact'] . "' WHERE userID='" . $_POST['userID'] . "'");
+echo("UPDATE users set userID='" . $_POST['userID'] . "',name='" . $_POST['name'] . "', email='" . $_POST['email'] . "',usertype='" . $_POST['usertype'] . "', contact='" . $_POST['contact'] . "' WHERE userID='" . $_POST['userID'] . "'");
 $message = "Record Modified Successfully";
-// header('location:EditUsers.php');
+ //header('location:EditUsers.php');
 }
 }
 $result = mysqli_query($conn,"SELECT * FROM users WHERE userID='" . $_GET['userID'] . "'");
@@ -46,7 +47,7 @@ $row= mysqli_fetch_array($result);
 		</div> -->
 		ID: <br>
 		<!-- <input type="hidden" name="id" class="txtField" value="<?php echo $row['userID']; ?>"> -->
-		<input type="text" style="width:635px" name="id" disabled value="<?php echo $row['userID']; ?>">
+		<input type="text" style="width:635px" name="userID"  value="<?php echo $row['userID']; ?>">
 		<br>
 		Name : <br>
 		<input type="text" style="width:635px" name="name" pattern="[a-zA-Z ]+|[a-zA-Z ]+\\s{1}[a-zA-Z ]{1,}|[a-zA-Z ]+\\s{1}[a-zA-Z ]{3,}\\s{1}[a-zA-Z ]{1,}" class="txtField" value="<?php echo $row['name']; ?>">
