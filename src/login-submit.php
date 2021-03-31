@@ -27,7 +27,7 @@ if(isset($_POST)){
             $_SESSION["usertype"] = $userRow['usertype'];
         
             $usertype= $userRow['usertype'];
-            //echo $usertype;
+            
 
             if($usertype == 'a' ){
                 echo "<script type='text/javascript'>";
