@@ -16,7 +16,7 @@ if(count($_POST)>0) {
             header('Location:EditProfile.php?msg=' . $message);
             exit();
         }else{
-            mysqli_query($conn,"UPDATE users set email='" . $_POST['email'] . "', name='" . $_POST['name'] . "', password='" . $_POST['password'] . "',contact='" . $_POST['contact'] . "' WHERE email='" . $_POST['email'] . "'");
+            mysqli_query($conn,"UPDATE users set email='" . $_POST['email'] . "', name='" . $_POST['name'] . "', password='" . sha1($_POST['password']) . "',contact='" . $_POST['contact'] . "' WHERE email='" . $_POST['email'] . "'");
             $message = "Record Modified Successfully";
         }
     }
@@ -57,8 +57,8 @@ $row= mysqli_fetch_array($result);
                     </div>
                     <div class="div">
                         <h5>Id</h5>
-                        <input type="hidden" name="userId" class="input" value="<?php echo $row['userID']; ?>">
-                        <input type="text" name="userId" disabled value="<?php echo $row['userID']; ?>">
+                        <input type="hidden" name="userID" class="input" value="<?php echo $row['userID']; ?>">
+                        <input type="text" name="userID" disabled value="<?php echo $row['userID']; ?>">
                     </div>
                 </div>
                 <div class="input-div one">
