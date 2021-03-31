@@ -62,7 +62,7 @@
                 <td>".$row['contact']."</td> "?> 
 
                 <td><a href="#?id=<?php echo $row["id"]; ?>"><i class="fa fa-pencil" style="font-size:25px;color:blue"></i></a></td>
-				<td><a href="3?id=<?php echo $row["id"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red"></i></a></td>
+				<td><a href="#?id=<?php echo $row["id"]; ?>"><i class="fa fa-trash" style="font-size:25px;color:red"></i></a></td>
                 <?php "
                 </tr>";
             }

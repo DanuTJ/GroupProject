@@ -35,7 +35,6 @@
 		  	<table id="myTable">
 			  <tr>
                 <th>Date</th>
-			    <th>Employee ID</th>
                 <th>Employee Name</th>
 			    <th>Status</th>
 				<th>Work Type</th>
@@ -52,7 +51,6 @@
 				?>
 			  <tr>
                 <td><?php echo $row["Date"]; ?></td>
-			    <td><?php echo $row["Emp_ID"]; ?></td>
                 <td><?php echo $row["Name"]; ?></td>
 			    <td><?php echo $row["Status"]; ?></td>
 				<td><?php echo $row["Work_type"]; ?></td>

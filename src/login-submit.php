@@ -28,7 +28,7 @@ if(isset($_POST)){
             $_SESSION["usertype"] = $userRow['usertype'];
         
             $usertype= $userRow['usertype'];
-            //echo $usertype;
+            
 
             if($usertype == 'a' ){
                 echo "<script type='text/javascript'>";
@@ -41,7 +41,7 @@ if(isset($_POST)){
                header( "Location:StockManager/dashboard.php" );
                logger("Successful login by Stock Manager | email - ".$_POST['email']. " | Password - ".$_POST['password']);  
             }
-            elseif ($usertype='acc'){
+            elseif ($usertype == 'c'){
               header( "Location:Accountant/dashboard.php" );
               logger("Successful login by Accountant | email - ".$_POST['email']. " | Password - ".$_POST['password']);  
             }

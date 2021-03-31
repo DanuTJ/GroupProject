@@ -51,15 +51,18 @@
 			<br>
 
 			<label for="Mdate">Manufacture Date:</label>
-		    <input type="date" id="Mdate" name="manufdate" max="<?php echo date("Y-m-d"); ?>" placeholder="Enter manufacture date.." style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="date" id="Mdate" name="manufdate" max="<?php echo date("Y-m-d"); ?>" placeholder="Enter manufacture date.."  value="2021-04-01"
+       min="2020-03-31" max="2021-04-01" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   				margin: 8px 0;" required> <br>
 
 			<label for="Edate">Expiry Date:</label>
-		    <input type="date" id="Edate" name="expdate"  placeholder="Enter expiry date.." style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="date" id="Edate" name="expdate"  placeholder="Enter expiry date.."  value="2021-04-01"
+       min="2021-03-31" max="2022-07-14" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   				margin: 8px 0;" required> <br>
 
 			<label for="Rdate">Received Date:</label>
-		    <input type="date" id="Rdate" name="receivedate" max="<?php echo date("Y-m-d"); ?>" placeholder="Enter received date.." style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
+		    <input type="date" id="Rdate" name="receivedate" max="<?php echo date("Y-m-d"); ?>" placeholder="Enter received date.."  value="2021-04-01"
+       min="2019-03-31" max="2021-04-01" style="width:505px;height:45px;border:3px solid #ccc;border-radius: 4px; padding: 12px 20px;
   				margin: 8px 0;" required> <br>
 
 			<br>

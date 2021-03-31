@@ -1,3 +1,8 @@
+<?php
+include_once '../../config/connection.php';
+include_once '../../public/includes/session.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,9 +39,18 @@
 		    <input type="text" id="Iid" name="id" style="width:635px" placeholder="Enter item id.." required>
 			<br>
 			
-		    <label for="Iname">Item Name:</label>
-		    <input type="text" id="Iname" name="itemname" style="width:635px" placeholder="Enter item name.." required>
-            <br>
+			<label for="Iname">Item Name:</label>
+			<select id="Iname" style="width:635px" name="Iname">
+			<?php
+			$records = mysqli_query($conn, "SELECT name From stock");
+			while($data = mysqli_fetch_array($records))
+			{
+				echo "<option value='". $data['name'] ."'>" .$data['name'] ."</option>";  // displaying data in option menu
+			}
+			?>
+			</select>
+		  
+			<br>
 			
 		    <label for="Icategory">Item Category:</label>
 		    <select id="category" style="width:635px" name="category">
